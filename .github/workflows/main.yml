@@ -9,7 +9,5 @@ jobs:
     
     steps:
     - uses: actions/checkout@master
-    - name: Install npm dependencies
-      run: npm install
     - name: Build static site
       run: npx @11ty/eleventy
