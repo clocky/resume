@@ -14,9 +14,9 @@ jobs:
         npm install
         npx @11ty/eleventy
     - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@1.1.3
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        env:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist
+      uses: JamesIves/github-pages-deploy-action@1.1.3
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      env:
+        ACCESS_TOKEN: ${{ secrets.GITHUB_ACCESS_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
