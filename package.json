@@ -7,7 +7,11 @@
     "serve": "eleventy --serve",
     "build": "eleventy"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clocky/resume.git"
+  },
+  "author": "Mark McLaughlin",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
