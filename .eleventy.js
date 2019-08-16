@@ -1,5 +1,5 @@
 module.exports = function(eleventyConfig) {
-    var pretty = require('pretty');
+  var pretty = require('pretty');
   eleventyConfig.addTransform("pretty", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
       let prettified = pretty(content, {
@@ -10,6 +10,8 @@ module.exports = function(eleventyConfig) {
     return content;
   });
   
+  eleventyConfig.addPassthroughCopy("assets");
+
   return {
         templateFormats: ["pug", "njk"],
 
