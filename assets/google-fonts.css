@@ -1,0 +1,21 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+  h3 {
+    font-size: 1.66rem;
+  }
+  h4 {
+    font-size: 1.33rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h5, p, p.lead {
+    font-weight: 400;
+  }
+  .text-primary {
+    color: #0078d4;
+  }
