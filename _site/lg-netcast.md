@@ -3,7 +3,7 @@ layout: article.njk
 title: LG NetCast
 client: Skype
 partner: LG
-year: 2010
+date: 2010-01-04
 abstract: Design and brand manager for LG/Skype partnership.
 headline: Optimising a 10-foot interface across locales
 text:

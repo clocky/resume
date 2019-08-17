@@ -3,9 +3,12 @@ layout: article.njk
 title: Philips VOIP 855
 client: Microsoft
 partner: Philips
-year: 2007
+date: 2009-09-07
 headline: Integrating Skype into the home environment
 abstract: Lead designer for Skype integration into Philips cordless phone interface.
+pr:
+ - VOIP855 is a DECT cordless phone with Skype that works without a PC, 
+   offering consumers total flexibility and independence from the PC.
 text: 
  - Collaborating with the Philips hardware team in France and Hong Kong, I 
    designed the interface for their VOIP851 cordless phone and answering machine.

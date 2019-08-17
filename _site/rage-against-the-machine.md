@@ -1,7 +1,6 @@
 ---
 layout: article.njk
 title: Rage Against The Machine
-year: 1999—2000
 date: 1999-11-02
 client: ARTISTdirect
 abstract: Full-time role in Los Angeles, designing and maintaining Rage's online presence.

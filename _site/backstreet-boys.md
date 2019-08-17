@@ -1,7 +1,6 @@
 ---
 layout: article.njk
 title: Backstreet Boys
-year: 1999
 date: 1999-05-18
 client: ARTISTdirect
 headline: Evolving a label-driven site into a fan-driven site
