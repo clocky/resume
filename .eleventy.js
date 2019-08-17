@@ -11,6 +11,13 @@ module.exports = function(eleventyConfig) {
   });
   
   eleventyConfig.addPassthroughCopy("assets");
+const moment = require("moment");
+
+// date filter
+eleventyConfig.addNunjucksFilter("date", function(date, format) {
+  return moment(date).format(format);
+});
+
 
   return {
         templateFormats: ["md", "pug", "njk"],
