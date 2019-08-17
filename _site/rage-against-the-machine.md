@@ -1,0 +1,24 @@
+---
+layout: article.njk
+title: Rage Against The Machine
+year: 1999—2000
+date: 1999-11-02
+client: ARTISTdirect
+abstract: Full-time role in Los Angeles, designing and maintaining Rage's online presence.
+headline: Activism and archives
+media: ["artistdirect-ratm.png"]
+collaborators: 
+  - Jake Sexton
+  - Mark Levien
+  - Tom Morello
+tags: web
+text:
+    - Over the course of 1999 and 2000 I was the Webmaster for Rage Against The 
+      Machine, designed in co-operation from 
+      Tom Morello to promote both the music and the message behind it.
+    - A large amount of the content was unique, creating archives of 
+      previously unpublished artwork as well as interviews with activists 
+      and causes that the band supported, including the Zapatista, Mumia Abu-Jamal and Leonard Peltier.
+    - The site won an award for “Best Artist Site” in the 2000 Wammy awards 
+      from the Academy of Digital Music Arts and Sciences.
+---

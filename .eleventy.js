@@ -13,7 +13,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
 
   return {
-        templateFormats: ["pug", "njk"],
+        templateFormats: ["md", "pug", "njk"],
 
         pathPrefix: "/",
         htmlTemplateEngine: "njk",
