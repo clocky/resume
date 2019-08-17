@@ -7,8 +7,12 @@
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <h5 class="text-dark font-weight-bold">{{ category | capitalize }}</h5>
                 <ul class="list-unstyled">
-                    {%- for article in pages -%}
-                        <li><a href="{{ article.url }}" class="text-info">{{ article.data.title }}</a></li>
+                    {%- for page in pages | reverse -%}
+                        <li>
+                            <a href="{{ page.url }}" class="text-primary">
+                                {{ page.data.title }}
+                            </a>
+                        </li>
                     {%- endfor -%}
                 </ul>
             </div>
