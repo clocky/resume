@@ -1,7 +1,6 @@
 ---
 layout: article.njk
 title: Kenny G
-year: 1999
 date: 1999-11-16
 client: ARTISTdirect
 abstract: Freelance role updating and maintaining Kenny G's online presence.

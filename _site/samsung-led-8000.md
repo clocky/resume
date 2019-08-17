@@ -1,7 +1,6 @@
 ---
 layout: article.njk
 title: Samsung LED 8000
-year: 2010
 date: 2010-02-25
 client: Skype
 abstract: Design manager for integrated Skype experience on the 2010 Samsung range of smart TV's

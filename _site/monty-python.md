@@ -1,7 +1,6 @@
 ---
 layout: article.njk
 title: Monty Python
-year: 2000
 date: 1999-07-04
 client: ARTISTdirect
 partner: Python Monty Pictures
