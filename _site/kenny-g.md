@@ -12,7 +12,7 @@ collaborators:
  - Jamie Loeb
 tags: web
 text:
-  - I worked in webmaster capacity working with Kenny G and his management to 
+  - I worked in a webmaster capacity working with Kenny G and his management to 
     refresh kennyg.com with tour dates and news updates.
   - The novelty at the time was using Flash to automatically play sound clips 
     of both Kenny talking and playing short snippets of music within a 
