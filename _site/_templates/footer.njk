@@ -4,7 +4,7 @@
         <div class="row pt-3">
         {% for category, pages in collections %}
             {% if category != "all" %}
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-4 col-sm-6">
                 <h5 class="text-dark font-weight-bold">{{ category | capitalize }}</h5>
                 <ul class="list-unstyled">
                     {%- for article in pages -%}
