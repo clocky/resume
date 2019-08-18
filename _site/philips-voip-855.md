@@ -1,9 +1,13 @@
 ---
 layout: article.njk
 title: Philips VOIP 855
-client: Microsoft
+client: Skype
 partner: Philips
 date: 2009-09-07
+collaborators:
+ - CCT
+ - Sébastien Merceron
+ - Denis Augeray
 headline: Integrating Skype into the home environment
 abstract: Lead designer for Skype integration into Philips cordless phone interface.
 pr:
