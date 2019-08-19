@@ -11,9 +11,9 @@
     <title>{{ title }}</title>
   </head>
   <body>
+    {% include "header.njk" %}
     <div class="container mt-5">
         {% block title %}
-        
         {% endblock %}
         {{ content | safe }}
     </div>
