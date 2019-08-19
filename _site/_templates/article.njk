@@ -39,12 +39,14 @@
       </ul>
     {% endif %}
   </div>
-  <div class="col-lg-8 order-lg-2 order-1">
-    {% if media.length <= 2 %}
+  {% if media.length <= 1 %}
+    <div class="col-lg-8 order-lg-2 order-1">
       {% for image in media %}
         <img class="d-block w-100" src="/assets/{{image}}" />
       {% endfor %}
-    {% else %}
+    </div>
+  {% else %}
+    <div class="col-lg-12 order-lg-2 order-1 mb-4">
       <div class="carousel.slide.mt-2.mb-4" id="{{title | slug }}" data-ride="carousel">
         <ol class="carousel-indicators">
           {% for n in media %}
