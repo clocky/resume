@@ -3,6 +3,7 @@ layout: article.njk
 title: Backstreet Boys
 date: 1999-05-18
 client: ARTISTdirect
+partner: The FIRM
 headline: Evolving a label-driven site into a fan-driven site
 collaborators:
  - The Firm
