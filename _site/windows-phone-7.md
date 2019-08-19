@@ -1,8 +1,9 @@
 ---
 layout: article.njk
 date: 2011-04-13
-client: Microsoft
+client: Skype
 title: Windows Phone 7
+partner: Microsoft
 media:
  - windows-phone-7.png
 collaborators:
