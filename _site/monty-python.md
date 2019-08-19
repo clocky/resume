@@ -7,7 +7,7 @@ partner: Python Monty Pictures
 tags: web
 url: pythonline.com
 headline: Monty Python's Big White Site
-abstract: Webmaster for the Monty Python’s online archive
+abstract: Webmaster for the Monty Python’s online archive.
 collaborators:
  - Bruce Lampcov
  - Eric Idle
