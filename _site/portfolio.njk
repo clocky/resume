@@ -1,0 +1,35 @@
+---
+title: All projects
+---
+{% extends "base.njk" %}
+
+{% block title %}
+<div class="row">
+    <div class="card-columns">
+        {% for page in collections.all | reverse  %}
+            {% if page.data.tags  %}
+                <div class="card mb-4">
+                    <a href="{{ page.url }}">
+                    <img class="card-img-top" src="/assets/{{ page.data.media[0] }}" />
+                    </a>
+                    <div class="card-body">
+                        <h3><a href="{{ page.url }}" class="text-info">{{ page.data.title}}</a></h3>
+                        <h5 class="text-secondary">
+                            {{ page.data.client }}
+                            {% if page.data.partner %}
+                            <code>×</code> {{ page.data.partner}}
+                            {% endif %}
+                        </h5>
+                        <p>{{ page.data.abstract }}</p>
+                    </div>
+                    <!--
+                    <div class="card-footer">
+                        <small>{{ page.data.date | date("MMMM Y")}}</small>
+                    </div>
+                    -->
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
