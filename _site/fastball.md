@@ -13,6 +13,6 @@ text:
     pull together a 'retro' themed site to support the lanch of their 2000
     release, "The Harsh Light Of Day"
 media:
-  - _placeholder.png
+  - fastball-home.png
 tags: web
 ---
