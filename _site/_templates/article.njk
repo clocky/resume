@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-12 border-bottom mb-4 pb-3">
         <h1 class="text-info">{{ title }}</h1>
-        <h4 class="text-dark">{{ page.date | date("Y") }} • {{ client }}</h4>
+        <h4 class="text-dark">{{ page.date | date("MMMM Y") }} • {{ client }}</h4>
     </div>
 </div>
 <div class="row">
@@ -42,7 +42,7 @@
   <div class="col-lg-4 order-lg-1 order-2">
   </div>
     {% endif %}
-  {% if media.length <= 2 %}
+  {% if media.length <= 1 %}
     <div class="col-lg-8 order-lg-2 order-1">
       {% for image in media %}
         <img class="d-block w-100" src="/assets/{{image}}" />
