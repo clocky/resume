@@ -9,9 +9,11 @@
                 <ul class="list-unstyled">
                     {%- for page in pages | reverse -%}
                         <li>
-                            <a href="{{ page.url }}" class="text-primary">
-                                {{ page.data.title }}
-                            </a>
+                            <small>
+                                <a href="{{ page.url }}" class="text-primary">
+                                    {{ page.data.title }}
+                                </a>
+                            </small>
                         </li>
                     {%- endfor -%}
                 </ul>
