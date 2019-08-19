@@ -1,7 +1,7 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
   }
-  h1, h2, h3 {
+  h1, h2, h3, .navbar-brand {
     font-family: 'Playfair Display', serif;
   }
   h3 {
@@ -12,6 +12,9 @@ body {
   }
   h5 {
     font-size: 1rem;
+  }
+  .navbar-brand {
+    font-size: 2.5em;
   }
   h5, p, p.lead {
     font-weight: 400;

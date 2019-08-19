@@ -3,6 +3,7 @@ layout: article.njk
 title: Samsung LED 8000
 date: 2010-02-25
 client: Skype
+partner: Samsung
 abstract: Design manager for integrated Skype experience on the 2010 Samsung range of smart TV's
 headline: Balancing native and branded UI
 media: 

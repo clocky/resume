@@ -1,8 +1,9 @@
 ---
 layout: article.njk
 date: 2011-04-13
-client: Microsoft
+client: Skype
 title: Windows Phone 7
+partner: Microsoft
 media:
  - windows-phone-7.png
 collaborators:
@@ -13,7 +14,7 @@ tags:
 headline:
  - Adapting the Skype brand for a new platform
 abstract:
- - Design lead for envisioning Skype on Microsoft's newest phone platform
+ - Design lead for envisioning Skype on Microsoft's mobile reinvention.
 text:
  - Immediately prior to the announcement of Microsoft acquiring Skype, the team 
    had been investigating the opportunity of creating a Windows Phone 7 
