@@ -4,7 +4,7 @@ title: Kenny G
 date: 1999-11-16
 client: ARTISTdirect
 abstract: Freelance role updating and maintaining Kenny G's online presence.
-headline: Activism and archives
+headline: The world's first and last saxophone navigation
 media: 
   - artistdirect-kennyg.png
 collaborators: 
