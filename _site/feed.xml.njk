@@ -1,0 +1,42 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+metadata:
+  title: Mark McLaughlin's portfolio
+  url: https://markmclaughlin.info/
+  author:
+    name: Mark McLaughlin
+    email: mark@mclaughlin.me.uk
+  feed:
+    subtitle: Projects designed and built by Mark McLaughlin
+    filename: feed.xml
+        url: https://markmclaughlin.info/feed.xml
+    id: https://markmclaughlin.info/
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.feed.subtitle }}</subtitle>
+  <link href="{{ metadata.feed.url }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.all | rssLastUpdatedDate }}</updated>
+  <id>{{ metadata.feed.id }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for post in collections.all %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | rssDate }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content type="html">
+        {% for sentence in post.data.text %}
+        <p>{{ sentence }}</p>
+        {% endfor %}
+    </content>
+  </entry>
+  {%- endfor %}
+</feed>
