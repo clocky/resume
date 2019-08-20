@@ -13,6 +13,8 @@ text:
     paradigm to fit both Western and Asian language usage scenarios - at the 
     time of engagement, the product was optimised entirely for Korean character 
     sets.
+thumbnail:
+  - thumbnail-lg.png
 media:
   - LG-NetCast_536.jpg
   - LG-NetCast-2_500.jpg

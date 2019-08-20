@@ -13,7 +13,9 @@ collaborators:
   - Guda Ram
   - Ameer Awan
   - Piers King
-tags: mobile
+tags: web
+thumbnail:
+ - thumbnail-my3.png
 text:
     - I designed and contributed to the development the front end UI for a 
       self-care portal for a Hutchison 3G (aka, "3 mobile") that allowed 
