@@ -10,7 +10,12 @@ title: All projects
             {% if page.data.tags  %}
                 <div class="card mb-4">
                     <a href="{{ page.url }}">
-                    <img class="card-img-top" src="/assets/{{ page.data.media[0] }}" />
+                        {% if page.data.thumbnail %}
+                            {% set thumbnail = page.data.thumbnail %}
+                        {% else %}
+                            {% set thumbnail = page.data.media[0] %}
+                        {% endif %}
+                        <img class="card-img-top" src="/assets/{{thumbnail}}" />
                     </a>
                     <div class="card-body">
                         <h3><a href="{{ page.url }}" class="text-info">{{ page.data.title}}</a></h3>

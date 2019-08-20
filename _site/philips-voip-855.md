@@ -10,6 +10,8 @@ collaborators:
  - Denis Augeray
 headline: Integrating Skype into the home environment
 abstract: Lead designer for Skype integration into Philips cordless phone interface.
+thumbnail:
+ - thumbnail-philips.png
 pr:
  - VOIP855 is a DECT cordless phone with Skype that works without a PC, 
    offering consumers total flexibility and independence from the PC.

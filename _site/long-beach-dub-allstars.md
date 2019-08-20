@@ -17,6 +17,6 @@ text:
   - It's probably for the best. Here's the album cover, which will give you 
     a sense of what you're missing.
 media:
-  - artistdirect-lbda.jpg
+  - lbda.jpg
 tags: web
 ---

@@ -11,6 +11,8 @@ collaborators:
  - David Powell
  - Bina Garden
  - Justin Buck
+thumbnail:
+ - thumbnail-skypephone.jpg
 text:
   - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ultricies tristique

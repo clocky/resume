@@ -4,7 +4,8 @@ tags: mobile
 title: Skype for iPad
 date: 2013-08-12
 client: Microsoft
-abstract: Design manager for the most downloaded iPad application of all time.
+abstract: Design lead for the most downloaded iPad application of all time.
+headline: Blending desktop and mobile paradigms
 collaborators:
  - Antonio Pedro Rezende
  - Daniel Winston

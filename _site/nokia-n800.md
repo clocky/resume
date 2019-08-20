@@ -6,6 +6,8 @@ partner: Nokia
 date: 2007-07-06
 abstract: Interaction designer for Nokia's original "Internet Tablet".
 headline: The first ever Skype tablet client
+thumbnail:
+ - thumbnail-n800.png
 collaborators:
  - Fjord
 text:
