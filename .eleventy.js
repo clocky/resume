@@ -1,11 +1,9 @@
 const pretty = require('pretty');
 const moment = require("moment");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const typesetPlugin = require('eleventy-plugin-typeset');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(typesetPlugin());
   eleventyConfig.addPassthroughCopy("assets");
 
   eleventyConfig.addTransform("pretty", function(content, outputPath) {
