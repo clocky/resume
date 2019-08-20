@@ -1,5 +1,11 @@
+const pretty = require('pretty');
+const moment = require("moment");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 module.exports = function(eleventyConfig) {
-  var pretty = require('pretty');
+  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPassthroughCopy("assets");
+
   eleventyConfig.addTransform("pretty", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
       let prettified = pretty(content, {
@@ -9,27 +15,29 @@ module.exports = function(eleventyConfig) {
     }
     return content;
   });
-  
-  eleventyConfig.addPassthroughCopy("assets");
-const moment = require("moment");
 
-// date filter
-eleventyConfig.addNunjucksFilter("date", function(date, format) {
-  return moment(date).format(format);
-});
+  eleventyConfig.addNunjucksFilter("date", function(dateObj, format) {
+    return moment(dateObj).format(format);
+  });
 
+  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
+    return moment(dateObj).format('YYYY-MM-DD')
+  });
 
   return {
-        templateFormats: ["md", "pug", "njk"],
-
-        pathPrefix: "/",
-        htmlTemplateEngine: "njk",
-        passthroughFileCopy: true,
-        dir: {
+      templateFormats: [
+          "md", 
+          "pug", 
+          "njk"
+      ],
+      pathPrefix: "/",
+      htmlTemplateEngine: "njk",
+      passthroughFileCopy: true,
+      dir: {
         input: "_site",
         includes: "_templates",
         data: "_data",
         output: "public"
-        }
-    }
+      }
+  }
 }
