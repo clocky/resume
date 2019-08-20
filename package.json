@@ -15,7 +15,9 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",
+    "@percy/puppeteer": "^1.0.8",
     "moment": "^2.24.0",
+    "percy": "^0.10.0",
     "pretty": "^2.0.0"
   }
 }
