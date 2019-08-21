@@ -1,17 +1,10 @@
 const pretty = require('pretty');
 const moment = require("moment");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const typesetPlugin = require('eleventy-plugin-typeset');
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPlugin(typesetPlugin({
-      disable: [
-        "ligatures"
-      ]
-    })
-  );
 
   eleventyConfig.addTransform("pretty", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
