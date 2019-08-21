@@ -11,6 +11,8 @@ collaborators:
   - Alec McKinlay
   - Jonathan Donahue
   - "Grasshopper" 
+thumbnail:
+  - thumbnail-mercury-rev.jpg
 tags: web
 text:
     - After sharing office space with Oasis’ management in London, I was 
