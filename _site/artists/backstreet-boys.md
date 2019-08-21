@@ -13,7 +13,6 @@ tags:
  - web
 abstract:
  - Freelance role designing and maintaining the Backstreet Boys website.
-
 text:
  - Working with Los Angeles management team The Firm, I took on what started as 
    a freelance and ultimately a full-time role managing the Backstreet Boys 
