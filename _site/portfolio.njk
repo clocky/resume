@@ -6,9 +6,9 @@ eleventyExcludeFromCollections: true
 
 {% block title %}
 <div class="row">
-    <div class="card-columns">
-        {% for page in collections.all | reverse  %}
-            {% if page.data.tags  %}
+    {% for page in collections.all | reverse  %}
+        {% if page.data.tags  %}
+            <div class="col-lg-3">
                 <div class="card mb-4">
                     <a href="{{ page.url }}">
                         {% if page.data.thumbnail %}
@@ -19,7 +19,7 @@ eleventyExcludeFromCollections: true
                         <img class="card-img-top" src="/assets/{{thumbnail}}" />
                     </a>
                     <div class="card-body">
-                        <h3><a href="{{ page.url }}" class="text-info">{{ page.data.title}}</a></h3>
+                        <h4><a href="{{ page.url }}" class="text-info">{{ page.data.title}}</a></h4>
                         <h5 class="text-secondary">
                             {{ page.data.client }}
                             {% if page.data.partner %}
@@ -28,14 +28,12 @@ eleventyExcludeFromCollections: true
                         </h5>
                         <p>{{ page.data.abstract }}</p>
                     </div>
-                    <!--
                     <div class="card-footer">
                         <small>{{ page.data.date | date("MMMM Y")}}</small>
                     </div>
-                    -->
                 </div>
-            {% endif %}
-        {% endfor %}
-    </div>
+            </div>
+        {% endif %}
+    {% endfor %}
 </div>
 {% endblock %}
