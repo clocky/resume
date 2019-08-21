@@ -10,7 +10,7 @@ media:
 collaborators: 
  - Jamie Loeb
 thumbnail:
-  - thumbnail-kennyg.jpg
+  - faith_600x600.jpg
 tags: web
 text:
   - I worked in a webmaster capacity working with Kenny G and his management to 

@@ -6,6 +6,8 @@ partner: Byrne Blood Management
 date: 2000-04-03
 abstract: Full-time role in London, supporting the launch of "STEPtacular" and a slew of chart-topping singles.
 headline: Steptacular!
+thumbnail:
+ - steps_600x600.jpg
 collaborators:
  - Jack Wallington
  - Byrne Blood Management

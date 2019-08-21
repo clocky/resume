@@ -1,6 +1,6 @@
 ---
 layout: article.njk
-title: Intel Mobile Internet Device
+title: Intel MID
 client: Skype
 partner: Intel
 date: 2009-01-08

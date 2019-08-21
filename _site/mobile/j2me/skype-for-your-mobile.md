@@ -6,6 +6,8 @@ partner: iSkoot
 date: 2008-04-28
 abstract: Interaction designer for a 'thin-client' Skype experience for Java-powered featurephones.
 headline: J2ME client for Sony Ericsson and Nokia devices.
+thumbnail:
+ - thumbnail-sfym.png
 collaborators:
  - Jaak Parik
  - Oliver Reitalu

@@ -9,6 +9,8 @@ collaborators:
  - The Firm
  - Gayle Boulware
  - Nick Carter
+thumbnail:
+ - millennium_600x600.jpg
 tags: 
  - web
 abstract:

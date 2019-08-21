@@ -1,6 +1,6 @@
 ---
 layout: article.njk
-title: Skype for Business online
+title: Lync online
 client: Microsoft
 partner: Office Design Group
 date: 2015-06-08

@@ -6,6 +6,8 @@ client: Skype
 partner: Samsung
 abstract: Design manager for integrated Skype experience on the 2010 Samsung range of smart TV's
 headline: Balancing native and branded UI
+thumbnail:
+ - thumbnail-samsung.png
 media: 
  - "samsung-tv_1600_c.png"
 tags: hardware

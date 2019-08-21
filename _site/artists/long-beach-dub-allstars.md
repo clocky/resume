@@ -5,6 +5,8 @@ client: ARTISTdirect
 date: 1999-09-28
 abstract: Full-time role in Los Angeles, supporting the launch of debut album "Right Back".
 headline: Sublime and ridiculous
+thumbnail:
+ - rightback_600x600.jpg
 collaborators:
  - JT Katzman
 text:

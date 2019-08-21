@@ -4,6 +4,8 @@ title: Asus EEE Videophone AiGuru SV-1
 client: Skype
 partner: Asus
 date: 2009-01-22
+thumbnail:
+ - thumbnail-asus.png
 abstract: Interaction designer for the entire embedded Linux OS on this consumer-focused standalone videophone.
 headline: The UI was better than the name
 collaborators:

@@ -5,6 +5,8 @@ client: ARTISTdirect
 date: 2000-09-19
 abstract: Freelance role, supporting the launch of the "The Harsh Light Of Day" album.
 headline: The Way
+thumbnail:
+ - fastball_600x600.jpg
 collaborators:
  - Jamie Loeb
 text:

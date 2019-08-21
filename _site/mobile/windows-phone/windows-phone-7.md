@@ -9,6 +9,8 @@ media:
 collaborators:
  - Oliver Reitalu
  - Rick Osterloh
+thumbnail:
+ - thumbnail-wp7.png
 tags:
  - mobile
 headline:

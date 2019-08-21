@@ -6,6 +6,8 @@ partner: ZTE
 date: 2008-08-21
 abstract: Lead designer at Skype, partnering with Hutchison Whampoa's handset team.
 headline: Second-generation of the Skype integrated experience.
+thumbnail:
+ - s2.jpg
 collaborators:
  - Gavin Edmonds
  - David Powell

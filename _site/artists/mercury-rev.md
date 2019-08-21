@@ -12,7 +12,7 @@ collaborators:
   - Jonathan Donahue
   - "Grasshopper" 
 thumbnail:
-  - thumbnail-mercury-rev.jpg
+  - rev_600x600.jpg
 tags: web
 text:
     - After sharing office space with Oasis’ management in London, I was 

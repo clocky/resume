@@ -6,11 +6,14 @@ date: 2013-08-12
 client: Microsoft
 abstract: Design lead for the most downloaded iPad application of all time.
 headline: Blending desktop and mobile paradigms
+thumbnail:
+ - thumbnail-ipad.png
 collaborators:
  - Antonio Pedro Rezende
  - Daniel Winston
  - Jaak Parik
  - Oliver Reitalu
+ - Stuart Bayston
 media:
  - ipad-profile.png
  - ipad-emoticons.png

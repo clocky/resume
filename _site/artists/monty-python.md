@@ -5,15 +5,14 @@ date: 1999-07-04
 client: ARTISTdirect
 partner: Python Monty Pictures
 tags: web
-url: pythonline.com
+thumbnail:
+ - python_600x600.jpg
 headline: Monty Python's Big White Site
 abstract: Webmaster for the Monty Python’s online archive.
 collaborators:
   - Bruce Lampcov
   - Eric Idle
   - Marc Geiger
-thumbnail: 
-  - thumbnail-python.png
 text:
   - The project was in collaboration with their film offshoot Python Monty 
     Pictures to bring Eric Idle’s — but especially Terry Gilliam’s — artwork to 
