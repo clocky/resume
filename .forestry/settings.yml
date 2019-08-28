@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: index.pug
+  label: Resumé
+  match: "**/*"
 - type: heading
   label: Projects
 upload_dir: uploads
