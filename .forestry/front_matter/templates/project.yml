@@ -5,6 +5,9 @@ fields:
 - type: text
   name: layout
   label: layout
+  config:
+    required: false
+  default: article.njk
 - type: text
   name: title
   label: title
@@ -22,7 +25,8 @@ fields:
   label: headline
 - type: list
   name: collaborators
-  label: collaborators
+  label: Collaborators
+  description: Who else worked on this project?
 - type: image_gallery
   name: thumbnail
   label: thumbnail
