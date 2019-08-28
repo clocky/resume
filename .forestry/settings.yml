@@ -4,6 +4,11 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: directory
+  path: artists
+  label: Artists
+  create: all
+  match: "**/*"
 - type: document
   path: index.pug
   label: Resumé
