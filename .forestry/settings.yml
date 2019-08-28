@@ -9,8 +9,8 @@ sections:
   label: Resumé
 - type: heading
   label: Projects
-upload_dir: ''
-public_path: ''
+upload_dir: portfolio
+public_path: "/portfolio"
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
