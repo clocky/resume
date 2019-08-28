@@ -42,3 +42,5 @@ fields:
 - type: image_gallery
   name: media
   label: media
+pages:
+- _site/artists/test-artiste.md
