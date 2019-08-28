@@ -1,0 +1,40 @@
+---
+label: Project
+hide_body: true
+fields:
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: client
+  label: client
+- type: text
+  name: partner
+  label: partner
+- type: text
+  name: headline
+  label: headline
+- type: list
+  name: collaborators
+  label: collaborators
+- type: image_gallery
+  name: thumbnail
+  label: thumbnail
+- type: list
+  name: tags
+  label: tags
+- type: list
+  name: abstract
+  label: abstract
+- type: list
+  name: text
+  label: text
+- type: image_gallery
+  name: media
+  label: media
