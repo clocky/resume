@@ -42,5 +42,14 @@ fields:
 - type: image_gallery
   name: media
   label: media
+- name: body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Body
 pages:
 - _site/artists/test-artiste.md
