@@ -2,8 +2,8 @@
 
 {% block title  %}
 <div class="row">
-    <div class="col-12 border-bottom mb-4 pb-3">
-        <h1 class="text-info">{{ title }}</h1>
+    <div class="col-12 border-bottom mt-4 mb-4 pb-3">
+        <h2 class="text-info">{{ title }}</h2>
         <h4 class="text-dark">{{ page.date | date("MMMM Y") }} • {{ client }}</h4>
     </div>
 </div>
@@ -19,23 +19,25 @@
     <div class="col-lg-8">
         {% for paragraph in text %}
             {% if loop.first %}
-            <p class="lead">{{ paragraph }}</p>
+              <p class="lead">{{ paragraph }}</p>
             {% else %}
-            <p>{{ paragraph }}</p>
+              <p>{{ paragraph }}</p>
             {% endif %}
         {% endfor %}
     </div>
 </div>
 <div class="row mt-4">
-    {% if collaborators %}
-  <div class="col-lg-4 order-lg-1 order-2">
-      <h3 class="text-info font-weight-bold">Collaborators</h3>
-      <ul class="list-unstyled">
-        {% for person in collaborators %}
-          <li class="text-secondary" >{{ person }}</li>
-        {% endfor %}
-      </ul>
-  </div>
+  {% if collaborators %}
+    <div class="col-lg-4 order-lg-1 order-2">
+        <h3 class="text-info font-weight-bold">Collaborators</h3>
+        <ul class="list-unstyled">
+          {% for person in collaborators %}
+            <li class="text-secondary" >
+               {{ person }}
+            </li>
+          {% endfor %}
+        </ul>
+    </div>
   {% else %}
   <div class="col-lg-4 order-lg-1 order-2">
   </div>
@@ -43,34 +45,44 @@
   {% if media.length <= 1 %}
     <div class="col-lg-8 order-lg-2 order-1">
       {% for image in media %}
-        <img class="d-block w-100" src="/assets/{{image}}" />
+          <img class="d-block w-100" src="/assets/{{client | string | lower }}/{{image}}" />
       {% endfor %}
     </div>
   {% else %}
-    <div class="col-lg-8 order-lg-2 order-1 mb-4">
-      <div class="carousel.slide.mt-2.mb-4" id="{{title | slug }}" data-ride="carousel">
-        <ol class="carousel-indicators">
-          {% for n in media %}
-            <li data-target="#{{title | slug}}" data-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active"{% endif %} ></li>
-          {% endfor %}
-        </ol>
-        <div class="carousel-inner">
-          {% for image in media %}
-            <div class="carousel-item {% if loop.first %}active{% endif %}">
-              <img class="d-block w-100" src="/assets/{{ image }}">
-            </div>
-          {% endfor %}
-          <a class="carousel-control-prev" href="#{{title | slug}}" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#{{title |slug}}" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
+
+  <div class="col-lg-8 order-lg-2 order-1 mb-4">
+  <!--Carousel Wrapper-->
+    <div id="{{title | slug }}" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+      <!--Slides-->
+      <div class="carousel-inner" role="listbox">
+        {% for image in media %}
+          <div class="carousel-item {% if loop.first %}active{% endif %}">
+            <img class="d-block w-100" src="/assets/{{ image }}">
+          </div>
+        {% endfor %}
       </div>
-    {% endif %}
+      <!--/.Slides-->
+      <!--Controls-->
+      <a class="carousel-control-prev" href="#{{title | slug }}" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#{{title | slug }}" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <!--/.Controls-->
+      <ol class="carousel-indicators">
+        {% for image in media %}
+          <li data-target="#{{title | slug }}" data-slide-to="{{loop.index0}}" {% if loop.first %}class="active"{% endif %}>
+            <img class="d-block w-100" src="/assets/{{ image }}" class="img-fluid">
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+    <!--/.Carousel Wrapper-->
+  </div>
+  {% endif %}
   </div> 
 </div>
 
