@@ -12,7 +12,8 @@ media:
  - artistdirect/ratm-benefits.png
  - artistdirect/ratm-freedom-fighter.png
  - artistdirect/ratm-album-covers.png
- 
+hero:
+ - /assets/hero/artistdirect/ratm.jpg
 thumbnail:
  - bola_600x600.jpg
 collaborators: 
