@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 layout: article.njk
 title: Sony mylo COM-2
 client: Skype

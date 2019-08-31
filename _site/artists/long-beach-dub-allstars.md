@@ -1,4 +1,6 @@
 ---
+eleventyExcludeFromCollections: true
+
 layout: article.njk
 title: Long Beach Dub Allstars
 client: ARTISTdirect

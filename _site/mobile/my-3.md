@@ -1,4 +1,6 @@
 ---
+eleventyExcludeFromCollections: true
+
 layout: article.njk
 title: My 3
 date: 2003-03-03
@@ -6,7 +8,7 @@ client: Hutchison 3G
 abstract: Full-time web developer role building out self-care tools for the UK's first 3G carrier.
 headline: Empowering customers to be in control 
 media: 
-    - my3_green_1190.png
+  - my3_green_1190.png
 collaborators: 
   - James Griffin
   - Graeme Fowler

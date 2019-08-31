@@ -6,7 +6,13 @@ client: ARTISTdirect
 partner: Tom Morello
 abstract: Full-time role in Los Angeles, designing and maintaining Rage's online presence.
 headline: Activism and archives
-media: ["artistdirect-ratm.png"]
+media: 
+ - artistdirect/ratm-news.png
+ - artistdirect/ratm-action.png
+ - artistdirect/ratm-benefits.png
+ - artistdirect/ratm-freedom-fighter.png
+ - artistdirect/ratm-album-covers.png
+ 
 thumbnail:
  - bola_600x600.jpg
 collaborators: 
