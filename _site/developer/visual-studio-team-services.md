@@ -1,17 +1,18 @@
 ---
+eleventyExcludeFromCollections: true
 layout: article.njk
-title: Office 365
+title: Visual Studio Team Services
 client: Microsoft
 partner: Office Design Group
-date: 2015-06-08
-abstract: Design manager for the initial integration of real-time communications within the Office 365 web suite.
+date: 2018-06-08
+abstract: Design manager for Visual Studio Team Services suite.
 headline: Skype 💕 Office 365
 collaborators:
- - Anna-Leena Brinck
- - Enrique Quiroz Valdez
- - Oliver Scholz
-hero:
- - /assets/hero/microsoft/office365.jpg
+ - Giorgia Paolini
+ - Hemant Kumar
+ - Marisa Parker
+ - Miguel Solorio
+ - Zari Salimnejad
 text:
   - The brief was simple - how do you make a Skype for Business client fit into
     the workflow of a typical Outlook user, but still make it feel like it was

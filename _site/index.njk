@@ -1,0 +1,53 @@
+---
+title: All projects
+eleventyExcludeFromCollections: true
+---
+{% extends "base.njk" %}
+
+{% block title %}
+    {% for page in collections.all | reverse  %}
+
+        <!-- HERO if first in collection -->
+
+        {% if loop.index == 1 %}
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <img class="img-fluid w-100" src="{{page.data.hero}}" />
+                    <h2 class="mt-4"><a href="{{page.url}}" class="text-info">{{page.data.title}}</a></h2>
+                    <p class="lead">{{ page.data.abstract }}</p>
+                </div>
+            </div>
+        {% endif %}
+
+        <!-- open and close second level -->
+
+        {% if loop.index == 2%}
+            <div class="row mt-4">
+        {% endif %}
+        {% if loop.index == 2 or loop.index == 3 %}
+            <div class="col-6 text-left">
+                <img class="img-fluid w-100" src="{{page.data.hero}}" />
+                <h3 class="mt-4"><a href="{{page.url}}" class="text-info">{{page.data.title}}</a></h3>
+                <p class="text-secondary">{{ page.data.abstract }}</p>
+            </div>
+        {% endif %}
+        {% if loop.index == 3 %}
+            </div>
+        {% endif %}
+
+        <!-- open and close second level -->
+        {% if loop.index == 4%}
+        <div class="row">
+        {% endif %}
+        {% if loop.index >= 4 %}
+            <div class="col-3 text-left">
+                <img class="img-fluid w-100" src="{{page.data.hero}}" />
+                <h4 class="mt-4"><a href="{{page.url}}" class="text-info">{{page.data.title}}</a></h4>
+                <p class="text-secondary">{{ page.data.abstract }}</p>
+            </div>
+        {% endif %}
+        {% if loop.index == 8 %}
+        </div> <!-- // row -->
+        {% endif %} 
+    {% endfor %}
+{% endblock %}

@@ -1,4 +1,6 @@
 ---
+eleventyExcludeFromCollections: true
+
 layout: article.njk
 title: Backstreet Boys
 date: 1999-05-18

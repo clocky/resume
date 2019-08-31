@@ -1,0 +1,33 @@
+---
+title: All projects
+eleventyExcludeFromCollections: true
+---
+{% extends "base.njk" %}
+
+{% block title %}
+    {% set current_year = 2019 %}
+    {% for page in collections.all | reverse  %}
+    <div class="row pb-4 mt-4">
+        {% set year = page.data.date | date("YYYY") %}
+        {% if year != current_year %}
+            <div class="offset-1 col-2 text-center">
+                <p class="text-secondary">{{ year }}</p>
+            </div>
+        {% else %}
+            <div class="col-1 offset-2">
+            </div>
+        {% endif %}
+        {% set current_year = year %}
+        <div class="col-3">
+            <a href="{{ page.url }}">
+                <img class="card-img-top" src="{{page.data.hero}}" />
+            </a>
+        </div>
+        <div class="col-5">
+            <p class="text-small text-uppercase text-muted mb-0">{{ page.data.client}}</p>
+            <h3 class="text-info">{{ page.data.title }}</h3>
+            <p>{{ page.data.abstract }}</p>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

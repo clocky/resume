@@ -1,4 +1,6 @@
 ---
+eleventyExcludeFromCollections: true
+
 layout: article.njk
 title: Skype for your Mobile
 client: Skype

@@ -1,4 +1,6 @@
 ---
+eleventyExcludeFromCollections: true
+
 layout: article.njk
 title: 3 X-Series
 client: Skype

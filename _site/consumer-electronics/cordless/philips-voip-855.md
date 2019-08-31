@@ -1,4 +1,6 @@
 ---
+eleventyExcludeFromCollections: true
+
 layout: article.njk
 title: Philips VOIP 855
 client: Skype

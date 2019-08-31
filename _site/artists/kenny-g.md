@@ -1,4 +1,6 @@
 ---
+eleventyExcludeFromCollections: true
+
 layout: article.njk
 title: Kenny G
 date: 1999-11-16
@@ -6,7 +8,7 @@ client: ARTISTdirect
 abstract: Freelance role updating and maintaining Kenny G's online presence. (I only wish I were making this up.)
 headline: The world's first and last saxophone navigation
 media: 
-  - artistdirect-kennyg.png
+  - kenny-g.png
 collaborators: 
  - Jamie Loeb
 thumbnail:

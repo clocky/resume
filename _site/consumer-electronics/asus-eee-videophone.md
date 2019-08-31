@@ -1,4 +1,6 @@
 ---
+eleventyExcludeFromCollections: true
+
 layout: article.njk
 title: Asus EEE Videophone AiGuru SV-1
 client: Skype
@@ -9,10 +11,10 @@ thumbnail:
 abstract: Interaction designer for the entire embedded Linux OS on this consumer-focused standalone videophone.
 headline: The UI was better than the name
 collaborators:
- - Jaak Parik
- - Oliver Reitalu
- - James Bowman
- - Tero Hurskainen
+  - Jaak Parik
+  - Oliver Reitalu
+  - James Bowman
+  - Tero Hurskainen
 text:
   - Announced at CeBIT 2009 and years ahead of the video-calling home appliance
     revival with Amazon's Alexa Show and Facebook's portal, I was the sole

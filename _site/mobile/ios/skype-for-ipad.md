@@ -6,6 +6,8 @@ date: 2013-08-12
 client: Microsoft
 abstract: Design lead for the most downloaded iPad application of all time.
 headline: Blending desktop and mobile paradigms
+hero: 
+ - /assets/hero/skype/ipad.jpg
 thumbnail:
  - thumbnail-ipad.png
 collaborators:

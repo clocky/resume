@@ -1,4 +1,5 @@
 ---
+eleventyExcludeFromCollections: true
 layout: article.njk
 title: 3 Skypephone
 client: Skype

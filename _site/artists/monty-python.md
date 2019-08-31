@@ -1,14 +1,16 @@
 ---
+eleventyExcludeFromCollections: true
+
 layout: article.njk
 title: Monty Python
 date: 1999-07-04
 client: ARTISTdirect
-partner: Python Monty Pictures
+partner: Python (Monty) Pictures
 tags: web
 thumbnail:
  - python_600x600.jpg
 headline: Monty Python's Big White Site
-abstract: Webmaster for the Monty Python’s online archive.
+abstract: Webmaster for the Monty Python’s online archive of Terry Gilliam artwork and Eric Idle's live shows.
 collaborators:
   - Bruce Lampcov
   - Eric Idle
@@ -21,6 +23,7 @@ text:
     was incredible openness to sharing dozens of files of scanned in Gilliam 
     artwork used on the original BBC shows, yet little or no direction on ongoing 
     content, other than the occasional Eric Idle tour plug.
+  - The main menu illustration below was hand-coloured by myself.
 media:
- - artistdirect-pythonline.png
+ - pythonline.png
 ---
