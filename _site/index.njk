@@ -1,5 +1,5 @@
 ---
-title: All projects
+title: Portfolio of Mark McLaughlin
 eleventyExcludeFromCollections: true
 ---
 {% extends "base.njk" %}
@@ -13,7 +13,15 @@ eleventyExcludeFromCollections: true
             <div class="row mt-4">
                 <div class="col-lg-12">
                     <a href="{{page.url}}">
-                        <img class="img-fluid w-100" src="{{page.data.hero}}" alt="{{page.data.title}}"/>
+                        <picture>
+                        {% set size = ["xl", "l", "m", "s"] %}
+                        {% for breakpoint in [1200, 992, 768, 576] %}
+                          <source 
+                            srcset="/assets/hero/{{page.data.client | slug}}/{{page.data.title | slug}}_{{size[loop.index0]}}.jpg"
+                            media="(min-width: {{ breakpoint }}px)">
+                         {% endfor %}
+                        <img class="img-fluid w-100" src="/assets/hero/{{page.data.client | slug}}/{{page.data.title | slug}}_m.jpg" alt="Preview of {{page.data.title}}, designed for {{page.data.client}}."/>
+                        </picture>
                     </a>
                     <h2 class="mt-4"><a href="{{page.url}}" class="text-info">{{page.data.title}}</a></h2>
                     <p class="lead">{{ page.data.abstract }}</p>
