@@ -11,8 +11,10 @@ eleventyExcludeFromCollections: true
 
         {% if loop.index == 1 %}
             <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <img class="img-fluid w-100" src="{{page.data.hero}}" />
+                <div class="col-lg-12">
+                    <a href="{{page.url}}">
+                        <img class="img-fluid w-100" src="{{page.data.hero}}" alt="{{page.data.title}}"/>
+                    </a>
                     <h2 class="mt-4"><a href="{{page.url}}" class="text-info">{{page.data.title}}</a></h2>
                     <p class="lead">{{ page.data.abstract }}</p>
                 </div>
@@ -22,13 +24,15 @@ eleventyExcludeFromCollections: true
         <!-- open and close second level -->
 
         {% if loop.index == 2%}
-            <div class="row mt-4">
+            <div class="row mt-4 mb-4">
         {% endif %}
         {% if loop.index == 2 or loop.index == 3 %}
-            <div class="col-6 text-left">
-                <img class="img-fluid w-100" src="{{page.data.hero}}" />
+            <div class="col-lg-6 col-md-6">
+                <a href="{{page.url}}">
+                    <img class="img-fluid w-100" src="{{page.data.hero}}" alt="{{page.data.title}}" />
+                </a>
                 <h3 class="mt-4"><a href="{{page.url}}" class="text-info">{{page.data.title}}</a></h3>
-                <p class="text-secondary">{{ page.data.abstract }}</p>
+                <p class="text-secondary lead">{{ page.data.abstract }}</p>
             </div>
         {% endif %}
         {% if loop.index == 3 %}
@@ -40,13 +44,15 @@ eleventyExcludeFromCollections: true
         <div class="row">
         {% endif %}
         {% if loop.index >= 4 %}
-            <div class="col-3 text-left">
-                <img class="img-fluid w-100" src="{{page.data.hero}}" />
+            <div class="col-lg-4">
+                <a href="{{page.url}}">
+                    <img class="img-fluid w-100" src="{{page.data.hero}}" alt="{{page.data.title}}" />
+                </a>
                 <h4 class="mt-4"><a href="{{page.url}}" class="text-info">{{page.data.title}}</a></h4>
                 <p class="text-secondary">{{ page.data.abstract }}</p>
             </div>
         {% endif %}
-        {% if loop.index == 8 %}
+        {% if loop.index == 7 %}
         </div> <!-- // row -->
         {% endif %} 
     {% endfor %}
