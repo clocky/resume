@@ -9,8 +9,6 @@ collaborators:
  - The Firm
  - Gayle Boulware
  - Nick Carter
-thumbnail:
- - millennium_600x600.jpg
 hero: 
  - true
 tags: 
@@ -32,9 +30,9 @@ text:
    every band member.
 
 media:
- - artistdirect-bsb-home.png
- - artistdirect-bsb-nick.png
- - artistdirect-bsb-kevin.png
- - artistdirect-bsb-tour.png
- - artistdirect-bsb-aj.png
+ - artistdirect/backstreetboys-home.png
+ - artistdirect/backstreetboys-nick.png
+ - artistdirect/backstreetboys-kevin.png
+ - artistdirect/backstreetboys-tour.png
+ - artistdirect/backstreetboys-aj.png
 ---
