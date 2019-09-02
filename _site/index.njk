@@ -1,20 +1,43 @@
 ---
-title: All projects
+title: Portfolio of Mark McLaughlin
 eleventyExcludeFromCollections: true
 ---
 {% extends "base.njk" %}
 
+{% macro img(title, client) %}
+    {% set prefix = "/assets/hero/" + client | slug + "/" + title | slug %}
+    <img 
+        class="img-fluid w-100"
+        src="{{ prefix }}_800.jpg"
+        srcset="
+            {%- for width in [1600, 1200, 800, 400] -%}
+            {{prefix}}_{{width}}w.jpg {{width}}w{% if not loop.last %},{% endif %}
+            {%- endfor -%}"
+        alt="Preview of {{ title }}, designed for {{ client }}."
+    />
+{% endmacro %}
+
 {% block title %}
+    {% set mobile = "d-xs-block d-sm-block d-md-none d-lg-none" %}
+    {% set tablet = "d-none d-md-block d-lg-block" %}
     {% for page in collections.all | reverse  %}
 
         <!-- HERO if first in collection -->
 
         {% if loop.index == 1 %}
             <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <img class="img-fluid w-100" src="{{page.data.hero}}" />
-                    <h2 class="mt-4"><a href="{{page.url}}" class="text-info">{{page.data.title}}</a></h2>
-                    <p class="lead">{{ page.data.abstract }}</p>
+                <div class="col-lg-12 col-md-12">
+                    <a href="{{page.url}}">
+                        {{ img(page.data.title, page.data.client) }}
+                    </a>
+                    <h2 class="mt-4 {{tablet}}">
+                        <a href="{{page.url}}" class="text-info">{{page.data.title}}</a>
+                    </h2>
+                    <p class="lead text-secondary {{tablet}}">{{ page.data.abstract }}</p>
+                    <h3 class="mt-4 {{mobile}}">
+                        <a href="{{page.url}}" class="text-info">{{page.data.title}}</a>
+                    </h3>
+                    <p class="text-secondary {{mobile}}">{{ page.data.abstract }}</p>
                 </div>
             </div>
         {% endif %}
@@ -22,11 +45,13 @@ eleventyExcludeFromCollections: true
         <!-- open and close second level -->
 
         {% if loop.index == 2%}
-            <div class="row mt-4">
+            <div class="row mt-4 mb-4">
         {% endif %}
         {% if loop.index == 2 or loop.index == 3 %}
-            <div class="col-6 text-left">
-                <img class="img-fluid w-100" src="{{page.data.hero}}" />
+            <div class="col-lg-6 col-md-6">
+                <a href="{{page.url}}">
+                    {{ img(page.data.title, page.data.client) }}
+                </a>
                 <h3 class="mt-4"><a href="{{page.url}}" class="text-info">{{page.data.title}}</a></h3>
                 <p class="text-secondary">{{ page.data.abstract }}</p>
             </div>
@@ -40,13 +65,15 @@ eleventyExcludeFromCollections: true
         <div class="row">
         {% endif %}
         {% if loop.index >= 4 %}
-            <div class="col-3 text-left">
-                <img class="img-fluid w-100" src="{{page.data.hero}}" />
-                <h4 class="mt-4"><a href="{{page.url}}" class="text-info">{{page.data.title}}</a></h4>
+            <div class="col-lg-4 col-md-6">
+                <a href="{{page.url}}">
+                    {{ img(page.data.title, page.data.client) }}
+                </a>
+                <h3 class="mt-4"><a href="{{page.url}}" class="text-info">{{page.data.title}}</a></h3>
                 <p class="text-secondary">{{ page.data.abstract }}</p>
             </div>
         {% endif %}
-        {% if loop.index == 8 %}
+        {% if loop.index == 6 %}
         </div> <!-- // row -->
         {% endif %} 
     {% endfor %}

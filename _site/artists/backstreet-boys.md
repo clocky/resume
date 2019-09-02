@@ -1,6 +1,4 @@
 ---
-eleventyExcludeFromCollections: true
-
 layout: article.njk
 title: Backstreet Boys
 date: 1999-05-18
@@ -11,12 +9,13 @@ collaborators:
  - The Firm
  - Gayle Boulware
  - Nick Carter
-thumbnail:
- - millennium_600x600.jpg
+hero: 
+ - true
 tags: 
  - web
 abstract:
- - Freelance role designing and maintaining the Backstreet Boys website.
+ - Freelance role designing and maintaining the Backstreet Boys website for the
+   release of their record-breaking "Millennium" album.
 text:
  - Working with Los Angeles management team The Firm, I took on what started as 
    a freelance and ultimately a full-time role managing the Backstreet Boys 
@@ -31,9 +30,9 @@ text:
    every band member.
 
 media:
- - artistdirect-bsb-home.png
- - artistdirect-bsb-nick.png
- - artistdirect-bsb-kevin.png
- - artistdirect-bsb-tour.png
- - artistdirect-bsb-aj.png
+ - artistdirect/backstreetboys-home.png
+ - artistdirect/backstreetboys-nick.png
+ - artistdirect/backstreetboys-kevin.png
+ - artistdirect/backstreetboys-tour.png
+ - artistdirect/backstreetboys-aj.png
 ---

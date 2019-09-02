@@ -4,6 +4,19 @@ eleventyExcludeFromCollections: true
 ---
 {% extends "base.njk" %}
 
+{% macro img(title, client) %}
+    {% set prefix = "/assets/hero/" + client | slug + "/" + title | slug %}
+    <img 
+        class="img-fluid w-100"
+        src="{{ prefix }}_800.jpg"
+        srcset="
+            {%- for width in [1600, 1200, 800, 400] -%}
+            {{prefix}}_{{width}}w.jpg {{width}}w{% if not loop.last %},{% endif %}
+            {%- endfor -%}"
+        alt="Preview of {{ title }}, designed for {{ client }}."
+    />
+{% endmacro %}
+
 {% block title %}
     {% set current_year = 2019 %}
     {% for page in collections.all | reverse  %}
@@ -20,7 +33,7 @@ eleventyExcludeFromCollections: true
         {% set current_year = year %}
         <div class="col-3">
             <a href="{{ page.url }}">
-                <img class="img-fluid" src="{{page.data.hero}}" />
+                {{ img(page.data.title, page.data.client) }}
             </a>
         </div>
         <div class="col-5">

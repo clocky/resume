@@ -13,9 +13,7 @@ media:
  - artistdirect/ratm-freedom-fighter.png
  - artistdirect/ratm-album-covers.png
 hero:
- - /assets/hero/artistdirect/ratm.jpg
-thumbnail:
- - bola_600x600.jpg
+ - true
 collaborators: 
   - Jake Sexton
   - Mark Levien
