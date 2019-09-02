@@ -1,6 +1,4 @@
 ---
-eleventyExcludeFromCollections: true
-
 layout: article.njk
 title: Backstreet Boys
 date: 1999-05-18
@@ -13,10 +11,13 @@ collaborators:
  - Nick Carter
 thumbnail:
  - millennium_600x600.jpg
+hero: 
+ - true
 tags: 
  - web
 abstract:
- - Freelance role designing and maintaining the Backstreet Boys website.
+ - Freelance role designing and maintaining the Backstreet Boys website for the
+   release of their record-breaking "Millennium" album.
 text:
  - Working with Los Angeles management team The Firm, I took on what started as 
    a freelance and ultimately a full-time role managing the Backstreet Boys 
