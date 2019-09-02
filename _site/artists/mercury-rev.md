@@ -1,11 +1,9 @@
 ---
-eleventyExcludeFromCollections: true
-
 layout: article.njk
 title: Mercury Rev
 date: 2000-04-08
 client: Ignition Management
-abstract: Freelance role in London, launching mercuryrev.net for the release of Deserter's Songs.
+abstract: Freelance role in London, launching mercuryrev.net after the critical success of "Deserter's Songs" in the UK.
 headline: Hand-written ephemera and Americana
 media: 
   - artistdirect/mercury-rev-home.png
@@ -15,13 +13,13 @@ collaborators:
   - Alec McKinlay
   - Jonathan Donahue
   - "Grasshopper" 
-thumbnail:
-  - rev_600x600.jpg
 tags: web
+hero: 
+  - true
 text:
     - After sharing office space with Ignition Management in London, best known
-      for being the long-time managers of Oasis, I was asked by Marcus Russell
-      to put together a small site for one of their other artists, 
+      for being the long-time managers of Oasis, I was asked by the legendary 
+      Marcus Russell to put together a small site for one of their other artists, 
       Mercury Rev.
 
     - Supporting their standout album, “Deserter’s Songs” (NME's 1998 Album of 
