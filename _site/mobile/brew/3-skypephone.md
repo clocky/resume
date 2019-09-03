@@ -1,32 +1,40 @@
 ---
-eleventyExcludeFromCollections: true
 layout: article.njk
 title: 3 Skypephone
 client: Skype
 partner: Amoi
 date: 2007-10-29
-abstract: Lead designer at Skype, partnering with Hutchison Whampoa's handset team.
+abstract: Interaction designer for the integrated Skype client experience on our branded handset, partnering with Hutchison Whampoa's handset team.
 headline: The first integrated Skype cellphone experience
 collaborators:
- - Gavin Edmonds
- - David Powell
- - Bina Garden
- - Justin Buck
-thumbnail:
- - thumbnail-skypephone.jpg
-text:
-  - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ultricies tristique
-    nulla aliquet enim tortor at auctor urna nunc. 
-  - Suspendisse potenti nullam ac tortor vitae purus faucibus ornare
-    suspendisse. Scelerisque felis imperdiet proin fermentum leo vel orci porta.
-  - Sit amet justo donec enim diam vulputate ut pharetra sit. Enim nunc faucibus
-    a pellentesque sit amet. Diam quis enim lobortis scelerisque fermentum dui
-    faucibus. 
-  - Aliquam eleifend mi in nulla posuere. Et netus et malesuada fames ac turpis
-    egestas integer. Velit euismod in pellentesque massa placerat.
+  - Bina Garden
+  - David Powell
+  - Gavin Edmonds
+  - Justin Buck
+  - Kevin Joyce
+  - Oliver Reitalu
+hero: true
 media:
-  - _placeholder.png
+  - skype/3-skypephone.png
+  - skype/3-skypephone-hutchison.png
+  - skype/3-skypephone-skype.png
+  - skype/3-skypephone-italia.png
+  - skype/3-skypephone-australia.png
+text:
+  - Developed in co-operation with the Hutchison Whampoa global handset team,
+    the "3 Skypephone" was the first ever integrated Skype experience on a
+    mobile device, only possible by co-operating with a forward-looking mobile
+    operator.
+  - Collaborating directly with Amoi, the handset OEM, the team at Skype created 
+    custom iconography that mapped to the default style of the phone.
+  - The core technology was based on a Qualcomm-powered BREW client developed
+    by iSkoot in Israel; over the course of multiple in-person workshops in
+    Jerusalem and London, the team created a first-class embedded client that
+    seamlessly moved between PSTN and VoIP calling.
+  - The device was launched globally in 2007 across all of 3's core markets in
+    the UK, Sweden, Italy and Australia and was awarded a "Highly Commended" 
+    rating in the 2008 GSMA awards in the the Best Mobile Handset or Device category.
 tags:
   - mobile
+  - hardware
 ---
