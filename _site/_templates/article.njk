@@ -1,17 +1,29 @@
 {% extends "base.njk" %}
 
 {% block title  %}
+<!-- title -->
+
 <div class="row">
     <div class="col-12 border-bottom mt-4 mb-4 pb-3">
         <h2 class="text-info">{{ title }}</h2>
         <h4 class="text-dark">{{ page.date | date("MMMM Y") }} • {{ client }}</h4>
     </div>
 </div>
+
+<!-- //title -->
+
+<!-- headline -->
+
 <div class="row">
     <div class="col-lg-8 offset-lg-4">
         <h2>{{ headline }}</h2>
     </div>
 </div>
+
+<!-- //headline -->
+
+<!-- lead -->
+
 <div class="row">
     <div class="col-lg-4">
         <p class="lead text-secondary">{{ abstract }}</p>
@@ -26,6 +38,10 @@
         {% endfor %}
     </div>
 </div>
+<!-- //lead -->
+
+<!-- collaborator -->
+
 <div class="row mt-4">
   {% if collaborators %}
     <div class="col-lg-4 order-lg-1 order-2">
@@ -57,7 +73,7 @@
       <div class="carousel-inner" role="listbox">
         {% for image in media %}
           <div class="carousel-item {% if loop.first %}active{% endif %}">
-            <img class="d-block w-100" src="/assets/{{ image }}">
+            <img class="d-block w-100" src="/assets/{{ image }}" alt="Image {{loop.index}} of {{loop.length}} of the {{ title }} project">
           </div>
         {% endfor %}
       </div>
@@ -75,13 +91,12 @@
       <ol class="carousel-indicators">
         {% for image in media %}
           <li data-target="#{{title | slug }}" data-slide-to="{{loop.index0}}" {% if loop.first %}class="active"{% endif %}>
-            <img class="d-block w-100" src="/assets/{{ image }}" class="img-fluid">
+            <img class="d-block w-100 img-fluid" src="/assets/{{ image }}">
           </li>
         {% endfor %}
       </ol>
     </div>
     <!--/.Carousel Wrapper-->
-  </div>
   {% endif %}
   </div> 
 </div>
