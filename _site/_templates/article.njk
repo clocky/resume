@@ -91,7 +91,7 @@
       <ol class="carousel-indicators">
         {% for image in media %}
           <li data-target="#{{title | slug }}" data-slide-to="{{loop.index0}}" {% if loop.first %}class="active"{% endif %}>
-            <img class="d-block w-100 img-fluid" src="/assets/{{ image }}">
+            <img class="d-block w-100 img-fluid" src="/assets/{{ image }}" alt="Thumbnail {{loop.index}} of {{loop.length}}">
           </li>
         {% endfor %}
       </ol>
