@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
 {% macro img(title, client) %}
     {% set prefix = "/assets/hero/" + client | slug + "/" + title | slug %}
     <img 
-        class="img-fluid w-100"
+        class="img-thumbnail"
         src="{{ prefix }}_800.jpg"
         srcset="
             {%- for width in [1600, 1200, 800, 400] -%}
@@ -38,7 +38,9 @@ eleventyExcludeFromCollections: true
         </div>
         <div class="col-5">
             <p class="text-small text-uppercase text-muted mb-0">{{ page.data.client}}</p>
-            <h3 class="text-info">{{ page.data.title }}</h3>
+            <h3 class="text-info">
+                <a href="{{ page.url }}" class="text-info">{{ page.data.title }}</a>
+            </h3>
             <p>{{ page.data.abstract }}</p>
         </div>
     </div>
