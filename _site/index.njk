@@ -14,7 +14,7 @@ eleventyExcludeFromCollections: true
                 media="(min-width: {{breakpoint[loop.index0]}}px)"
             />
         {% endfor -%}
-        <img class="img-fluid w-100" src="{{prefix}}_800w.jpg" alt="Preview of {{ title }}, designed by Mark McLaughlin for {{ client }}.">
+        <img class="img-fluid" src="{{prefix}}_800w.jpg" alt="Preview of {{ title }}, designed by Mark McLaughlin for {{ client }}.">
     </picture>
 {% endmacro %}
 
@@ -60,7 +60,7 @@ eleventyExcludeFromCollections: true
             <!-- // second-row -->
         {% endif %}
 
-        {% if loop.index0 % 3 == 0 and loop.index0 >= 3 %}
+        {% if loop.index0 == 3 %}
         <!-- BOTTOM ROWS -->
         <div class="row">
         {% endif %}
@@ -73,8 +73,6 @@ eleventyExcludeFromCollections: true
                 <p class="text-secondary">{{ page.data.abstract }}</p>
             </div>
         {% endif %}
-        {% if loop.index0 % 3 == 2  and loop.index0 >= 3 %}
-        </div> <!-- // row -->
-        {% endif %} 
     {% endfor %}
+    </div> <!-- // row -->
 {% endblock %}
