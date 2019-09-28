@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "serve": "eleventy --serve",
-    "forestry:preview": "eleventy --serve",
     "build": "eleventy"
   },
   "repository": {
