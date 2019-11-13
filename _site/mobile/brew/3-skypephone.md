@@ -15,11 +15,11 @@ collaborators:
   - Oliver Reitalu
 hero: true
 media:
-  - skype/3-skypephone.png
-  - skype/3-skypephone-hutchison.png
-  - skype/3-skypephone-skype.png
-  - skype/3-skypephone-italia.png
-  - skype/3-skypephone-australia.png
+  - 3-skypephone.png
+  - 3-skypephone-hutchison.png
+  - 3-skypephone-skype.png
+  - 3-skypephone-italia.png
+  - 3-skypephone-australia.png
 text:
   - Developed in co-operation with the Hutchison Whampoa global handset team,
     the "3 Skypephone" was the first ever integrated Skype experience on a

@@ -6,8 +6,8 @@ client: Ignition Management
 abstract: Freelance role in London, launching mercuryrev.net after the critical success of "Deserter's Songs" in the UK.
 headline: Hand-written ephemera and Americana
 media: 
-  - artistdirect/mercury-rev-home.png
-  - artistdirect/mercury-rev-hello.png
+  - mercury-rev-home.png
+  - mercury-rev-hello.png
 collaborators: 
   - Marcus Russell
   - Alec McKinlay
