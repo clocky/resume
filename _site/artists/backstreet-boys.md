@@ -30,9 +30,9 @@ text:
    every band member.
 
 media:
- - artistdirect/backstreetboys-home.png
- - artistdirect/backstreetboys-nick.png
- - artistdirect/backstreetboys-kevin.png
- - artistdirect/backstreetboys-tour.png
- - artistdirect/backstreetboys-aj.png
+ - backstreetboys-home.png
+ - backstreetboys-nick.png
+ - backstreetboys-kevin.png
+ - backstreetboys-tour.png
+ - backstreetboys-aj.png
 ---
