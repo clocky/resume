@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
         class="img-thumbnail"
         src="{{ prefix }}_800.jpg"
         srcset="
-            {%- for width in [1600, 1200, 800, 400] -%}
+            {%- for width in [800, 400] -%}
             {{prefix}}_{{width}}w.jpg {{width}}w{% if not loop.last %},{% endif %}
             {%- endfor -%}"
         alt="Preview of {{ title }}, designed for {{ client }}."
@@ -24,7 +24,7 @@ eleventyExcludeFromCollections: true
         {% set year = page.data.date | date("YYYY") %}
         {% if year != current_year %}
             <div class="offset-1 col-2 text-center">
-                <p class="text-secondary">{{ year }}</p>
+                <h3 class="heading-3 text-secondary">{{ year }}</h3>
             </div>
         {% else %}
             <div class="col-1 offset-2">
