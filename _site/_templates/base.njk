@@ -24,7 +24,7 @@
   </head>
   <body>
     {% include "header.njk" %}
-    <div class="container">
+    <div class="container" role="main" aria-label="Content">
         {% block title %}
         {% endblock %}
         {{ content | safe }}

@@ -4,8 +4,8 @@
         <div class="row pt-3">
         {% for category, pages in collections %}
             {% if category != "all" %}
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <h5 class="text-dark font-weight-bold">{{ category | capitalize }}</h5>
+            <div class="col-lg-3 col-md-4 col-sm-6" role="navigation" aria-labelledby="category-{{ category | slug}}">
+                <h5 class="text-dark font-weight-bold" id="category-{{ category | slug }}">{{ category | capitalize }}</h5>
                 <ul class="list-unstyled">
                     {%- for page in pages | reverse -%}
                         <li>
@@ -21,7 +21,7 @@
             {% endif %}
         {% endfor %}
         </div>
-        <div class="row">
+        <div class="row" role="contentinfo">
             <div class="col-12 text-left">
                 <p>
                 <small>
