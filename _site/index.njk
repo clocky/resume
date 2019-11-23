@@ -4,17 +4,19 @@ eleventyExcludeFromCollections: true
 ---
 {% extends "base.njk" %}
 
-{% macro picture(title, client) %}
+{% macro picture(title, client, maximum='1200') %}
     {% set prefix = "/assets/hero/" + client | slug + "/" + title | slug %}
     <picture>
         {% set breakpoint = [1200, 992, 768, 576] %}
         {%- for width in [1600, 1200, 800, 400] -%}
+            {% if width < maximum %}
             <source 
                 srcset="{{prefix}}_{{width}}w.jpg"
                 media="(min-width: {{breakpoint[loop.index0]}}px)"
             />
+            {% endif %}
         {% endfor -%}
-        <img class="img-fluid" src="{{prefix}}_800w.jpg" alt="Preview of {{ title }}, designed by Mark McLaughlin for {{ client }}.">
+        <img class="img-fluid" src="{{prefix}}_{{maximum}}w.jpg" alt="Preview of {{ title }}, designed by Mark McLaughlin for {{ client }}.">
     </picture>
 {% endmacro %}
 
@@ -65,7 +67,7 @@ eleventyExcludeFromCollections: true
         {% if loop.index == 2 or loop.index == 3 %}
             <div class="col-lg-6 col-md-6">
                 <a href="{{page.url}}">
-                    {{ picture(page.data.title, page.data.client) }}
+                    {{ picture(page.data.title, page.data.client, 1200) }}
                 </a>
                 <h3 class="mt-4"><a href="{{page.url}}" class="text-info">{{page.data.title}}</a></h3>
                 <p class="text-secondary">{{ page.data.abstract }}</p>
@@ -83,7 +85,7 @@ eleventyExcludeFromCollections: true
         {% if loop.index >= 4 %}
             <div class="col-lg-4 col-md-6">
                 <a href="{{page.url}}">
-                    {{ picture(page.data.title, page.data.client) }}
+                    {{ picture(page.data.title, page.data.client, 800) }}
                 </a>
                 <h3 class="mt-3"><a href="{{page.url}}" class="text-info">{{page.data.title}}</a></h3>
                 <p class="text-secondary">{{ page.data.abstract }}</p>
