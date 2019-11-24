@@ -1,5 +1,5 @@
 ---
-eleventyExcludeFromCollections: true
+eleventyExcludeFromCollections: false
 
 layout: article.njk
 title: Fastball
@@ -7,8 +7,6 @@ client: ARTISTdirect
 date: 2000-09-19
 abstract: Freelance role, supporting the launch of the "The Harsh Light Of Day" album.
 headline: The Way
-thumbnail:
- - fastball_600x600.jpg
 collaborators:
  - Jamie Loeb
 text:
@@ -17,6 +15,6 @@ text:
     pull together a 'retro' themed site to support the lanch of their 2000
     release, "The Harsh Light Of Day"
 media:
-  - fastball-home.png
+  - fastball.png
 tags: web
 ---
