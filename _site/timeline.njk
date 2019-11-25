@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
     {% set prefix = "/assets/hero/" + client | slug + "/" + title | slug %}
     <img 
         class="img-thumbnail"
-        src="{{ prefix }}_800.jpg"
+        src="{{ prefix }}_400w.jpg"
         srcset="
             {%- for width in [800, 400] -%}
             {{prefix}}_{{width}}w.jpg {{width}}w{% if not loop.last %},{% endif %}
