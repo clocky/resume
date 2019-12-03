@@ -10,12 +10,11 @@ headline: Design systems for developer services
 collaborators:
  - Giorgia Paolini
  - Hemant Kumar
+ - Inayaili de León Persson
  - Marisa Parker
  - Miguel Solorio
  - Vinicius Depizzol
  - Zari Salimnejad
-hero:
- - /assets/hero/microsoft/office365.jpg
 text:
   - During the transition of the Visual Studio Team Services product to the
     rebranded Azure DevOps suite, I managed the team that oversaw the roll
@@ -29,16 +28,50 @@ text:
 thumbnail:
   - thumbnail-0365.png
 media:
-  - devops-acrylic.png
-  - devops-depth.png
-  - devops-panels.png
-  - devops-tooltips.png
-  - devops-textfields.png
+  - devops-pipeline.png
+  - devops-save-run.png
 tags: 
  - applications
 ---
 
 .container
+  .row.mt-5.mb-0
+    .col-lg-8.offset-lg-4
+      h3 Everything is a list, sort of.
+      p 
+        | One of the key discoveries during the exploration phase of the project
+        | was that almost everything in the product operated on the concept of
+        | a list or collection of objects - be they bugs, files, work items or
+        | test cases. 
+
+  .row.mt-4.mb-4
+    .col-lg-12
+      img(src="/assets/microsoft/devops-tables.png" class="img-fluid shadow")
+
+  .row.mt-4.mb-4
+    .col-lg-8.offset-lg-4
+      p
+        | As a result, the team took particular care in defining every known
+        | scenario in the product for tabular data, and especially defining
+        | accessibile and visually differentiated styles for each type of 
+        | object to be used throughout the different parts of the product.
+
+
+  .row.mt-4.mb-4
+    .col-lg-8.offset-lg-4
+      h3 Building and maintaining the content
+      p 
+        | During the development and implementation of the design system, we 
+        | took advantage of the recent acquisition of GitHub to create an open 
+        | backlog that allowed designers from all our locations to make requests
+        | and ask questions asynchronously - and there are no stupid questions -
+        | with a dedicated designer helping triage and understand requirements.
+
+  .row.mt-4.mb-4
+    .col-lg-8.offset-lg-4
+      img(src="/assets/microsoft/codex-github.png" class="img-fluid shadow-sm")
+
+
   .row.mt-4.mb-4
     .col-lg-8.offset-lg-4
       h3 Centralising design components 
@@ -50,6 +83,12 @@ tags:
         | redrawing the interface of the product in their own personal design systems
         | in Sketch, Adobe XD or even Visio.
 
+  .row.mt-4.mb-4
+    .col-lg-8.offset-lg-4
+      img(src="/assets/microsoft/codex-design-system.png" class="img-fluid shadow-sm")
+
+  .row.mt-4.mb-4
+    .col-lg-8.offset-lg-4
       p 
         | As the first team at Microsoft to adopt Figma for a shipping product, our use of
         | Team Libraries in a distributed team was groundbreaking within Microsoft. As
