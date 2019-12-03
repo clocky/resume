@@ -61,14 +61,14 @@
   {% if media.length <= 1 %}
     <div class="col-lg-8 order-lg-2 order-1">
       {% for image in media %}
-          <img class="d-block w-100" src="/assets/{{client | string | slug }}/{{image}}" />
+          <img class="d-block w-100 shadow-sm" src="/assets/{{client | string | slug }}/{{image}}" />
       {% endfor %}
     </div>
   {% else %}
 
   <div class="col-lg-8 order-lg-2 order-1 mb-4">
   <!--Carousel Wrapper-->
-    <div id="{{title | slug }}" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
+    <div id="{{title | slug }}" class="carousel slide carousel-fade carousel-thumbnails shadow-sm" data-ride="carousel">
       <!--Slides-->
       <div class="carousel-inner" role="listbox">
         {% for image in media %}
