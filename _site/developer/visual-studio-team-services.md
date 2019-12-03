@@ -26,7 +26,7 @@ thumbnail:
 media:
   - office-365.png
 tags: 
- - applications
+ - desktop
 video:
  - https://www.youtube.com/watch?v=Hm8FYuvqXV8
 ---
