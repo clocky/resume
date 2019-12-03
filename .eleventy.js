@@ -13,6 +13,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("_site/apple-touch0-icon.png");
   eleventyConfig.addPassthroughCopy("_site/safari-pinned-tab.svg");
 
+  eleventyConfig.addPassthroughCopy("_site/robots.txt");
   eleventyConfig.addPassthroughCopy("_site/site.webmanifest");
 
   eleventyConfig.addTransform("pretty", function(content, outputPath) {
