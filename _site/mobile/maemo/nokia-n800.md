@@ -1,5 +1,5 @@
 ---
-eleventyExcludeFromCollections: true
+eleventyExcludeFromCollections: false
 
 layout: article.njk
 title: Skype for Nokia N800
@@ -12,17 +12,15 @@ thumbnail:
  - thumbnail-n800.png
 collaborators:
  - Fjord
+ - Nokia
 text:
-  - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ultricies tristique
-    nulla aliquet enim tortor at auctor urna nunc. 
-  - Suspendisse potenti nullam ac tortor vitae purus faucibus ornare
-    suspendisse. Scelerisque felis imperdiet proin fermentum leo vel orci porta.
-  - Sit amet justo donec enim diam vulputate ut pharetra sit. Enim nunc faucibus
-    a pellentesque sit amet. Diam quis enim lobortis scelerisque fermentum dui
-    faucibus. 
-  - Aliquam eleifend mi in nulla posuere. Et netus et malesuada fames ac turpis
-    egestas integer. Velit euismod in pellentesque massa placerat.
+- Working with Nokia's Maemo (later, MeeGo) team in Helsinki, Finland, I was the
+  interaction designer for a standalone Skype application on their N800 and N810
+  "Internet Tablet" devices.
+- There were some unique aspects of the project in terms of keeping a somewhat
+  familiar Windows feel to  the application - it was loosely based on our
+  Windows Mobile app - while ensuring the app worked equally well with the
+  hardware keys and the in-box stylus. 
 media:
   - skype-n800-stylus.jpg
 tags:
