@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build:eleventy && npm run build:parcel",
     "serve": "eleventy --serve",
-    "build:clean": "rm -rf .cache dist public",
+    "build:clean": "rm -rf dist public",
     "build:eleventy": "eleventy",
     "build:parcel": "parcel build public/**/*.html --log-level 3 --detailed-report 10"
   },
@@ -29,7 +29,6 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
-    "popper.js": "^1.16.0",
-    "webpack": "^4.41.5"
+    "popper.js": "^1.16.0"
   }
 }
