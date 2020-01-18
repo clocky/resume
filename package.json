@@ -4,9 +4,11 @@
   "description": "Mark McLaughlin's resumé and portfolio",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build:eleventy && npm run build:parcel",
+    "build": "run-s build:*",
+    "clean": "run-p *:clean",
     "serve": "eleventy --serve",
-    "build:clean": "rm -rf dist public",
+    "parcel:clean": "rimraf .cache",
+    "build:clean": "rimraf dist public",
     "build:eleventy": "eleventy",
     "build:parcel": "parcel build public/**/*.html --log-level 3 --detailed-report 10"
   },
@@ -20,8 +22,10 @@
     "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "moment": "^2.24.0",
+    "npm-run-all": "^4.1.5",
     "parcel-bundler": "^1.12.4",
-    "pretty": "^2.0.0"
+    "pretty": "^2.0.0",
+    "rimraf": "^3.0.0"
   },
   "resolutions": {
     "lodash": "^4.17.5"
