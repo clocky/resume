@@ -6,6 +6,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy({"src/_assets/favicon/": "/"});
+  eleventyConfig.addPassthroughCopy({"src/_assets/css/": "/css"});
 
   eleventyConfig.addTransform("pretty", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
