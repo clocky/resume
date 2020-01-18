@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: true
 {% extends "base.njk" %}
 
 {% macro picture(title, client, maximum='1200') %}
-    {% set prefix = "/assets/hero/" + client | slug + "/" + title | slug %}
+    {% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
     <picture>
         {% set breakpoint = [1200, 992, 768, 576] %}
         {%- for width in [1600, 1200, 800, 400] -%}
@@ -21,7 +21,7 @@ eleventyExcludeFromCollections: true
 {% endmacro %}
 
 {% macro srcset(title, client) %}
-    {% set prefix = "/assets/hero/" + client | slug + "/" + title | slug %}
+    {% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
     {% set breakpoint = [1200, 992, 768, 576] %}
     {% set srcset %}
         {%- for width in [1600, 1200, 800, 400] -%}

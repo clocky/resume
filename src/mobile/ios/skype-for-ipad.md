@@ -7,7 +7,7 @@ client: Microsoft
 abstract: Design manager for the team that produced Apple's most downloaded iPad application of all time.
 headline: Blending desktop and mobile paradigms
 hero: 
- - /assets/hero/skype/ipad.jpg
+ - /img/hero/skype/ipad.jpg
 thumbnail:
  - thumbnail-ipad.png
 collaborators:

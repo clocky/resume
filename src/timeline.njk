@@ -5,7 +5,7 @@ eleventyExcludeFromCollections: true
 {% extends "base.njk" %}
 
 {% macro img(title, client) %}
-    {% set prefix = "/assets/hero/" + client | slug + "/" + title | slug %}
+    {% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
     <img 
         class="img-fluid shadow-sm"
         src="{{ prefix }}_400w.jpg"

@@ -13,7 +13,7 @@ media:
  - indigogirls-discography.png
  - indigogirls-news.png
 hero:
- - /assets/hero/artistdirect/smartmockups_k008c6ww.jpg
+ - /img/hero/artistdirect/smartmockups_k008c6ww.jpg
 thumbnail:
  - cons_600x600.jpg
 text:
