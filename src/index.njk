@@ -4,9 +4,9 @@ eleventyExcludeFromCollections: true
 ---
 {% extends "base.njk" %}
 
-{% macro picture(title, client, maximum='1200') %}
+{% macro picture(title, client, maximum='1280') %}
     {% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
-    <picture>
+    <picture class="img-fluid">
         {% set breakpoint = [1200, 992, 768, 576] %}
         {%- for width in [1600, 1200, 800, 400] -%}
             {% if width < maximum %}
@@ -44,9 +44,9 @@ eleventyExcludeFromCollections: true
             {% for page in collections.all | reverse  %}
             <!-- Hero  -->
                 <div class="
-                    {% if loop.index == 1 %}col-lg-12 col-md-12 mb-4{% endif %}
-                    {% if loop.index == 2 or loop.index == 3 %}col-lg-6 col-md-6 mb-4{% endif %}
-                    {% if loop.index >= 4 %}col-lg-4 col-md-6 mb-3{% endif %}
+                    {%- if loop.index == 1 %} col-lg-12 col-md-12 mb-4 {%- endif %}
+                    {%- if loop.index == 2 or loop.index == 3 %} col-lg-6 col-md-6 mb-4 {%- endif %}
+                    {%- if loop.index >= 4 %} col-lg-4 col-md-6 mb-3 {%- endif %}
                     ">
                     <a href="{{page.url}}index.html">
                         {{ picture(page.data.title, page.data.client) }}
