@@ -3,17 +3,20 @@
 {% block title  %}
 <!-- title -->
 
-<div class="row">
-    <div class="col-12 border-bottom mt-4 mb-4 pb-3">
-        <h2 class="text-info">{{ title }}</h2>
-        <h4 class="text-dark">{{ page.date | date("MMMM Y") }} • {{ client }}</h4>
-    </div>
+<div class="container">
+  <div class="row">
+      <div class="col-12 border-bottom mt-4 mb-4 pb-3">
+          <h2 class="text-info">{{ title }}</h2>
+          <h4 class="text-dark">{{ page.date | date("MMMM Y") }} • {{ client }}</h4>
+      </div>
+  </div>
 </div>
 
 <!-- //title -->
 
 <!-- headline -->
 
+<div class="container">
 <div class="row">
     <div class="col-lg-8 offset-lg-4">
         <h2>{{ headline }}</h2>
@@ -99,6 +102,7 @@
     <!--/.Carousel Wrapper-->
   {% endif %}
   </div> 
+</div>
 </div>
 
 {% endblock %}

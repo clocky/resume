@@ -39,6 +39,7 @@ eleventyExcludeFromCollections: true
 {% block title %}
     {% set mobile = "d-xs-block d-sm-block d-md-none d-lg-none" %}
     {% set tablet = "d-none d-md-block d-lg-block" %}
+    <div class="container">
     {% for page in collections.all | reverse  %}
         {% if loop.index == 1 %}
             <!-- Hero  -->
@@ -93,4 +94,5 @@ eleventyExcludeFromCollections: true
         {% endif %}
     {% endfor %}
     </div> <!-- // row -->
+</div> <!-- container -->
 {% endblock %}
