@@ -10,7 +10,7 @@
     "parcel:clean": "rimraf .cache",
     "build:clean": "rimraf dist public",
     "build:eleventy": "eleventy",
-    "build:parcel": "parcel build public/index.html --log-level 3 --detailed-report 10",
+    "build:parcel": "parcel build public/**/*.html --log-level 3 --detailed-report 10",
     "build:framer": "ncp src/_assets/framer/ dist/framer/"
   },
   "repository": {
