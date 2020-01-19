@@ -1,5 +1,5 @@
 ---
-eleventyExcludeFromCollections: true
+eleventyExcludeFromCollections: false
 
 layout: article.njk
 title: Long Beach Dub Allstars
@@ -21,6 +21,7 @@ text:
   - It's probably for the best. Here's the album cover, which will give you 
     a sense of what you're missing.
 media:
-  - lbda.jpg
+  - long-beach-dub-allstars.jpg
 tags: web
 ---
+
