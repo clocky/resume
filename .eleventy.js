@@ -4,17 +4,9 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPassthroughCopy("assets");
-
-  eleventyConfig.addPassthroughCopy("_site/favicon.ico");
-  eleventyConfig.addPassthroughCopy("_site/favicon-16x16.png");
-  eleventyConfig.addPassthroughCopy("_site/favicon-32x32.png");
-
-  eleventyConfig.addPassthroughCopy("_site/apple-touch-icon.png");
-  eleventyConfig.addPassthroughCopy("_site/safari-pinned-tab.svg");
-
-  eleventyConfig.addPassthroughCopy("_site/robots.txt");
-  eleventyConfig.addPassthroughCopy("_site/site.webmanifest");
+  eleventyConfig.addPassthroughCopy({"src/_assets/img/": "/img"});
+  eleventyConfig.addPassthroughCopy({"src/_assets/favicon/": "/"});
+  eleventyConfig.addPassthroughCopy({"src/_assets/css/": "/css"});
 
   eleventyConfig.addTransform("pretty", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
@@ -44,7 +36,7 @@ module.exports = function(eleventyConfig) {
       htmlTemplateEngine: "njk",
       passthroughFileCopy: true,
       dir: {
-        input: "_site",
+        input: "src",
         includes: "_templates",
         data: "_data",
         output: "public"

@@ -13,7 +13,7 @@ collaborators:
  - Enrique Quiroz Valdez
  - Oliver Scholz
 hero:
- - /assets/hero/microsoft/office365.jpg
+ - /img/hero/microsoft/office365.jpg
 text:
   - The brief was simple - how do you make a Skype for Business client fit into
     the workflow of a typical Outlook information worker, but still make it feel like it was
