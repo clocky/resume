@@ -1,9 +1,12 @@
 const pretty = require('pretty');
 const moment = require("moment");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  
   eleventyConfig.addPassthroughCopy({"src/_assets/img/": "/img"});
   eleventyConfig.addPassthroughCopy({"src/_assets/favicon/": "/"});
   eleventyConfig.addPassthroughCopy({"src/_assets/css/": "/css"});
@@ -24,6 +27,10 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
     return moment(dateObj).format('YYYY-MM-DD')
+  });
+
+  eleventyConfig.addCollection("projects", function(collection) {
+    return collection.getFilteredByGlob(["src/projects/**/*.md", "src/projects/**/*.pug"]);
   });
 
   return {

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row pt-3">
         {% for category, pages in collections %}
-            {% if category != "all" %}
+            {% if category != "all" and category != "projects" %}
             <div class="col-lg-3 col-md-4 col-sm-6" role="navigation" aria-labelledby="category-{{ category | slug}}">
                 <h5 class="text-dark font-weight-bold" id="category-{{ category | slug }}">{{ category | capitalize }}</h5>
                 <ul class="list-unstyled">

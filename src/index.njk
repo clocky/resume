@@ -1,6 +1,7 @@
 ---
 title: Portfolio of Mark McLaughlin
-eleventyExcludeFromCollections: true
+eleventyNavigation:
+  key: Projects
 ---
 {% extends "base.njk" %}
 
@@ -41,7 +42,7 @@ eleventyExcludeFromCollections: true
     {% set tablet = "d-none d-md-block d-lg-block" %}
     <div class="container">
         <div class="row mt-4">
-            {% for page in collections.all | reverse  %}
+            {% for page in collections.projects | reverse  %}
             <!-- Hero  -->
                 <div class="
                     {%- if loop.index == 1 %} col-lg-12 col-md-12 mb-4 {%- endif %}
