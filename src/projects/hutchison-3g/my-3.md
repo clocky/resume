@@ -1,5 +1,9 @@
 ---
-eleventyExcludeFromCollections: true
+permalink: "mobile/my-3/index.html"
+dynamicPermalink: false
+eleventyNavigation:
+  key: My 3
+  parent: Projects
 
 layout: article.njk
 title: My 3
