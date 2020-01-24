@@ -20,7 +20,7 @@ eleventyExcludeFromCollections: true
 {% block title %}
     <div class="container">
     {% set current_year = 2019 %}
-    {% for page in collections.all | reverse  %}
+    {% for page in collections.projects | reverse  %}
     <div class="row pb-4 mt-4">
         {% set year = page.data.date | date("YYYY") %}
         {% if year != current_year %}
