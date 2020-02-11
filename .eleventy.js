@@ -25,6 +25,12 @@ module.exports = function(eleventyConfig) {
     return moment(dateObj).format(format);
   });
 
+  eleventyConfig.addShortcode("now",
+    function () {
+      return moment();
+    }
+  );
+
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
     return moment(dateObj).format('YYYY-MM-DD')
   });
