@@ -4,6 +4,7 @@ permalink: "artists/fastball/index.html"
 layout: article.njk
 title: Fastball
 client: ARTISTdirect
+partner: Hollywood Records
 date: 2000-09-19
 abstract: Freelance role, supporting the launch of the "The Harsh Light Of Day" album.
 headline: The Way

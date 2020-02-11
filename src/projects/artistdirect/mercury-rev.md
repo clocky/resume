@@ -5,6 +5,7 @@ layout: article.njk
 title: Mercury Rev
 date: 2000-04-08
 client: Ignition Management
+partner: V2 Records
 abstract: Freelance role in London, launching mercuryrev.net after the critical success of "Deserter's Songs" in the UK.
 headline: Hand-written ephemera and Americana
 media: 

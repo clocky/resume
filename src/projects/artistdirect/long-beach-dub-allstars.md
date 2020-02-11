@@ -4,6 +4,7 @@ permalink: "artists/long-beach-dub-allstars/index.html"
 layout: article.njk
 title: Long Beach Dub Allstars
 client: ARTISTdirect
+partner: Geffen
 date: 1999-09-28
 abstract: Full-time role in Los Angeles, supporting the launch of debut album "Right Back".
 headline: Sublime and ridiculous

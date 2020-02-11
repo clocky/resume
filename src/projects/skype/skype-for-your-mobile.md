@@ -1,7 +1,7 @@
 ---
 eleventyExcludeFromCollections: true
 
-permalink: "mobile/j2m3/skype-for-your-mobile/index.html"
+permalink: "mobile/j2me/skype-for-your-mobile/index.html"
 eleventyNavigation:
   key: Skype for your Mobile
   parent: Projects
