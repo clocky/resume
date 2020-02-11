@@ -1,0 +1,28 @@
+    <script type="application/ld+json">
+      {% set publisher = partner if partner else client %}
+      {
+        "@context": "http://schema.org/",
+        "@type": "Article",
+        "author": {
+          "@type": "Person",
+          "name": "Mark McLaughlin"
+        },
+        "datePublished": "{{ date }}",
+        "dateModified": "{% now %}",
+        "publisher": {
+          "@type": "Organization",
+          "name": "{{ client }}",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://logo.clearbit.com/{{ client | lower }}.com"
+          }
+        },
+        "image": "https://markmclaughlin.info/img/projects/{{ client | lower }}/{{ media[0] }}",
+        "headline": "{{ title }}: {{ headline }}",
+        "abstract": "{{ abstract }}",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ absoluteUrl }}"
+        }
+      }
+    </script>
