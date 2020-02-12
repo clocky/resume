@@ -9,7 +9,7 @@ eleventyNavigation:
 layout: article.njk
 title: 3 X-Series
 client: Skype
-partner: 3
+partner: Three
 date: 2008-08-21
 abstract: Lead designer at Skype, partnering with 3 UK's design team.
 headline: Use Skype on the move with X-Series

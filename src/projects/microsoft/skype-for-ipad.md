@@ -10,6 +10,7 @@ tags: mobile
 title: Skype for iPad
 date: 2013-08-12
 client: Microsoft
+partner: Apple
 abstract: Design manager for the team that produced Apple's most downloaded iPad application of all time.
 headline: Blending desktop and mobile paradigms
 hero: 

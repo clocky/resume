@@ -4,6 +4,7 @@ permalink: "artists/indigo-girls/index.html"
 layout: article.njk
 title: Indigo Girls
 client: ARTISTdirect
+partner: Epic
 date: 1999-09-28
 abstract: Webmaster for indigogirls.com, supporting the launch of "Come On Now Social".
 headline: Promoting social change
