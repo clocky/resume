@@ -1,0 +1,37 @@
+{
+    "extends": ["web-recommended"],
+    "formatters": ["stylish"],
+    "hints": {
+        "content-type": "off",
+        "http-cache": "off",
+        "http-compression": "off",
+        "ssllabs": "off",
+        "x-content-type-options": "off",
+        "compat-api/css": "off",
+        "compat-api/html": "off"
+    },
+    "ignoredUrls": [
+        {
+        "domain": "google-analytics.com",
+        "hints": [
+            "content-type",
+            "sri"
+        ]
+    }, {
+        "domain": "fonts.googleapis.com",
+        "hints": ["no-html-only-headers"]
+    }, {
+        "domain": "code.jquery.com",
+        "hints": ["strict-transport-security"]
+    }, {
+        "domain": "stackpath.bootstrapcdn.com",
+        "hints": ["strict-transport-security"]
+    }, {
+        "domain": "fonts.gstatic.com",
+        "hints": [
+            "strict-transport-security",
+            "no-html-only-headers"
+        ]
+    }
+]
+}
