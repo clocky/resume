@@ -1,5 +1,5 @@
 ---
-eleventyExcludeFromCollections: true
+eleventyExcludeFromCollections: false
 
 permalink: "enterprise/office-365/index.html"
 dynamicPermalink: false
