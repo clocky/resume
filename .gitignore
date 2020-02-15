@@ -2,6 +2,7 @@ public
 dist
 .cache
 node_modules
+hint-report
 
 .DS_Store
 .AppleDouble
