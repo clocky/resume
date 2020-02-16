@@ -1,0 +1,15 @@
+{% macro picture(title, client, maximum='1600') %}
+    {% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
+    <picture class="img-fluid">
+        {% set breakpoint = [1200, 992, 768, 576, 320] %}
+        {%- for width in [1600, 1200, 800, 800, 400] -%}
+            {% if width < maximum %}
+            <source 
+                srcset="{{prefix}}_{{width}}w.jpg"
+                media="(min-width: {{breakpoint[loop.index0]}}px)"
+            />
+            {% endif %}
+        {% endfor -%}
+        <img class="img-fluid" src="{{prefix}}_{{maximum}}w.jpg" alt="Preview of {{ title }}, designed by Mark McLaughlin for {{ client }}.">
+    </picture>
+{% endmacro %}
