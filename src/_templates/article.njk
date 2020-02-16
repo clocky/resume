@@ -2,12 +2,18 @@
 
 {% block title  %}
 <!-- title -->
+{% from "helpers/picture.njk" import picture %}
+
+{% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
+
+<div class="jumbotron parallax" style="background-image: url({{prefix}}_1600w.jpg);">
+</div>
 
 <div class="container">
-  <div class="row">
-      <div class="col-12 border-bottom mt-4 mb-4 pb-3">
+  <div class="row mt-n5">
+      <div class="col-12 col-lg-6 col-md-8 pt-3 pl-4 ml-n2 mt-n5 mb-4 pb-3 bg-white">
           <h2 class="text-info">{{ title }}</h2>
-          <h4 class="text-dark">{{ page.date | date("MMMM Y") }} • {{ client }}</h4>
+          <h4 class="h5 text-dark">{{ page.date | date("MMMM Y") }} • {{ client }}</h4>
       </div>
   </div>
 </div>
@@ -58,9 +64,11 @@
         </ul>
     </div>
   {% else %}
-  <div class="col-lg-4 order-lg-1 order-2">
-  </div>
-    {% endif %}
+    <div class="col-lg-4 order-lg-1 order-2">
+    </div>
+  {% endif %}
+  
+  {# Render one photo #}
   {% if media.length <= 1 %}
     <div class="col-lg-8 order-lg-2 order-1">
       {% for image in media %}
@@ -68,7 +76,7 @@
       {% endfor %}
     </div>
   {% else %}
-
+  {# Render carousel #}
   <div class="col-lg-8 order-lg-2 order-1 mb-4">
   <!--Carousel Wrapper-->
     <div id="{{title | slug }}" class="carousel slide carousel-fade carousel-thumbnails shadow-sm" data-ride="carousel">
