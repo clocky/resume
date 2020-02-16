@@ -1,0 +1,15 @@
+{% macro srcset(title, client) %}
+    {% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
+    {% set breakpoint = [1200, 992, 768, 576] %}
+    {% set srcset %}
+        {%- for width in [1600, 1200, 800, 400] -%}
+            {{prefix}}_{{width}}w.jpg {{breakpoint[loop.index0]}}px,
+        {%- endfor -%}
+    {% endset %}
+    <img 
+        class="img-fluid"
+        srcset="{{ srcset }}" 
+        sizes="(min-width: 48em) 48em, 100vw" 
+        src="{{prefix}}_1200w.jpg"
+    />
+{% endmacro %}

@@ -5,37 +5,7 @@ eleventyNavigation:
 ---
 {% extends "base.njk" %}
 
-{% macro picture(title, client, maximum='1600') %}
-    {% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
-    <picture class="img-fluid">
-        {% set breakpoint = [1200, 992, 768, 576, 320] %}
-        {%- for width in [1600, 1200, 800, 800, 400] -%}
-            {% if width < maximum %}
-            <source 
-                srcset="{{prefix}}_{{width}}w.jpg"
-                media="(min-width: {{breakpoint[loop.index0]}}px)"
-            />
-            {% endif %}
-        {% endfor -%}
-        <img class="img-fluid" src="{{prefix}}_{{maximum}}w.jpg" alt="Preview of {{ title }}, designed by Mark McLaughlin for {{ client }}.">
-    </picture>
-{% endmacro %}
-
-{% macro srcset(title, client) %}
-    {% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
-    {% set breakpoint = [1200, 992, 768, 576] %}
-    {% set srcset %}
-        {%- for width in [1600, 1200, 800, 400] -%}
-            {{prefix}}_{{width}}w.jpg {{breakpoint[loop.index0]}}px,
-        {%- endfor -%}
-    {% endset %}
-    <img 
-        class="img-fluid"
-        srcset="{{ srcset }}" 
-        sizes="(min-width: 48em) 48em, 100vw" 
-        src="{{prefix}}_1200w.jpg"
-    />
-{% endmacro %}
+{% from "helpers/picture.njk" import picture %}
 
 {% block title %}
     {% set mobile = "d-xs-block d-sm-block d-md-none d-lg-none" %}
