@@ -1,10 +1,13 @@
-
 <footer class="bg-light mt-5 pt-4">
     <div class="container">
-        <div class="row pt-3">
+        <div class="row py-3">
+            <div class="col-xl-4 pb-4">
+                <p>{{ site.description }}</p>
+                <hr>
+            </div>
         {% for category, pages in collections %}
             {% if category != "all" and category != "projects" %}
-            <div class="col-lg-3 col-md-4 col-sm-6" role="navigation" aria-labelledby="category-{{ category | slug}}">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6" role="navigation" aria-labelledby="category-{{ category | slug}}">
                 <h5 class="text-dark font-weight-bold" id="category-{{ category | slug }}">{{ category | capitalize }}</h5>
                 <ul class="list-unstyled">
                     {%- for page in pages | reverse -%}
@@ -21,15 +24,17 @@
             {% endif %}
         {% endfor %}
         </div>
-        <div class="row" role="contentinfo">
-            <div class="col-12 text-left">
-                <p>
-                <small>
-                    &copy; 1997—2020 Mark McLaughlin
-                    •
-                    <a href='&#109;a&#105;&#108;to&#58;mar&#107;&#64;%&#54;&#68;cl&#37;&#54;1u%&#54;&#55;h%6C&#37;&#54;&#57;n&#46;&#37;6De%&#50;Eu%6B'>&#109;ark&#64;mcl&#97;ughlin&#46;me&#46;uk</a>
-                </small>
-                </p>
+    </div>
+    <div class="container-fluid bg-dark">
+        <div class="container">
+            <div class="row" role="contentinfo">
+                <div class="col-12 text-left text-white pt-3">
+                    <p>
+                    <small>
+                        &copy; 1997—2020 Mark McLaughlin
+                    </small>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
