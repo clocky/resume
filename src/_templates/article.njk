@@ -6,7 +6,7 @@
 
 {% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
 
-<div class="jumbotron parallax" style="background-image: url({{prefix}}_1600w.jpg);">
+<div class="jumbotron-fluid parallax" style="background-image: url({{prefix}}_1600w.jpg);">
 </div>
 
 <div class="container">
@@ -110,7 +110,6 @@
     <!--/.Carousel Wrapper-->
   {% endif %}
   </div> 
-</div>
 </div>
 
 {% endblock %}
