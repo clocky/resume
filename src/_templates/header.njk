@@ -1,21 +1,24 @@
-<nav class="navbar navbar-light navbar-expand-md bg-light" role="banner" aria-label="Main navigation">
+<nav class="navbar navbar-light fixed-top navbar-expand-sm bg-white shadow-sm" role="banner" aria-label="Main navigation">
     <div class="container">
-    <a class="navbar-brand text-dark" href="/index.html" aria-label="Return to homepage">Mark McLaughlin</a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link 
-                    {%- if ("resume" not in page.url) and ("timeline" not in page.url) and 
-                   ("patents" not in page.url) %} active{% endif %}" href="/">Projects</a>
-            </li>
-            <li class="nav-item {% if "resume" in page.url %}active{% endif %}" aria-label="Resumé">
-                <a class="nav-link" href="/resume">Resumé</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link {% if "timeline" in page.url %}active{% endif %}" href="/timeline" aria-label="Timeline of work">Timeline</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {% if "patents" in page.url %}active{% endif %}" href="/patents" aria-label="List of patents">Patents</a>
-            </li>
-        </ul>
-    </div>
+            <a class="navbar-brand text-dark" href="/index.html" aria-label="Return to homepage">Mark McLaughlin</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link 
+                        {%- if ("resume" not in page.url) and ("timeline" not in page.url) and 
+                    ("patents" not in page.url) %} active{% endif %}" href="/">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if "resume" in page.url %}active{% endif %}" aria-label="Resumé" href="/resume">Resumé</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if "timeline" in page.url %}active{% endif %}" href="/timeline" aria-label="Timeline of work">Timeline</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if "patents" in page.url %}active{% endif %}" href="/patents" aria-label="List of patents">Patents</a>
+                </li>
+                <li class="nav-item">
+                    <a class="ml-2 btn btn-outline-primary" href='&#109;a&#105;&#108;to&#58;mar&#107;&#64;%&#54;&#68;cl&#37;&#54;1u%&#54;&#55;h%6C&#37;&#54;&#57;n&#46;&#37;6De%&#50;Eu%6B'>Contact</a>
+                </li>
+            </ul>
+        </div>
 </nav>

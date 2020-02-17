@@ -10,17 +10,17 @@ eleventyNavigation:
 {% block title %}
     {% set mobile = "d-xs-block d-sm-block d-md-none d-lg-none" %}
     {% set tablet = "d-none d-md-block d-lg-block" %}
-    <div class="container">
+    <div class="container mt-5 pt-3">
         <div class="row mt-4">
             {% for page in collections.projects | reverse  %}
             <!-- Hero  -->
                 <div class="
-                    {%- if loop.index == 1 %} col-lg-12 col-md-12 mb-4 {%- endif %}
-                    {%- if loop.index == 2 or loop.index == 3 %} col-lg-6 col-md-6 mb-4 {%- endif %}
+                    {%- if loop.index == 1 %} col-md-12 mb-4 {%- endif %}
+                    {%- if loop.index == 2 or loop.index == 3 %} col-md-6 mb-4 {%- endif %}
                     {%- if loop.index >= 4 %} col-lg-4 col-md-6 mb-3 {%- endif %}
                     ">
                     <a href="{{page.url}}index.html">
-                        {{ picture(page.data.title, page.data.client) }}
+                        {{ picture(page.data.title, page.data.client ) }}
                     </a>
                     {% if loop.index == 1 %}
                         <h2 class="mt-4 {{tablet}}">
