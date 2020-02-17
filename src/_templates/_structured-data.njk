@@ -1,3 +1,4 @@
+    {% if partner or client %}
     <script type="application/ld+json">
       {% set publisher = partner if partner else client %}
       {
@@ -26,3 +27,4 @@
         }
       }
     </script>
+    {% endif %}
