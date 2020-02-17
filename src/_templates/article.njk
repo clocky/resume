@@ -23,93 +23,92 @@
 <!-- headline -->
 
 <div class="container">
-<div class="row">
-    <div class="col-lg-8 offset-lg-4">
-        <h2>{{ headline }}</h2>
-    </div>
-</div>
+  <div class="row">
+      <div class="col-lg-8 offset-lg-4">
+          <h2>{{ headline }}</h2>
+      </div>
+  </div>
 
-<!-- //headline -->
+  <!-- //headline -->
 
-<!-- lead -->
+  <!-- lead -->
 
-<div class="row">
-    <div class="col-lg-4">
-        <p class="lead text-secondary">{{ abstract }}</p>
-    </div>
-    <div class="col-lg-8">
-        {% for paragraph in text %}
-            {% if loop.first %}
-              <p class="lead">{{ paragraph }}</p>
-            {% else %}
-              <p>{{ paragraph }}</p>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
-<!-- //lead -->
-
-<!-- collaborator -->
-
-<div class="row mt-4">
-  {% if collaborators %}
-    <div class="col-lg-4 order-lg-1 order-2" role="complementary">
-        <h3 class="text-secondary font-weight-bold">Collaborators</h3>
-        <ul class="list-unstyled">
-          {% for person in collaborators %}
-            <li class="text-secondary" >
-               {{ person }}
-            </li>
+  <div class="row">
+      <div class="col-lg-4">
+          <p class="lead text-secondary">{{ abstract }}</p>
+      </div>
+      <div class="col-lg-8">
+          {% for paragraph in text %}
+              {% if loop.first %}
+                <p class="lead">{{ paragraph }}</p>
+              {% else %}
+                <p>{{ paragraph }}</p>
+              {% endif %}
           {% endfor %}
-        </ul>
-    </div>
-  {% else %}
-    <div class="col-lg-4 order-lg-1 order-2">
-    </div>
-  {% endif %}
-  
-  {# Render one photo #}
-  {% if media.length <= 1 %}
-    <div class="col-lg-8 order-lg-2 order-1">
-      {% for image in media %}
-          <img class="d-block w-100 shadow-sm" src="/img/projects/{{client | string | slug }}/{{image}}" />
-      {% endfor %}
-    </div>
-  {% else %}
-  {# Render carousel #}
-  <div class="col-lg-8 order-lg-2 order-1 mb-4">
-  <!--Carousel Wrapper-->
-    <div id="{{title | slug }}" class="carousel slide carousel-fade carousel-thumbnails shadow-sm" data-ride="carousel">
-      <!--Slides-->
-      <div class="carousel-inner" role="listbox">
+      </div>
+  </div>
+  <!-- //lead -->
+
+  <!-- collaborator -->
+
+  <div class="row mt-4">
+    {% if collaborators %}
+      <div class="col-lg-4 order-lg-1 order-2" role="complementary">
+          <h3 class="text-secondary font-weight-bold">Collaborators</h3>
+          <ul class="list-unstyled">
+            {% for person in collaborators %}
+              <li class="text-secondary" >
+                {{ person }}
+              </li>
+            {% endfor %}
+          </ul>
+      </div>
+    {% else %}
+      <div class="col-lg-4 order-lg-1 order-2">
+      </div>
+    {% endif %}
+    
+    {# Render one photo #}
+    {% if media.length <= 1 %}
+      <div class="col-lg-8 order-lg-2 order-1">
         {% for image in media %}
-          <div class="carousel-item {% if loop.first %}active{% endif %}">
-            <img class="d-block w-100" src="/img/projects/{{client | string | slug }}/{{ image }}" alt="Image {{loop.index}} of {{loop.length}} of the {{ title }} project">
-          </div>
+            <img class="d-block w-100 shadow-sm" src="/img/projects/{{client | string | slug }}/{{image}}" />
         {% endfor %}
       </div>
-      <!--/.Slides-->
-      <!--Controls-->
-      <a class="carousel-control-prev" href="#{{title | slug }}" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#{{title | slug }}" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-      <!--/.Controls-->
-      <ol class="carousel-indicators">
-        {% for image in media %}
-          <li data-target="#{{title | slug }}" data-slide-to="{{loop.index0}}" {% if loop.first %}class="active"{% endif %}>
-            <img class="d-block w-100 img-fluid" src="/img/projects/{{client | string | slug }}/{{ image }}" alt="Thumbnail {{loop.index}} of {{loop.length}}">
-          </li>
-        {% endfor %}
-      </ol>
-    </div>
-    <!--/.Carousel Wrapper-->
-  {% endif %}
-  </div> 
-</div>
+    {% else %}
+    {# Render carousel #}
+    <div class="col-lg-8 order-lg-2 order-1 mb-4">
+    <!--Carousel Wrapper-->
+      <div id="{{title | slug }}" class="carousel slide carousel-fade carousel-thumbnails shadow-sm" data-ride="carousel">
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+          {% for image in media %}
+            <div class="carousel-item {% if loop.first %}active{% endif %}">
+              <img class="d-block w-100" src="/img/projects/{{client | string | slug }}/{{ image }}" alt="Image {{loop.index}} of {{loop.length}} of the {{ title }} project">
+            </div>
+          {% endfor %}
+        </div>
+
+        <a class="carousel-control-prev" href="#{{title | slug }}" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#{{title | slug }}" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+        <ol class="carousel-indicators">
+          {% for image in media %}
+            <li data-target="#{{title | slug }}" data-slide-to="{{loop.index0}}" {% if loop.first %}class="active"{% endif %}>
+              <img class="d-block w-100 img-fluid" src="/img/projects/{{client | string | slug }}/{{ image }}" alt="Thumbnail {{loop.index}} of {{loop.length}}">
+            </li>
+          {% endfor %}
+        </ol>
+      </div> <!-- /carousel -->
+    </div> <!-- /col -->
+    {% endif %}
+  </div>  <!-- /row -->
+</div> <!-- /container -->
 
 {% endblock %}
