@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   
   eleventyConfig.addPassthroughCopy({"src/_assets/img/": "/img"});
+  eleventyConfig.addPassthroughCopy({"src/_assets/js/": "/js"});
   eleventyConfig.addPassthroughCopy({"src/_assets/favicon/": "/"});
   eleventyConfig.addPassthroughCopy({"src/_assets/css/": "/css"});
 
