@@ -12,4 +12,4 @@
 [[headers]]
     for = "site.webmanifest"
     [headers.values]
-        Content-Type = "application/manifest+json"
+        Content-Type = "application/manifest+json; charset=utf-8"
