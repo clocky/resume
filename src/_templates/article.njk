@@ -11,8 +11,8 @@
 
 <div class="container">
   <div class="row mt-n5">
-      <div class="col-12 col-lg-6 col-md-8 pt-3 pl-4 ml-n2 mt-n5 mb-4 pb-3 bg-white">
-          <h2 class="text-info">{{ title }}</h2>
+      <div class="col-12 col-md-8 col-lg-6 offset-lg-4 offset-md-1 py-3 pl-4 ml-n2 mt-n5 mb-4 bg-white">
+          <h2 class="h1 text-info">{{ title }}</h2>
           <h4 class="h5 text-dark">{{ page.date | date("MMMM Y") }} • {{ client }}</h4>
       </div>
   </div>
@@ -24,7 +24,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-lg-8 offset-lg-4">
+      <div class="col-lg-8 offset-lg-2">
           <h2>{{ headline }}</h2>
       </div>
   </div>
@@ -34,10 +34,7 @@
   <!-- lead -->
 
   <div class="row">
-      <div class="col-lg-4">
-          <p class="lead text-secondary">{{ abstract }}</p>
-      </div>
-      <div class="col-lg-8">
+      <div class="col-lg-8 offset-lg-2">
           {% for paragraph in text %}
               {% if loop.first %}
                 <p class="lead">{{ paragraph }}</p>
@@ -49,35 +46,19 @@
   </div>
   <!-- //lead -->
 
-  <!-- collaborator -->
-
   <div class="row mt-4">
-    {% if collaborators %}
-      <div class="col-lg-4 order-lg-1 order-2" role="complementary">
-          <h3 class="text-secondary font-weight-bold">Collaborators</h3>
-          <ul class="list-unstyled">
-            {% for person in collaborators %}
-              <li class="text-secondary" >
-                {{ person }}
-              </li>
-            {% endfor %}
-          </ul>
-      </div>
-    {% else %}
-      <div class="col-lg-4 order-lg-1 order-2">
-      </div>
-    {% endif %}
-    
     {# Render one photo #}
     {% if media.length <= 1 %}
-      <div class="col-lg-8 order-lg-2 order-1">
+      <div class="col-lg-8 offset-lg-2 order-lg-2 order-1">
         {% for image in media %}
-            <img class="d-block w-100 shadow-sm" src="/img/projects/{{client | string | slug }}/{{image}}" />
+            <img class="d-block w-100" src="/img/projects/{{client | string | slug }}/{{image}}" />
         {% endfor %}
       </div>
     {% else %}
+
     {# Render carousel #}
-    <div class="col-lg-8 order-lg-2 order-1 mb-4">
+
+    <div class="col-lg-8 offset-lg-2 order-lg-2 order-1 mb-4">
     <!--Carousel Wrapper-->
       <div id="{{title | slug }}" class="carousel slide carousel-fade carousel-thumbnails shadow-sm" data-ride="carousel">
         <!--Slides-->
@@ -110,5 +91,9 @@
     {% endif %}
   </div>  <!-- /row -->
 </div> <!-- /container -->
+{% endblock %}
+
+{% block footer %}
+{% include '_collaborators.njk' %}
 
 {% endblock %}
