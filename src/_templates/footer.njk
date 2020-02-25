@@ -1,19 +1,18 @@
-<footer class="bg-light mt-5 pt-4">
+<footer class="bg-dark mt-0 pt-4">
     <div class="container">
         <div class="row py-3">
-            <div class="col-xl-4 pb-4">
-                <p class="text-secondary">{{ site.description }}</p>
-                <hr>
+            <div class="col-xl-3 pb-4">
+                <p class="text-white"><small>{{ site.description }}</small></p>
             </div>
         {% for category, pages in collections %}
             {% if category != "all" and category != "projects" %}
             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6" role="navigation" aria-labelledby="category-{{ category | slug}}">
-                <h5 class="text-dark font-weight-bold" id="category-{{ category | slug }}">{{ category | capitalize }}</h5>
+                <h5 class="text-white font-weight-bold" id="category-{{ category | slug }}">{{ category | capitalize }}</h5>
                 <ul class="list-unstyled">
                     {%- for page in pages | reverse -%}
                         <li>
                             <small>
-                                <a href="{{ page.url }}" class="text-secondary">
+                                <a href="{{ page.url }}" class="text-white">
                                     {{ page.data.title }}
                                 </a>
                             </small>
@@ -25,7 +24,7 @@
         {% endfor %}
         </div>
     </div>
-    <div class="container-fluid bg-dark">
+    <div class="container-fluid bg-black">
         <div class="container">
             <div class="row" role="contentinfo">
                 <div class="col-12 text-left text-white pt-3">
