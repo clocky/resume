@@ -18,7 +18,15 @@ eleventyExcludeFromCollections: true
 {% endmacro %}
 
 {% block title %}
-    <div class="container mt-5 pt-3">
+<div class="container mt-5 pt-3">
+    <div class="row">
+        <div class="col-12 border-bottom mt-4 mb-4 pb-2">
+            <h2 class="display-4 text-info">Timeline</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-3 pt-3">
     {% set current_year = 2020 %}
     {% for page in collections.projects | reverse  %}
     <div class="row pb-4 mt-4">

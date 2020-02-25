@@ -38,9 +38,6 @@ tags:
   - desktop
 ---
 .container
-  .row.mt-5.mb-5
-    .col-lg-12
-      hr
   .row.mt-5.mb-1
       .col-lg-4
         h3 Extending and animating
@@ -69,18 +66,28 @@ tags:
 
 .container
     .row.mt-5.mb-1
-        .col-lg-8.offset-lg-4
+        .col-lg-8.offset-lg-2
           h3 Julian's Muse
 
           p 
             | Along the way in any design process, there's always a few memorable 
             | moments that get lost to history, but this is one that we were 
-            | fortunate to capture for future generations.
-          p 
-            a(href="http://marklacroce.com/") Mark Lacroce 
-            | offers up his take on the Carlton and other moves; after, Julian brings it to life.
+            | fortunate to capture for future generations - the history of the Skype #[code (dance)] emoticon.
     .row.mt-1
-        .col-lg-4.offset-lg-4
+      .col-lg-4.offset-lg-4
+          img(
+              data-src="/img/projects/skype/emoticons/dance.gif"
+              class="img-fluid mx-auto d-block lazyload"
+            )
+
+    .row.mt-5.mb-1
+        .col-lg-8.offset-lg-2
+          p 
+            | Our colleague, 
+            a(href="http://marklacroce.com/") Mark Lacroce 
+            | is captured here offering up his take on the Carlton and other moves; after, Julian brings it to life.
+    .row.mt-1
+        .col-lg-6.offset-lg-3
             .embed-responsive.embed-responsive-1by1.mb-5
                 iframe(
                     data-src="https://www.youtube.com/embed/9-i2gi9bW3E?controls=0", 
@@ -88,8 +95,3 @@ tags:
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
                     )
-        .col-lg-4                
-          img(
-              data-src="/img/projects/skype/emoticons/dance.gif"
-              class="img-fluid mx-auto d-block lazyload"
-            )

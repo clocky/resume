@@ -1,24 +1,30 @@
-<nav class="navbar navbar-light fixed-top navbar-expand-sm bg-white shadow-sm" role="banner" aria-label="Main navigation">
+<nav class="navbar navbar-light fixed-top navbar-expand-md bg-white shadow-sm" role="banner" aria-label="Main navigation">
     <div class="container">
-            <a class="navbar-brand text-dark" href="/index.html" aria-label="Return to homepage">Mark McLaughlin</a>
+        <a class="navbar-brand text-dark" href="/index.html" aria-label="Return to homepage">Mark McLaughlin</a>
+    	<button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
             <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link 
-                        {%- if ("resume" not in page.url) and ("timeline" not in page.url) and 
-                    ("patents" not in page.url) %} active{% endif %}" href="/">Projects</a>
+                <li class="nav-item {%- if ("resume" not in page.url) and ("timeline" not in page.url) and 
+                    ("patents" not in page.url) %} active{% endif %}">
+                    <a class="nav-link" href="/">Projects</a>
+                </li>
+                <li class="nav-item {% if "resume" in page.url %}active{% endif %}">
+                    <a class="nav-link" aria-label="Resumé" href="/resume">Resumé</a>
+                </li>
+                <li class="nav-item {% if "timeline" in page.url %}active{% endif %}">
+                    <a class="nav-link" href="/timeline" aria-label="Timeline of work">Timeline</a>
+                </li>
+                <li class="nav-item {% if "patents" in page.url %}active{% endif %}">
+                    <a class="nav-link" href="/patents" aria-label="List of patents">Patents</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if "resume" in page.url %}active{% endif %}" aria-label="Resumé" href="/resume">Resumé</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if "timeline" in page.url %}active{% endif %}" href="/timeline" aria-label="Timeline of work">Timeline</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if "patents" in page.url %}active{% endif %}" href="/patents" aria-label="List of patents">Patents</a>
-                </li>
-                <li class="nav-item">
-                    <a class="ml-2 btn btn-outline-primary" href="/about">Contact</a>
+                    <a class="ml-0 ml-lg-1 btn btn-outline-primary" href="/about">Contact</a>
                 </li>
             </ul>
         </div>
+    </div>
 </nav>

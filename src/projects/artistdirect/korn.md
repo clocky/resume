@@ -8,7 +8,9 @@ client: ARTISTdirect
 partner: The FIRM
 headline: From fan to full-time
 collaborators:
+ - Epic Records
  - Gayle Boulware
+ - Immortal Records
  - Peter Katsis
  - Jonathan Davis
  - Sony Music

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/css/google-fonts.css" />
     <link rel="stylesheet" href="/css/typeset.css" />
     <link rel="stylesheet" href="/css/parallax.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
 
     {% include '_structured-data.njk' %}
 
@@ -29,6 +30,8 @@
         {% block title %}
         {% endblock %}
         {{ content | safe }}
+        {% block footer %}
+        {% endblock %}
     <!-- //container -->
     {% include "footer.njk" %}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
