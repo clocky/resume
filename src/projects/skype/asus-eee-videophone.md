@@ -17,8 +17,8 @@ abstract: Interaction designer for the entire embedded Linux OS on this consumer
 headline: The UI was better than the name
 collaborators:
   - Jaak Parik
-  - Oliver Reitalu
   - James Bowman
+  - Oliver Reitalu
   - Tero Hurskainen
 text:
   - Announced at CeBIT 2009 and years ahead of the video-calling home appliance
