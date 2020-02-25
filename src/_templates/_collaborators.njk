@@ -1,0 +1,32 @@
+<div class="container-fluid bg-light">
+  <div class="container">
+    <div class="row mt-5 pt-5">
+      <div class="col-12">
+        <h3 class="text-center">Collaborators</h3>
+      </div>
+    </div>
+    <div class="row pb-5">
+      <div class="col-lg-8 offset-lg-2">
+        <div class="row">
+          {% if collaborators.length >= 6 %}
+            {% for person in collaborators %}
+              <div class="col-lg-4 col-md-6 col-sm-6 text-secondary text-center" >
+                {{ person }}
+              </div>
+            {% endfor %}
+          {% else %}
+
+            <div class="col">
+              <ul class="list-unstyled  text-center">
+                {% for person in collaborators %}
+                  <li class="text-secondary">{{ person }}</li>
+                {% endfor %}
+              </ul>
+            </div>  
+
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
