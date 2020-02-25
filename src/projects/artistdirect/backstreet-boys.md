@@ -10,6 +10,7 @@ headline: Evolving a label-driven site into a fan-driven site
 collaborators:
  - The Firm
  - Gayle Boulware
+ - Jive Records
  - Nick Carter
 tags: 
  - web
