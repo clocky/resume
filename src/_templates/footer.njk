@@ -1,8 +1,14 @@
 <footer class="bg-dark mt-0 pt-4">
     <div class="container">
         <div class="row py-2 py-md-3">
-            <div class="col-xl-3 pb-4">
-                <p class="text-white"><small>{{ site.description }}</small></p>
+            <div class="col-xl-4 pb-4">
+                <p class="text-white">{{ site.description }}</p>
+                
+                <!-- social -->
+                {% for social in ['twitter', 'instagram', 'linkedin'] %}
+                    <a href="{{ site[social].url }}" class="fa fa-{{ social }} d-inline-block mr-2 text-info"></a>
+                {% endfor %}
+                <!-- /social -->
             </div>
         {% for category, pages in collections %}
             {% if category != "all" and category != "projects" %}
