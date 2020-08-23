@@ -3,17 +3,18 @@ const moment = require("moment");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  
-  eleventyConfig.addPassthroughCopy({"src/_assets/img/": "/img"});
-  eleventyConfig.addPassthroughCopy({"src/_assets/js/": "/js"});
-  eleventyConfig.addPassthroughCopy({"src/_assets/favicon/": "/"});
-  eleventyConfig.addPassthroughCopy({"src/_assets/css/": "/css"});
 
-  eleventyConfig.addTransform("pretty", function(content, outputPath) {
-    if( outputPath.endsWith(".html") ) {
+  eleventyConfig.addPassthroughCopy({ "src/_assets/img/": "/img" });
+  eleventyConfig.addPassthroughCopy({ "src/_assets/js/": "/js" });
+  eleventyConfig.addPassthroughCopy({ "src/_assets/favicon/": "/" });
+  eleventyConfig.addPassthroughCopy({ "src/_assets/css/": "/css" });
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
+
+  eleventyConfig.addTransform("pretty", function (content, outputPath) {
+    if (outputPath.endsWith(".html")) {
       let prettified = pretty(content, {
         ocd: true,
       });
@@ -22,7 +23,7 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
-  eleventyConfig.addNunjucksFilter("date", function(dateObj, format) {
+  eleventyConfig.addNunjucksFilter("date", function (dateObj, format) {
     return moment(dateObj).format(format);
   });
 
@@ -36,24 +37,24 @@ module.exports = function(eleventyConfig) {
     return moment(dateObj).format('YYYY-MM-DD')
   });
 
-  eleventyConfig.addCollection("projects", function(collection) {
+  eleventyConfig.addCollection("projects", function (collection) {
     return collection.getFilteredByGlob(["src/projects/**/*.md", "src/projects/**/*.pug"]);
   });
 
   return {
-      templateFormats: [
-          "md", 
-          "pug", 
-          "njk"
-      ],
-      pathPrefix: "/",
-      htmlTemplateEngine: "njk",
-      passthroughFileCopy: true,
-      dir: {
-        input: "src",
-        includes: "_templates",
-        data: "_data",
-        output: "public"
-      }
+    templateFormats: [
+      "md",
+      "pug",
+      "njk"
+    ],
+    pathPrefix: "/",
+    htmlTemplateEngine: "njk",
+    passthroughFileCopy: true,
+    dir: {
+      input: "src",
+      includes: "_templates",
+      data: "_data",
+      output: "public"
+    }
   }
 }
