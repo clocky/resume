@@ -10,7 +10,7 @@ const folder = {
 };
 
 const dir = {
-    img: `/${folder.assets}/img/`,
+    img: `/img/`,
 }
 
 module.exports = {
