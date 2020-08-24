@@ -1,8 +1,10 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    font-display: swap;
   }
   h1, h2, h3, .navbar-brand {
     font-family: 'Playfair Display', serif;
+    font-display: swap;
   }
   h3 {
     font-size: 1.66rem;
