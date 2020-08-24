@@ -12,8 +12,8 @@
 <div class="container">
   <div class="row mt-n5">
       <div class="col-10 col-md-8 col-lg-6 offset-lg-4 offset-md-1 py-3 pl-4 ml-n2 mt-n5 mb-4 bg-white">
-          <h2 class="h1 text-info">{{ title }}</h2>
-          <h4 class="h5 text-dark">{{ page.date | date("MMMM Y") }} • {{ client }}</h4>
+          <h1 class="h1 text-info">{{ title }}</h1>
+          <p class="h5 text-dark">{{ page.date | date("MMMM Y") }} • {{ client }}</p>
       </div>
   </div>
 </div>
@@ -50,9 +50,7 @@
     {# Render one photo #}
     {% if media.length <= 1 %}
       <div class="col-lg-8 offset-lg-2 order-lg-2 order-1">
-        {% for image in media %}
-            <img class="d-block w-100" src="/img/projects/{{client | string | slug }}/{{image}}" />
-        {% endfor %}
+          <img class="d-block w-100" src="/img/projects/{{client | string | slug }}/{{ media[0] }}" alt ="Image representing work on the {{ title }} project"/>
       </div>
     {% else %}
 
@@ -62,9 +60,9 @@
     <!--Carousel Wrapper-->
       <div id="{{title | slug }}" class="carousel slide carousel-fade carousel-thumbnails shadow-sm" data-ride="carousel">
         <!--Slides-->
-        <div class="carousel-inner" role="listbox">
+        <div class="carousel-inner" role="listbox" aria-label="Screenshots of the {{ title }} project">
           {% for image in media %}
-            <div class="carousel-item {% if loop.first %}active{% endif %}">
+            <div class="carousel-item {% if loop.first %}active{% endif %}" role="option">
               <img class="d-block w-100" src="/img/projects/{{client | string | slug }}/{{ image }}" alt="Image {{loop.index}} of {{loop.length}} of the {{ title }} project">
             </div>
           {% endfor %}

@@ -10,16 +10,16 @@
         <div class="row">
           {% if collaborators.length >= 6 %}
             {% for person in collaborators %}
-              <div class="col-lg-4 col-md-6 col-sm-6 text-secondary text-center" >
+              <div class="col-lg-4 col-md-6 col-sm-6 text-center" style="color: #666;">
                 {{ person }}
               </div>
             {% endfor %}
           {% else %}
 
             <div class="col">
-              <ul class="list-unstyled  text-center">
+              <ul class="list-unstyled text-center">
                 {% for person in collaborators %}
-                  <li class="text-secondary">{{ person }}</li>
+                  <li style="color: #666;">{{ person }}</li>
                 {% endfor %}
               </ul>
             </div>  

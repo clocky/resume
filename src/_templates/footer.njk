@@ -1,19 +1,21 @@
 <footer class="bg-dark mt-0 pt-4">
     <div class="container">
         <div class="row py-2 py-md-3">
-            <div class="col-xl-4 pb-4">
+            <div class="col-xl-4 pb-4 pr-5">
                 <p class="text-white">{{ site.description }}</p>
                 
                 <!-- social -->
                 {% for social in ['twitter', 'instagram', 'linkedin'] %}
-                    <a href="{{ site[social].url }}" class="fa fa-{{ social }} d-inline-block mr-2 text-info"></a>
+                    <a href="{{ site[social].url }}" class="fa fa-{{ social }} d-inline-block mr-2 text-info">
+                        <span class="sr-only">{{ social }}</span>
+                    </a>
                 {% endfor %}
                 <!-- /social -->
             </div>
         {% for category, pages in collections %}
             {% if category != "all" and category != "projects" %}
             <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6" role="navigation" aria-labelledby="category-{{ category | slug}}">
-                <h5 class="text-white font-weight-bold" id="category-{{ category | slug }}">{{ category | capitalize }}</h5>
+                <h4 class="h6 border-bottom border-secondary pb-2 text-white font-weight-bold pt-1" id="category-{{ category | slug }}">{{ category | capitalize }}</h4>
                 <ul class="list-unstyled">
                     {%- for page in pages | reverse -%}
                         <li>
