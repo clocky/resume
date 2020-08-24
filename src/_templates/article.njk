@@ -64,7 +64,7 @@
         <!--Slides-->
         <div class="carousel-inner" role="listbox" aria-label="Screenshots of the {{ title }} project">
           {% for image in media %}
-            <div class="carousel-item {% if loop.first %}active{% endif %}">
+            <div class="carousel-item {% if loop.first %}active{% endif %}" role="option">
               <img class="d-block w-100" src="/img/projects/{{client | string | slug }}/{{ image }}" alt="Image {{loop.index}} of {{loop.length}} of the {{ title }} project">
             </div>
           {% endfor %}
