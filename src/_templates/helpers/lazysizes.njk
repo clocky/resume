@@ -2,10 +2,12 @@
     {% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
     <picture class="img-fluid">
         {%- for width in [1600, 1200, 800, 400] -%}
+            {% if width <= maximum %}
             <source 
                 data-srcset="{{prefix}}_{{width}}w.jpg" 
                 media="(max-width: {{width}}px)" 
             />
+            {% endif %}
         {%- endfor %}
         <img 
             data-src="{{prefix}}_{{maximum}}w.jpg" 

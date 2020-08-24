@@ -14,12 +14,19 @@ eleventyNavigation:
         <div class="row mt-4">
             {% for page in collections.projects | reverse  %}
             <!-- Hero  -->
-                <div class="
-                    {%- if loop.index == 1 %} col-md-12 mb-4 {%- endif %}
-                    {%- if loop.index == 2 or loop.index == 3 %} col-md-6 mb-4 {%- endif %}
-                    {%- if loop.index >= 4 %} col-lg-4 col-md-6 mb-3 {%- endif %}">
+                {% if loop.index == 1%}
+                    {% set classes = "col-md-12 mb-4" %}
+                    {% set width = 1200 %}
+                {% elif loop.index == 2 or loop.index == 3  %}
+                    {% set classes = "col-md-6 mb-4" %}
+                    {% set width = 800 %}
+                {% elif loop.index >= 4  %}
+                    {% set classes = "col-lg-4 col-md-6 mb-3" %}
+                    {% set width = 400 %}
+                {% endif %}
+                <div class="{{ classes }}">
                     <a href="{{page.url}}index.html">
-                        {{ picture(page.data.title, page.data.client ) }}
+                        {{ picture(page.data.title, page.data.client, width ) }}
                     </a>
                     {% if loop.index == 1 %}
                         <h2 class="mt-4 {{tablet}}">
@@ -36,8 +43,8 @@ eleventyNavigation:
                     {% endif %}
                 </div>
             <!-- // hero -->
-    {% endfor %}
-            </div>
+            {% endfor %}
+        </div>
     </div> <!-- // row -->
 </div> <!-- container -->
 {% endblock %}
