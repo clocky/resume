@@ -62,7 +62,7 @@
     <!--Carousel Wrapper-->
       <div id="{{title | slug }}" class="carousel slide carousel-fade carousel-thumbnails shadow-sm" data-ride="carousel">
         <!--Slides-->
-        <div class="carousel-inner" role="listbox">
+        <div class="carousel-inner" role="listbox" aria-label="Screenshots of the {{ title }} project">
           {% for image in media %}
             <div class="carousel-item {% if loop.first %}active{% endif %}">
               <img class="d-block w-100" src="/img/projects/{{client | string | slug }}/{{ image }}" alt="Image {{loop.index}} of {{loop.length}} of the {{ title }} project">
