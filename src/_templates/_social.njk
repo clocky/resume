@@ -1,6 +1,5 @@
   {% if client %}
   {% set cover = env.base.img + "hero/" + client | slug + "/" + title | slug  + "_1200w.jpg" %}
-  {% endif %}
 
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ abstract or title }}">
@@ -15,3 +14,4 @@
   <meta name="twitter:description" content="{{ abstract or title }}">
   <meta name="twitter:image" content="{{ cover }}">
   <meta name="twitter:creator" content="@clocky">
+  {% endif %}
