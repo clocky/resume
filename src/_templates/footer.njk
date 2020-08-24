@@ -6,7 +6,9 @@
                 
                 <!-- social -->
                 {% for social in ['twitter', 'instagram', 'linkedin'] %}
-                    <a href="{{ site[social].url }}" class="fa fa-{{ social }} d-inline-block mr-2 text-info"></a>
+                    <a href="{{ site[social].url }}" class="fa fa-{{ social }} d-inline-block mr-2 text-info">
+                        <span class="sr-only">{{ social }}</span>
+                    </a>
                 {% endfor %}
                 <!-- /social -->
             </div>
