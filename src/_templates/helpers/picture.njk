@@ -3,7 +3,7 @@
     <picture class="img-fluid">
         {% set breakpoint = [1200, 992, 768, 576, 320] %}
         {%- for width in [1600, 1200, 800, 800, 400] -%}
-            {% if width < maximum %}
+            {% if width <= maximum %}
             <source 
                 srcset="{{prefix}}_{{width}}w.jpg"
                 media="(min-width: {{breakpoint[loop.index0]}}px)"
