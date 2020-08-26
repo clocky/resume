@@ -1,6 +1,6 @@
 {% macro picture(title, client, maximum='1600') %}
     {% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
-    <picture class="img-fluid">
+    <picture class="img-fluid rounded">
         {%- for width in [1600, 1200, 800, 400] -%}
             {% if width <= maximum %}
             <source 
@@ -11,7 +11,7 @@
         {%- endfor %}
         <img 
             data-src="{{prefix}}_{{maximum}}w.jpg" 
-            class="img-fluid lazyload" 
+            class="img-fluid rounded lazyload shadow-sm" 
             alt="Preview of {{ title }}, designed by Mark McLaughlin for {{ client }}."
         />
     </picture>
