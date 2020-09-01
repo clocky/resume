@@ -4,18 +4,7 @@ eleventyExcludeFromCollections: true
 ---
 {% extends "base.njk" %}
 
-{% macro img(title, client) %}
-    {% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
-    <img 
-        class="img-fluid shadow-sm"
-        src="{{ prefix }}_400w.jpg"
-        srcset="
-            {%- for width in [800, 400] -%}
-            {{prefix}}_{{width}}w.jpg {{width}}w{% if not loop.last %},{% endif %}
-            {%- endfor -%}"
-        alt="Preview of {{ title }}, designed for {{ client }}."
-    />
-{% endmacro %}
+{% from "helpers/lazysizes.njk" import picture %}
 
 {% block title %}
 <div class="container mt-5 pt-3">
@@ -42,8 +31,8 @@ eleventyExcludeFromCollections: true
         {% endif %}
         {% set current_year = year %}
         <div class="col-lg-3 col-md-4 pb-2">
-            <a href="{{ page.url }}">
-                {{ img(page.data.title, page.data.client) }}
+            <a href="{{ page.url }}index.html">
+                {{ picture(page.data.title, page.data.client, 800 ) }}
             </a>
         </div>
         <div class="col-lg-5 col-md-8">
