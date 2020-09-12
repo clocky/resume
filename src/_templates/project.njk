@@ -1,0 +1,22 @@
+{% extends "base.njk" %}
+{% from "helpers/picture.njk" import picture %}
+
+{% block title  %}
+    {% set prefix = "/img/hero/" + client | slug + "/" + title | slug %}
+
+    <div class="jumbotron-fluid parallax" style="background-image: url({{prefix}}_1600w.jpg);">
+    </div>
+
+    <div class="container">
+        <div class="row mt-n5">
+            <div class="col-10 col-md-8 col-lg-6 offset-lg-4 offset-md-1 py-3 pl-4 ml-n2 mt-n5 mb-4 bg-white rounded-top">
+                <h1 class="h1 text-info">{{ title }}</h1>
+                <p class="h5 text-dark">{{ page.date | date("MMMM Y") }} • {{ client }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {% include '_collaborators.njk' %}
+{% endblock %}
