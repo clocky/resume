@@ -1,4 +1,4 @@
-const pretty = require('pretty');
+const pretty = require("pretty");
 const moment = require("moment");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
@@ -27,26 +27,34 @@ module.exports = function (eleventyConfig) {
     return moment(dateObj).format(format);
   });
 
-  eleventyConfig.addShortcode("now",
-    function () {
-      return moment();
-    }
-  );
+  eleventyConfig.addShortcode("now", function () {
+    return moment();
+  });
 
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return moment(dateObj).format('YYYY-MM-DD')
+  eleventyConfig.addShortcode("img", function (asset) {
+    return `</div></div>
+      <div class="row mt-3">
+      <div class="col=12">
+      <img data-src="${asset}" class="img-fluid  lazyload shadow" />
+      </div>
+      </div>
+    <div class="row mt-5">
+    <div class="col-lg-8 offset-lg-2">`;
+  });
+
+  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+    return moment(dateObj).format("YYYY-MM-DD");
   });
 
   eleventyConfig.addCollection("projects", function (collection) {
-    return collection.getFilteredByGlob(["src/projects/**/*.md", "src/projects/**/*.pug"]);
+    return collection.getFilteredByGlob([
+      "src/projects/**/*.md",
+      "src/projects/**/*.pug",
+    ]);
   });
 
   return {
-    templateFormats: [
-      "md",
-      "pug",
-      "njk"
-    ],
+    templateFormats: ["md", "pug", "njk"],
     pathPrefix: "/",
     htmlTemplateEngine: "njk",
     passthroughFileCopy: true,
@@ -54,7 +62,7 @@ module.exports = function (eleventyConfig) {
       input: "src",
       includes: "_templates",
       data: "_data",
-      output: "public"
-    }
-  }
-}
+      output: "public",
+    },
+  };
+};

@@ -31,7 +31,15 @@
     {% include "header.njk" %}
         {% block title %}
         {% endblock %}
-        {{ content | safe }}
+
+      <article class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2">
+            {{ content | safe }}
+          </div>
+        </div>
+      </article>
+
         {% block footer %}
         {% endblock %}
     <!-- //container -->
