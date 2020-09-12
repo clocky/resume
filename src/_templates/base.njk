@@ -32,13 +32,9 @@
         {% block title %}
         {% endblock %}
 
-      <article class="container">
-        <div class="row">
-          <div class="col-lg-8 offset-lg-2">
+        {% block content %}
             {{ content | safe }}
-          </div>
-        </div>
-      </article>
+        {% endblock %}
 
         {% block footer %}
         {% endblock %}
