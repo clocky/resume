@@ -12,7 +12,7 @@ partner: Skype
 abstract: Co-designer of a unified presence model that aligned Microsoft's consumer and enterprise communications products.
 tags:
   - mobile
-  - web
+  - desktop
 collaborators:
  - Beste Nazilli
  - Mizue Fujinuma
