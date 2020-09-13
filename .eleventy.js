@@ -35,7 +35,7 @@ module.exports = function (eleventyConfig) {
     return `</div>
       </div>
       <div class="row mt-3">
-        <div class="col-12">
+        <div class="col-12 text-center">
           <img data-src="${asset}" class="img-fluid lazyload shadow" />
         </div>
       </div>
