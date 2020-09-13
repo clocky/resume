@@ -2,10 +2,16 @@ const pretty = require("pretty");
 const moment = require("moment");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const embedYouTube = require("eleventy-plugin-youtube-embed");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(embedYouTube, {
+    embedClass: "embed-responsive-item",
+    allowFullScreen: true,
+    lazy: true
+  });
 
   eleventyConfig.addPassthroughCopy({ "src/_assets/img/": "/img" });
   eleventyConfig.addPassthroughCopy({ "src/_assets/js/": "/js" });
