@@ -19,22 +19,6 @@ collaborators:
  - Paul Sim
  - Sergei Tuterov
 abstract: Design manager for the initial release of Skype on HoloLens experience, deployed by NASA to the International Space Station as part of "Project Sidekick".
-thumbnail:
- - thumbnail-hololens.jpg
-text:
- - My team were responsible for building the companion experience for 
-   remote participants and collaborating with the Windows Holographic 
-   team for the native app.
- - While the holographic version of the application served as a showcase for
-   permitting the user to share their Mixed Reality experience with a third 
-   party, many of the design challenges were around how Windows users joining
-   the HoloLens user could interact with a 3D space on a 2D input plane.
-tags: hardware
-media:
- - 
- - hololens-video-2_1600_c.jpg
- - hololens-video-3_1600_c.jpg
- - hololens-video-6_1600_c.jpg
 ---
 
 ## Windows Holographic + Windows 10
