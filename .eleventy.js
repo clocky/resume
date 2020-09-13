@@ -2,15 +2,32 @@ const pretty = require("pretty");
 const moment = require("moment");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const embedYouTube = require("eleventy-plugin-youtube-embed");
 const markdownItAttrs = require('markdown-it-attrs');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+
+
+
+  /**
+   * Plugin: Embed YouTube
+   */
+  const embedYouTube = require("eleventy-plugin-youtube-embed");
+
   eleventyConfig.addPlugin(embedYouTube, {
     embedClass: "embed-responsive-item embed-responsive-16by9 mt-5",
     lite: true
+  });
+
+  /**
+   * Plugin: Embed Vimeo
+   */
+
+  const embedVimeo = require("eleventy-plugin-vimeo-embed");
+
+  eleventyConfig.addPlugin(embedVimeo, {
+    embedClass: "embed-responsive-item embed-responsive-16by9 mt-5",
   });
 
   eleventyConfig.addPassthroughCopy({ "src/_assets/img/": "/img" });
@@ -43,7 +60,7 @@ module.exports = function (eleventyConfig) {
       </div>
       <div class="row mt-3">
         <div class="col-12 text-center">
-          <img data-src="${asset}" class="img-fluid lazyload ${shadowClass}" />
+          <img data-src="${asset}" class="img-fluid lazyload rounded ${shadowClass}" />
         </div>
       </div>
       <div class="row mt-5">
