@@ -32,14 +32,15 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addShortcode("img", function (asset) {
-    return `</div></div>
+    return `</div>
+      </div>
       <div class="row mt-3">
-      <div class="col=12">
-      <img data-src="${asset}" class="img-fluid  lazyload shadow" />
+        <div class="col-12">
+          <img data-src="${asset}" class="img-fluid lazyload shadow" />
+        </div>
       </div>
-      </div>
-    <div class="row mt-5">
-    <div class="col-lg-8 offset-lg-2">`;
+      <div class="row mt-5">
+        <div class="col-lg-8 offset-lg-2">`;
   });
 
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {
