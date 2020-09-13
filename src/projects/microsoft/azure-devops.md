@@ -12,6 +12,8 @@ date: 2018-06-08
 
 abstract: Design manager for Azure DevOps design system and feature development, introducing Figma to Microsoft.
 headline: Design systems for developer services
+tags:
+  - desktop
 collaborators:
   - Giorgia Paolini
   - Jared Bauer
@@ -37,9 +39,7 @@ Hyderabad to enumerate the typical stock screens and scenarios that were common
 throughout the suite, in order normalize and bring coherency to the individual
 product workflows.
 
-<section class="my-5">
-
-### Everything is a list, sort of.
+### Everything is a list, sort of. {.mt-5}
 
 One of the key discoveries during the exploration phase of the project was that
 almost everything in the product operated on the concept of a list or collection
@@ -52,11 +52,7 @@ scenario in the product for tabular data, and especially defining accessible and
 visually differentiated styles for each type of object to be used throughout the
 different parts of the product.
 
-</section>
-
-<section class="my-5">
-
-### Building and maintaining the content
+### Building and maintaining the content {.mt-5}
 
 During the development and implementation of the design system, we took
 advantage of the recent acquisition of GitHub to create an open backlog that
@@ -66,11 +62,7 @@ helping triage and understand requirements.
 
 {% img "/img/projects/microsoft/codex-github.png" %}
 
-</section>
-
-<section class="my-5">
-
-### Centralising design components in Figma
+### Centralising design components in Figma {.mt-5}
 
 With the rollout of the design system, I took the opportunity to standardise the
 team on use of Figma as our source of truth, helping reduce the amount of time
@@ -80,9 +72,7 @@ XD or even in one case, Visio.
 
 {% img "/img/projects/microsoft/codex-design-system.png" %}
 
-<section class="my-5">
-
-### Evangelising best practices
+### Evangelising best practices {.mt-5}
 
 As the first design org at Microsoft to adopt Figma for a shipping product, our
 use of Team Libraries in a distributed team was groundbreaking within the

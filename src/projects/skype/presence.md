@@ -10,11 +10,13 @@ title: Presence
 client: Microsoft
 partner: Skype
 abstract: Co-designer of a unified presence model that aligned Microsoft's consumer and enterprise communications products.
-
+tags:
+  - mobile
+  - desktop
 collaborators:
  - Beste Nazilli
  - Mizue Fujinuma
- - Michael Lam
+ - Michael W. Lam
 ---
 
 ## Aligning consumer and enterprise needs
