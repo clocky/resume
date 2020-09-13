@@ -8,6 +8,7 @@
     "build": "run-s build:*",
     "clean": "run-p *:clean",
     "serve": "eleventy --serve",
+    "debug": "DEBUG=Eleventy* eleventy",
     "build:clean": "rimraf dist public",
     "build:eleventy": "ELEVENTY_ENV=prod eleventy",
     "build:framer": "ncp src/_assets/framer/ public/framer/",
