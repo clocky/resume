@@ -26,11 +26,10 @@ collaborators:
 
 ## Design systems for developer services
 
-<p class="lead">
 During the transition of the Visual Studio Team Services product to the
 rebranded Azure DevOps suite, I managed the team that oversaw the roll out of a
 refreshed design system and feel, building on Microsoft's Fabric framework.
-</p>
+{.lead}
 
 Taking the opportunity of the rebrand, we worked with our engineering and
 product management stakeholders across Raleigh, San Francisco, Seattle and
