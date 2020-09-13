@@ -20,12 +20,6 @@ collaborators:
   - Mark Lacroce
   - Oliver Reitalu
   - Steve "Buzz" Pearce
-hero: true
-media:
-  - 
-text:
-  - 
-  - 
 tags:
   - mobile
   - desktop
@@ -46,8 +40,6 @@ balancing line weights at different sizes and most crucially of all, keeping a
 sense of the original set without drifting too much into 'quirky'.
 
 {% img "/img/projects/skype/emoticons-hicksdesign.png" %}
-
-
 
 ### Extending and animating {.mt-5}
 
@@ -81,4 +73,3 @@ Our colleague, [Mark Lacroce](http://marklacroce.com) is captured here offering
 up his take on the Carlton and other moves; after, Julian brings it to life.
 
 https://www.youtube.com/embed/9-i2gi9bW3E?controls=0
-
