@@ -29,6 +29,8 @@ Video application - acting as a FaceTime and Hangouts competitor in the OS.
 
 {% img "/img/projects/microsoft/windows-10-video.png" %}
 
+<section class="my-5">
+
 ### Mobile
 
 For mobile we took the approach of integration with the address book, allowing
@@ -37,3 +39,5 @@ Windows communications team to enable cost-conscious customers to switch between
 Skype and SMS within a conversation as they saw fit.
 
 https://www.youtube.com/watch?v=hsxKU4-mHLo
+
+</section>
