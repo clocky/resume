@@ -3,12 +3,13 @@ const moment = require("moment");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
+const markdownItAttrs = require('markdown-it-attrs');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(embedYouTube, {
-    embedClass: "embed-responsive-item embed-responsive-16by9",
+    embedClass: "embed-responsive-item embed-responsive-16by9 mt-5",
     lite: true
   });
 
@@ -36,12 +37,13 @@ module.exports = function (eleventyConfig) {
     return moment();
   });
 
-  eleventyConfig.addShortcode("img", function (asset) {
+  eleventyConfig.addShortcode("img", function (asset, shadow = true) {
+    let shadowClass = shadow ? "shadow" : "";
     return `</div>
       </div>
       <div class="row mt-3">
         <div class="col-12 text-center">
-          <img data-src="${asset}" class="img-fluid lazyload shadow" />
+          <img data-src="${asset}" class="img-fluid lazyload ${shadowClass}" />
         </div>
       </div>
       <div class="row mt-5">
@@ -58,6 +60,12 @@ module.exports = function (eleventyConfig) {
       "src/projects/**/*.pug",
     ]);
   });
+
+  const markdownIt = require('markdown-it')({
+    html: true
+  }
+  );
+  eleventyConfig.setLibrary("md", markdownIt.use(markdownItAttrs))
 
   return {
     templateFormats: ["md", "pug", "njk"],
