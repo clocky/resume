@@ -3,6 +3,7 @@ dist
 .cache
 node_modules
 hint-report
+.git-old
 
 .DS_Store
 .AppleDouble
