@@ -1,6 +1,4 @@
 ---
-eleventyExcludeFromCollections: false
-
 permalink: "developer/azure-devops/index.html"
 dynamicPermalink: false
 eleventyNavigation:
@@ -11,6 +9,7 @@ layout: project.njk
 title: Azure DevOps
 client: Microsoft
 date: 2018-06-08
+
 abstract: Design manager for Azure DevOps design system and feature development, introducing Figma to Microsoft.
 headline: Design systems for developer services
 collaborators:
