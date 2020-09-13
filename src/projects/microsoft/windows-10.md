@@ -21,11 +21,10 @@ collaborators:
 
 ## Native communications for desktop and mobile
 
-<p class="lead">
 As part of the launch of Windows 10, one of the flagship features was to
 integrate Skype directly into the native People, Messaging, Phone and a new
 Video application - acting as a FaceTime and Hangouts competitor in the OS.
-</p>
+{.lead}
 
 {% img "/img/projects/microsoft/windows-10-video.png" %}
 
