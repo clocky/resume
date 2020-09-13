@@ -8,9 +8,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(embedYouTube, {
-    embedClass: "embed-responsive-item",
-    allowFullScreen: true,
-    lazy: true
+    embedClass: "embed-responsive-item embed-responsive-16by9",
+    lite: true
   });
 
   eleventyConfig.addPassthroughCopy({ "src/_assets/img/": "/img" });
