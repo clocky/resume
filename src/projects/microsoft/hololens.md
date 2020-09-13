@@ -11,14 +11,19 @@ title: Skype for HoloLens
 client: Microsoft
 date: 2016-02-26
 headline: Windows Holographic + Windows 10
+tags: 
+  - hardware
 collaborators:
- - Austin Lee
- - Joe Thompson
- - Maciek Janicki
- - Mark Swift
- - Paul Sim
- - Sergei Tuterov
-abstract: Design manager for the initial release of Skype on HoloLens experience, deployed by NASA to the International Space Station as part of "Project Sidekick".
+  - Austin Lee
+  - Joe Thompson
+  - Maciek Janicki
+  - Mark Swift
+  - Paul Sim
+  - Sergei Tuterov 
+abstract: |
+  Design manager for the initial release of Skype on HoloLens experience,
+  deployed by NASA to the International Space Station as part of "Project
+  Sidekick".
 ---
 
 ## Windows Holographic + Windows 10
