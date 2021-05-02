@@ -1,0 +1,25 @@
+---
+title: 404
+permalink: /404.html
+eleventyExcludeFromCollections: true
+
+---
+{% extends "base.njk" %}
+{% block title %}
+<script>plausible("404",{ props: { path: document.location.pathname } });</script>
+<div class="container mt-5 pt-3">
+    <div class="row">
+        <div class="col-12 border-bottom mt-4 mb-4 pb-2">
+            <h2 class="display-4 text-info">404 Not Found</h2>
+        </div>
+    </div>
+</div>
+<div class="container mt-1 mb-3 pt-1 pb-3">
+    <div class="row">
+        <div class="col-lg-6 col-md-10 col-sm-12">
+            <h2 class="h2 mb-4">Whatever it was, it's not here.</h2>
+            <p>If you're looking for design work by Mark McLaughlin, you could start with the one with the <a href="/artists/backstreet-boys/">pop group</a> your little sister was into; the app that was used by <a href="/hardware/hololens/">an astronaut</a> or even maybe the one <a href="/mobile/webos/">pulled 49 days after launch</a>.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
