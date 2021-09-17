@@ -1,25 +1,39 @@
 [[headers]]
     for = "/*.jpg"
     [headers.values]
-        Cache-Control = "public, max-age=31536000, immutable"
+        cache-control = '''
+        public,
+        max-age=31536000,
+        immutable'''
+
+[[headers]]
+    for = "/*.png"
+    [headers.values]
+        cache-control = '''
+        public,
+        max-age=31536000,
+        immutable'''
 
 [[headers]]
     for = "/*.css"
     [headers.values]
-        Cache-Control = "public, max-age=31536000, immutable"
+        cache-control = '''
+        public,
+        max-age=31536000,
+        immutable'''
 
 [[headers]]
     for = "/*.js"
     [headers.values]
-        Content-Type = "application/javascript; charset=utf-8"
+        content-type = "application/javascript; charset=utf-8"
         
 [[headers]]
     for = "/*"
     [headers.values]
-        Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-        X-Content-Type-Options = "nosniff"
+        strict-transport-security = "max-age=31536000; includeSubDomains; preload"
+        x-content-type-options = "nosniff"
         
 [[headers]]
     for = "site.webmanifest"
     [headers.values]
-        Content-Type = "application/manifest+json; charset=utf-8"
+        content-type = "application/manifest+json; charset=utf-8"
