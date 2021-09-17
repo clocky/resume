@@ -15,14 +15,15 @@
     <link rel="canonical" href="{{ absoluteUrl }}"/>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:900%7CSource+Sans+Pro:300,400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:900%7CSource+Sans+Pro:300,400&display=swap" crossorigin="anonymous" />
     <script src="https://kit.fontawesome.com/c4674e1253.js" crossorigin="anonymous"></script>
-    <script src="/js/lazysizes.min.js" async=""></script>
+    <script src="/js/lazysizes.min.js" async crossorigin="{{ cors }}"></script>
 
-    <link rel="stylesheet" href="/css/google-fonts.css" />
-    <link rel="stylesheet" href="/css/typeset.css" />
-    <link rel="stylesheet" href="/css/parallax.css" />
-    <link rel="stylesheet" href="/css/navbar.css" />
+    {% set cors = "anonymous" if env.environment == "prod" else "invalid"%}
+    <link rel="stylesheet" href="/css/google-fonts.css" crossorigin="{{ cors }}" />
+    <link rel="stylesheet" href="/css/typeset.css" crossorigin="{{ cors }}" />
+    <link rel="stylesheet" href="/css/parallax.css" crossorigin="{{ cors }}" />
+    <link rel="stylesheet" href="/css/navbar.css" crossorigin="{{ cors }}" />
 
     {% include '_structured-data.njk' %}
 
