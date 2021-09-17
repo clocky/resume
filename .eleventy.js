@@ -2,13 +2,11 @@ const pretty = require("pretty");
 const moment = require("moment");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const markdownItAttrs = require('markdown-it-attrs');
+const markdownItAttrs = require("markdown-it-attrs");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
-
 
   /**
    * Plugin: Embed YouTube
@@ -17,7 +15,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(embedYouTube, {
     embedClass: "embed-responsive-item embed-responsive-16by9 mt-5",
-    lite: true
+    lite: true,
   });
 
   /**
@@ -78,11 +76,10 @@ module.exports = function (eleventyConfig) {
     ]);
   });
 
-  const markdownIt = require('markdown-it')({
-    html: true
-  }
-  );
-  eleventyConfig.setLibrary("md", markdownIt.use(markdownItAttrs))
+  const markdownIt = require("markdown-it")({
+    html: true,
+  });
+  eleventyConfig.setLibrary("md", markdownIt.use(markdownItAttrs));
 
   return {
     templateFormats: ["md", "pug", "njk"],
