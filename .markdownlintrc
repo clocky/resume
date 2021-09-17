@@ -1,5 +1,0 @@
-{
-    "default": true,
-    // Allow bare URL's as two Eleventy plugins use them for video embeds
-    "MD034": false
-}
