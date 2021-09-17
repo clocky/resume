@@ -28,6 +28,7 @@ Video application - acting as a FaceTime and Hangouts competitor in the OS.
 
 {% img "/img/projects/microsoft/windows-10-video.png" %}
 
+<!-- markdownlint-disable MD033 -->
 <section class="my-5">
 
 ### Mobile
@@ -37,6 +38,7 @@ users to automatically find friends who also used Skype. We also worked with the
 Windows communications team to enable cost-conscious customers to switch between
 Skype and SMS within a conversation as they saw fit.
 
+<!-- markdownlint-disable MD034 -->
 https://www.youtube.com/watch?v=hsxKU4-mHLo
 
 </section>
