@@ -8,7 +8,7 @@ JAMstack site built with Eleventy and deployed to Netlify.
 
 Local development server.
 
-* `npm run serve`
+* `npm run start`
 
 Production build
 
