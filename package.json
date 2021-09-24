@@ -6,7 +6,7 @@
   "scripts": {
     "build": "run-s build:*",
     "clean": "run-p *:clean",
-    "serve": "ELEVENTY_ENV=development eleventy --serve",
+    "start": "ELEVENTY_ENV=development eleventy --serve",
     "debug": "DEBUG=Eleventy* eleventy",
     "build:clean": "rimraf dist public",
     "build:eleventy": "ELEVENTY_ENV=prod eleventy",
