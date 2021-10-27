@@ -9,9 +9,12 @@
 
     {% include '_favicon.njk' %}
     {% include '_social.njk' %}
-    <script async defer data-domain="markmclaughlin.info" src="https://plausible.io/js/plausible.outbound-links.js"></script>
-    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 
+    {% if env.environment == "prod" %}
+      {# Only include Plausible.io tracking if we're in production environment #}
+      <script async defer data-domain="markmclaughlin.info" src="https://plausible.io/js/plausible.outbound-links.js"></script>
+      <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    {% endif %}
     <link rel="canonical" href="{{ absoluteUrl }}"/>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
