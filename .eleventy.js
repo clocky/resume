@@ -28,11 +28,19 @@ module.exports = function (eleventyConfig) {
     embedClass: "embed-responsive-item embed-responsive-16by9 mt-5",
   });
 
+  /**
+   * Passthrough copy of assets
+   */
+
   eleventyConfig.addPassthroughCopy({ "src/_assets/img/": "/img" });
   eleventyConfig.addPassthroughCopy({ "src/_assets/js/": "/js" });
   eleventyConfig.addPassthroughCopy({ "src/_assets/favicon/": "/" });
   eleventyConfig.addPassthroughCopy({ "src/_assets/css/": "/css" });
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+
+  /**
+   * Transform: Run HTML documents through Pretty
+   */
 
   eleventyConfig.addTransform("pretty", function (content, outputPath) {
     if (outputPath.endsWith(".html")) {
@@ -44,13 +52,33 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  /**
+   * Filter: add live date to posts
+   */
+
   eleventyConfig.addNunjucksFilter("date", function (dateObj, format) {
     return moment(dateObj).format(format);
   });
 
+  /**
+   * Filter: Convert a date to YYYY-MM-DD format.
+   */
+
+  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+    return moment(dateObj).format("YYYY-MM-DD");
+  });
+
+  /**
+   * Shortcode: Shortcode for current time
+   */
+
   eleventyConfig.addShortcode("now", function () {
     return moment();
   });
+
+  /**
+   * Shortcode: render a full width image with shadows
+   */
 
   eleventyConfig.addShortcode("img", function (asset, shadow = true) {
     let shadowClass = shadow ? "shadow" : "";
@@ -65,16 +93,16 @@ module.exports = function (eleventyConfig) {
         <div class="col-lg-8 offset-lg-2">`;
   });
 
-  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-    return moment(dateObj).format("YYYY-MM-DD");
-  });
-
   eleventyConfig.addCollection("projects", function (collection) {
     return collection.getFilteredByGlob([
       "src/projects/**/*.md",
       "src/projects/**/*.pug",
     ]);
   });
+
+  /**
+   * Set MarkdownIt as the default markdown parser, including the attribs plugin
+   */
 
   const markdownIt = require("markdown-it")({
     html: true,
