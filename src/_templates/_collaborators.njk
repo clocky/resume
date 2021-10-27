@@ -8,6 +8,7 @@
     <div class="row pb-lg-5 pb-4">
       <div class="col-lg-8 offset-lg-2">
         <div class="row">
+          {# Render multiple columns if there are more than 6 people listed #}
           {% if collaborators.length >= 6 %}
             {% for person in collaborators %}
               <div class="col-lg-4 col-md-6 col-sm-6 text-center" style="color: #666;">
@@ -15,7 +16,7 @@
               </div>
             {% endfor %}
           {% else %}
-
+            {# Render a single list if there are less than 6 people listed #}
             <div class="col">
               <ul class="list-unstyled text-center">
                 {% for person in collaborators %}
@@ -23,10 +24,9 @@
                 {% endfor %}
               </ul>
             </div>  
-
           {% endif %}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        </div> <!-- /row -->
+      </div> <!-- col-lg-8 -->
+    </div> <!-- /row -->
+  </div> <!-- /container -->
+</div> <!-- /container-fluid -->
