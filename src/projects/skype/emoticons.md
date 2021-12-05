@@ -53,6 +53,7 @@ Here's a few of the standouts that I especially enjoyed working with Julian and
 the team on. Sadly (but possibly for the best) not all of these survived the
 Microsoft acquisition.
 
+<!-- markdownlint-disable MD013 -->
 <img data-src="/img/projects/skype/emoticons/emo.gif" class="img-fluid lazyload" />
 <img data-src="/img/projects/skype/emoticons/mooning.gif" class="img-fluid lazyload"/>
 <img data-src="/img/projects/skype/emoticons/lalala.gif" class="img-fluid lazyload"/>

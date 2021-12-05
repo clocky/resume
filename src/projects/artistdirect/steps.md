@@ -30,6 +30,4 @@ photo shoots to create animated GIFs of the bands signature dance moves, (i.e,
 their "STEPS").
 
 {% img "/img/projects/artistdirect/steps-buzz.png" %}
-
-
 {% img "/img/projects/artistdirect/steps-news.png" %}

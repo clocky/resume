@@ -21,7 +21,7 @@ collaborators:
 tags: web
 ---
 
-## Empowering customers to be in control 
+## Empowering customers to be in control
 
 I designed and contributed to the development the front end UI for a self-care
 portal for a Hutchison 3G (aka, "3 mobile") that allowed customers to review,

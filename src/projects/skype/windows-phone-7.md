@@ -20,9 +20,8 @@ headline:
 abstract:
  - Design lead for envisioning Skype on Microsoft's mobile reinvention.
 ---
-Immediately prior to the announcement of Microsoft acquiring Skype, the team 
-had been investigating the opportunity of creating a Windows Phone 7 
-application.
+Immediately prior to the announcement of Microsoft acquiring Skype, the team had
+been investigating the opportunity of creating a Windows Phone 7 application.
 {.lead}
 
 At short notice, I put together a conceptual application presented by [Joe

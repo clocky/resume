@@ -30,4 +30,3 @@ much as the music.
 {% img "/img/projects/artistdirect/indigogirls-resources.png" %}
 {% img "/img/projects/artistdirect/indigogirls-discography.png" %}
 {% img "/img/projects/artistdirect/indigogirls-news.png" %}
-

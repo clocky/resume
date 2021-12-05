@@ -51,9 +51,10 @@ initial setup screens.
 
 ### Pivoting on hardware
 
-A key challenge during the development cycle was the [deprecation of the Kinect accessory](https://kotaku.com/microsoft-announces-xbox-one-without-kinect-shipping-j-1575644372"), removing
-the ability to use skeletal tracking to correct crop the video to focus on the
-speaker; the flip-side was that it enabled Xbox owners to use any regular
+A key challenge during the development cycle was the
+[deprecation of the Kinect accessory](https://kotaku.com/microsoft-announces-xbox-one-without-kinect-shipping-j-1575644372"),
+removing the ability to use skeletal tracking to correct crop the video to focus
+on the speaker; the flip-side was that it enabled Xbox owners to use any regular
 consumer-grade webcam for the app.
 
 I proposed an alternate scheme where the analog triggers and sticks on the Xbox

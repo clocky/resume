@@ -36,4 +36,3 @@ Academy of Digital Music Arts and Sciences.
 {% img "/img/projects/artistdirect/ratm-benefits.png" %}
 {% img "/img/projects/artistdirect/ratm-freedom-fighter.png" %}
 {% img "/img/projects/artistdirect/ratm-album-covers.png" %}
-

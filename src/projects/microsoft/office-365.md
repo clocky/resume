@@ -22,10 +22,9 @@ tags:
 
 ## Skype 💕 Office 365
 
-The brief was simple - how do you make a Skype for Business client fit into
-the workflow of a typical Outlook information worker, but still make it feel like it was
-part of Office 365 all along?
-{.lead}
+The brief was simple - how do you make a Skype for Business client fit into the
+workflow of a typical Outlook information worker, but still make it feel like it
+was part of Office 365 all along? {.lead}
 
 Myself and the team took particular care to align typography, grids and even
 themes to ensure that the Skype app felt at home alongside e-mail, but also

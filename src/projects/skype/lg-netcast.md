@@ -18,16 +18,14 @@ collaborators:
 - Simon Wilson
 ---
 
-## Optimising a 10-foot interface across locales 
+## Optimising a 10-foot interface across locales
 
-I collaborated in a managerial and review capacity with the LG design team 
-in Seoul, South Korea both on site and remotely.
-{.lead}
+I collaborated in a managerial and review capacity with the LG design team in
+Seoul, South Korea both on site and remotely. {.lead}
 
-The biggest challenges were around customization of their native grid UI 
-paradigm to fit both Western and Asian language usage scenarios - at the 
-time of engagement, the product was optimised entirely for Korean character 
-sets.
+The biggest challenges were around customization of their native grid UI
+paradigm to fit both Western and Asian language usage scenarios - at the time of
+engagement, the product was optimised entirely for Korean character sets.
 
 {% img "/img/projects/skype/lg-netcast-history.jpg", false %}
 {% img "/img/projects/skype/lg-netcast-contacts.jpg", false %}

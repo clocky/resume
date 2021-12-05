@@ -32,4 +32,3 @@ their tours and travels over the years.
 {% img "/img/projects/ignition-management/mercury-rev-home.png" %}
 
 {% img "/img/projects/ignition-management/mercury-rev-hello.png" %}
-

@@ -14,7 +14,7 @@ collaborators:
   - Marc Geiger
 ---
 
-##  Monty Python's Big White Site
+## Monty Python's Big White Site
 
 The project was in collaboration with their film offshoot Python Monty Pictures
 to bring Eric Idle’s — but especially Terry Gilliam’s — artwork to life as part

@@ -23,8 +23,8 @@ interaction designer for a standalone Skype application on their N800 and N810
 {.lead}
 
 There were some unique aspects of the project in terms of keeping a somewhat
-familiar Windows feel to  the application - it was loosely based on our
-Windows Mobile app - while ensuring the app worked equally well with the
-hardware keys and the in-box stylus. 
+familiar Windows feel to  the application - it was loosely based on our Windows
+Mobile app - while ensuring the app worked equally well with the hardware keys
+and the in-box stylus.
 
 {% img "/img/projects/skype/skype-n800-stylus.jpg", false %}

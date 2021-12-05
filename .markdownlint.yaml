@@ -1,0 +1,12 @@
+md013:
+  stern: false
+md026:
+  punctuation:
+    - !
+md033:
+  allowed_elements:
+    - section
+    - img
+    - div
+    - iframe
+md034: false

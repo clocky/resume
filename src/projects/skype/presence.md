@@ -32,7 +32,7 @@ connected to a car.
 
 {% img "/img/projects/microsoft/presence_funnel3_1000.png" %}
 
-The second and perhaps most crucial part, was to ensure that the visual 
+The second and perhaps most crucial part, was to ensure that the visual
 representation of presence states was immediate and glanceable, even for those
 users that may have visual impairments.
 
@@ -43,6 +43,7 @@ different Microsoft properties, as well as referencing legacy presence models to
 ease the transition.
 
 {.mt-5}
+
 ### Signalling
 
 Particular time and effort was spent understanding the granular requirements of
