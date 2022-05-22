@@ -10,8 +10,11 @@
     {% include '_favicon.njk' %}
     {% include '_social.njk' %}
 
+    {# 
+      Only include Plausible.io tracking if we're in production environment 
+    #}
+
     {% if env.environment == "prod" %}
-      {# Only include Plausible.io tracking if we're in production environment #}
       <script async defer data-domain="markmclaughlin.info" src="https://plausible.io/js/plausible.outbound-links.js"></script>
       <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
     {% endif %}
@@ -20,10 +23,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:900%7CSource+Sans+Pro:300,400&display=swap" crossorigin="anonymous" />
 
+    {# 
+      Set CORS to anonymous if we're in production environment 
+    #}
+    
     {% set cors = "anonymous" if env.environment == "prod" else "invalid"%}
 
     <script src="https://kit.fontawesome.com/c4674e1253.js" crossorigin="anonymous"></script>
     <script src="/js/lazysizes.min.js" async crossorigin="{{ cors }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <link rel="stylesheet" href="/css/google-fonts.css" crossorigin="{{ cors }}" />
     <link rel="stylesheet" href="/css/typeset.css" crossorigin="{{ cors }}" />
