@@ -1,0 +1,26 @@
+<div data-theme="dark">
+    <nav class="container">
+        <ul>
+            <li>
+                <strong>
+                    {{ resume.basics.name }}
+                </strong>
+            </li>
+        </ul>
+        <ul>
+            {# Loop through social network profiles #}
+            {% for profile in resume.basics.profiles %}
+                <li>
+                    <a href="{{ profile.url }}">
+                        <i 
+                        aria-hidden="true" 
+                        class="fa-brands fa-{{profile.network | slugify }}" 
+                        title="View {{profile.username}} on {{profile.network}}"></i>
+                        <span class="fa-sr-only">{{ profile.network }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+
+    </nav>
+</div>

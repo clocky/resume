@@ -1,0 +1,233 @@
+{
+    "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+    "basics": {
+        "name": "Mark McLaughlin",
+        "label": "UX Design Manager at Google",
+        "email": "mark@mclaughlin.me.uk",
+        "summary": "Mark is an experienced design leader with over 20 years background creating end-to-end experiences for web, cloud, mobile, desktop and consumer electronics platforms.",
+        "profiles": [
+            {
+                "network": "Twitter",
+                "username": "clocky",
+                "url": "http://twitter.com/clocky"
+            },
+            {
+                "network": "GitHub",
+                "username": "clocky",
+                "url": "https://github.com/clocky"
+            },
+            {
+                "network": "Instagram",
+                "username": "clocky",
+                "url": "https://instagram.com/clocky"
+            },
+            {
+                "network": "Linkedin",
+                "username": "markmclaughlin",
+                "url": "https://linkedin.com/in/markmclaughlin"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Google",
+            "location": "Kirkland, WA",
+            "position": "UX Design Manager",
+            "description": "Google Cloud",
+            "summary": "UX design manager for a multinational team of designers and researchers building the next generation of tooling to empower Google's product teams to onboard, deploy, monitor and manage their cloud services.",
+            "startDate": "2022-05-23",
+            "highlights": [
+                "Presenting at internal summits demonstrating open-source tooling and extensibility models.",
+                "Aligning multiple stakeholders around a common brand identity for the product family.",
+                "Defining principles and guidelines for showing health, status and performance of cloud services."
+            ]
+        },
+        {
+            "name": "Microsoft",
+            "location": "Redmond, WA",
+            "position": "Principal Design Director",
+            "startDate": "2021-07-01",
+            "endDate": "2022-04-27",
+            "description": "Visual Studio",
+            "summary": "Design director for the multi-disciplinary design teams that create the Visual Studio family of products for millions of developers worldwide; including Visual Studio Code, Visual Studio 2022, Visual Studio for Mac, Azure Lab Services and Azure Notebooks.",
+            "highlights": [
+                "Launch of Visual Studio for Mac 2022 with fully native macOS UI, VoiceOver and Voice Control.",
+                "Launch of Visual Studio 2022 for Windows, with IntelliCode support, improved Git integration and themes for neurodiverse users.",
+                "Launch of Visual Studio WebView UI Toolkit as an open-source initiative to enable developers to build VSCode extensions using web Components."
+            ]
+        },
+        {
+            "name": "Microsoft",
+            "location": "Redmond, WA",
+            "position": "Principal Design Manager",
+            "description": "Developer Division",
+            "startDate": "2018-01-01",
+            "endDate": "2021-06-01",
+            "summary": "DesignOps lead for the Developer Division at Microsoft; introducing best practices for tooling, design systems and prototyping across over 25 designers working in Redmond and remote locations on Visual Studio, VS Code and Azure developer products.",
+            "highlights": [
+                "Built, managed and deployed documentation and UX guidelines for the Visual Studio family of products.",
+                "Co-created and architected Figma plugins to improve design deliverables and accessibility.",
+                "Empowered design technologists to commit UI fixes directly to the Visual Studio source codebase."
+            ]
+        },
+        {
+            "name": "Microsoft",
+            "location": "Redmond, WA + Raleigh, NC",
+            "position": "Senior Design Manager",
+            "description": "Azure DevOps",
+            "summary": "Managed a team of 8 designers in Raleigh, NC and Redmond, WA, supporting a product organization of over 100 product managers across Azure Boards, Repos and Pipelines (CI/CD) feature sets.",
+            "highlights": [
+                "Introduced briefs, process and design systems to a legacy product team, including adoption of Figma and shared team component libraries.",
+                "Piloted usage of Figma across Microsoft, including speaking and sharing best practices at internal events, facilitating over 1,000 users within the Visual Studio, Windows, and Azure product teams to move to one centralised design tool."
+            ]
+        },
+        {
+            "name": "Microsoft",
+            "location": "Redmond, WA",
+            "position": "Senior Design Manager",
+            "description": "Gaming & Entertainment",
+            "startDate": "2013-04-01",
+            "endDate": "2014-09-01",
+            "summary": "Design and prototyping lead for Skype integration on gaming and entertainment products, focusing on Xbox One and casual gaming. ",
+            "highlights": [
+                "Lead designer for the UWP (Universal Windows Platform) powered iteration of Skype for Xbox One.",
+                "Shipped v1.0 of Skype for HoloLens, including a successful deployment to the International Space Station.",
+                "Prototyped deep integration of Skype into the Xbox core platform."
+            ]
+        },
+        {
+            "name": "Skype",
+            "location": "London, United Kingdom",
+            "position": "Design Lead",
+            "description": "Mobile",
+            "startDate": "2010-04-01",
+            "endDate": "2013-03-01",
+            "summary": "Formed a world-class team of 12 interaction and visual designers defining the Skype and Qik experience across iPhone, iPad, Android, BlackBerry, Symbian, BREW, WebOS, MeeGo and Windows Phone platforms, on all form factors.",
+            "highlights": [
+                "Recognized by Apple in 2013 for Skype on iPad being the most downloaded iPad application of all time."
+            ]
+        },
+        {
+            "name": "Skype",
+            "position": "Senior Interaction Designer",
+            "description": "Mobile and Platform",
+            "location": "London, United Kingdom",
+            "startDate": "2007-05-01",
+            "endDate": "2010-04-01",
+            "summary": "Working with carriers, hardware vendors and other partners as a senior designer creating and defining the interaction design and user experience for Skype on mobile including iOS, Meego, Maemo, Java, Android and Symbian platforms. Additional work on consumer electronics, including TV interfaces for Panasonic, LG and Samsung embedded platforms",
+            "highlights": [
+                "Launched first mobile Skype video calling UX on Nokia N900 flagship device",
+                "Interaction design for Philips VOIP855 cordless phone, with the highest ARPU of any Skype product"
+            ]
+        },
+        {
+            "name": "Ericsson",
+            "location": "Reading, United Kingdom",
+            "position": "Mobile UI Designer",
+            "description": "Operator Applications",
+            "startDate": "2006-01-01",
+            "endDate": "2006-06-01",
+            "summary": "Interaction designer for operator preload applications on Symbian and Java MIDP devices.",
+            "highlights": [
+                "Creation of use cases, workflows and prototypes to provide a consistent experience across devices",
+                "Worked with 3rd party vendors as part of RFQ processes to formalise specifications for app UI",
+                "Oversight and direction of vendors to build device prototypes using Flash Lite"
+            ]
+        },
+        {
+            "name": "Three",
+            "location": "Reading, United Kingdom",
+            "position": "Handset Product Designer",
+            "description": "My 3",
+            "startDate": "2004-10-01",
+            "endDate": "2006-02-01",
+            "summary": "Interface design for 3's \"My 3\" self-care product for early mobile browsers.",
+            "highlights": [
+                "Development of screen flows, storyboard and prototypes",
+                "Develop and test new interface XHTML 'widgets' and ensure compatibility across multiple handsets",
+                "Designed and created PHP-powered rapid prototyping tools to reduce sign-off and development lifecycle."
+            ]
+        },
+        {
+            "name": "Three",
+            "location": "Reading, United Kingdom",
+            "position": "Web Designer",
+            "description": "SAIA",
+            "startDate": "2001-05-01",
+            "endDate": "2004-10-01",
+            "summary": "Web designer for the first 3G carrier in the United Kingdom.",
+            "highlights": [
+                "Designed and built internal intranet using the Movable Type blogging platform",
+                "Designed in-store purchase flows for 1st and 3rd party retailer terminals",
+                "Designed web-based 'self-care' portal that helped customers manage their accounts online"
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "ADPList",
+            "position": "Mentor",
+            "url": "https://adplist.org/",
+            "startDate": "2012-01-01",
+            "endDate": "2013-01-01",
+            "summary": "Description…",
+            "highlights": [
+                "Completed 100"
+            ]
+        }
+    ],
+    "awards": [
+        {
+            "title": "Most Loved IDE",
+            "date": "2021-06-01",
+            "awarder": "Stack Overflow",
+            "summary": "\"Visual Studio Code has a significant lead as the IDE of choice across all developers.\""
+        },
+        {
+            "title": "Most Loved IDE",
+            "date": "2022-06-01",
+            "awarder": "Stack Overflow",
+            "summary": "\"Visual Studio Code remains the preferred IDE across all developers.\""
+        },
+        {
+            "title": "Most downloaded free app of all time",
+            "date": "2013-06-01",
+            "awarder": "Apple",
+            "summary": "Skype for iPad was recognized by Apple as the most downloaded iPad app of all time."
+        },
+        {
+            "title": "Platinum Sales Award",
+            "date": "1998-10-01",
+            "awarder": "Recording Industry Association of America",
+            "summary": "Received a RIAA platinum disc for work on the promotion, launch and support of Korn's 1998 album \"Follow The Leader\""
+        }
+    ],
+    "projects": [
+        {
+            "name": "Webview UI Toolkit for Visual Studio Code",
+            "description": "A component library for building webview-based extensions in Visual Studio Code.",
+            "url": "https://github.com/microsoft/vscode-webview-ui-toolkit",
+            "keywords": [
+                "Web Components",
+                "Open Source"
+            ],
+            "roles": [
+                "Design Director"
+            ],
+            "entity": "Microsoft"
+        },
+        {
+            "name": "Skype for iOS",
+            "description": "A component library for building webview-based extensions in Visual Studio Code.",
+            "url": "https://backstreetboys.com",
+            "keywords": [
+                "ios",
+                "mobile"
+            ],
+            "roles": [
+                "Webmaster"
+            ],
+            "entity": "Skype"
+        }
+    ]
+}

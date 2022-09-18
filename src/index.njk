@@ -1,0 +1,75 @@
+---
+layout: base.njk
+eleventyComputed:
+    title: "{{resume.basics.name }}"
+---
+
+{% macro brand(glyph) %}
+    <i class="fa-brands fa-{{ glyph| slugify }}"></i>
+{% endmacro %}
+
+{% macro solid(glyph) %}
+    <i class="fa-solid fa-{{ glyph| slugify }}"></i>
+{% endmacro %}
+
+<h2 id="work-experience">Work Experience</h2>
+{% for work in resume.work %}
+    <section id="{{work.name | slugify }}--{{work.description | slugify}}">
+        {% if work.name != name %}
+            <h3>
+                {{ brand(work.name) }}
+                {{ work.name }}
+            </h3>
+        {% endif %}
+        <h4>{{ work.position }}, {{ work.description }}</h4>
+        <aside class="headings">
+            {% if work.startDate -%}
+                <time datetime="{{ work.startDate | formatDate("YYYY-MM-DD") }}">
+                    {{ work.startDate | formatDate("MMM YYYY") }}
+                </time>—
+            {%- endif -%}
+            {%- if work.endDate -%}
+                <time>{{ work.endDate | formatDate("MMM YYYY") }}</time>
+            {%- else -%}
+                <span>Present</span>
+            {%- endif -%}
+            {%- if work.location %}
+                    • <address>{{ work.location }}</address>
+            {%- endif -%}
+        </aside>
+        <p>{{ work.summary }}</p>
+        {% if work.highlights%}
+            <ul>
+                {% for highlight in work.highlights %}
+                    <li>{{highlight}}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </section>
+    {% set name = work.name %}
+{% endfor %}
+
+<!-- Awards -->
+
+<h2 id="awards">Awards</h2>
+{% for group in resume.awards | batch(2) %}
+    <div class="grid">
+        {% for award in group %}
+            <section id="{{award.awarder | slugify }}--{{award.title | slugify}}" >
+                <hgroup>
+                    <h4>
+                        {% if award.awarder == "Recording Industry Association of America" %}
+                            {{ solid("record-vinyl") }}
+                        {% else %}
+                            {{ brand(award.awarder) }}
+                        {% endif %}
+                        {{ award.title }}
+                    </h4>
+                    <h5>{{ award.awarder }} • <time datetime="{{ award.date | formatDate("YYYY-MM-DD")}}">{{ award.date | formatDate("YYYY")}}</time>
+                    </h5>
+                </hgroup>
+                <p>{{award.summary}}</p>
+            </section>
+        {% endfor %}
+    </div>
+{% endfor %}

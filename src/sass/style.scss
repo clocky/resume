@@ -1,0 +1,55 @@
+$fa-font-path: "../webfonts";
+
+@import "../../node_modules/@picocss/pico/scss/pico";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands";
+
+@media (min-width: 992px) {
+  section {
+    width: 72.5%;
+  }
+}
+
+h3 {
+  display: inline-block;
+  border-top: #000 4px solid;
+  padding-top: 0.5em;
+}
+
+/* offset for icons */
+h3 > i {
+  margin-left: -2.5rem;
+  width: 2.15rem;
+}
+
+h4 {
+  > i {
+    margin-left: -1.75rem;
+    width: 1.45rem;
+  }
+}
+
+section {
+  hgroup {
+    margin-bottom: 0;
+    + p {
+      margin-top: 0;
+    }
+  }
+}
+[data-theme="dark"] {
+  background-color: #11191f;
+}
+
+section > h3 {
+  margin-bottom: 0;
+}
+
+h4 {
+  margin-bottom: 0;
+}
+
+address {
+  display: inline;
+}
