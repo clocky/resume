@@ -7,21 +7,19 @@
                 </small>
             </p>
             <aside class="grid">
-                {% for group in resume.basics.profiles | batch(2) %}
-                    <ul>
-                        {% for profile in group %}
-                            <li>
-                                <small>
-                                    <a href="{{ profile.url }}">
-                                        <i class="fa-brands fa-{{profile.network | slugify }}" 
+                <ul>
+                    {% for profile in resume.basics.profiles %}
+                        <li>
+                            <small>
+                                <a href="{{ profile.url }}">
+                                    <i class="fa-brands fa-{{profile.network | slugify }}" 
                 title="View {{profile.username}} on {{profile.network}}"></i>
-                                        <span>{{ profile.network }}</span>
-                                    </a>
-                                </small>
-                            </li>
-                        {% endfor %}
+                                    <span>{{ profile.network }}</span>
+                                </a>
+                            </small>
+                        </li>
+                        {%endfor%}
                     </ul>
-                    {%endfor%}
                 </aside>
             </nav>
         </div>
