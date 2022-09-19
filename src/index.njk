@@ -27,7 +27,7 @@ eleventyComputed:
                 <time datetime="{{ work.startDate | formatDate("YYYY-MM-DD") }}">
                     {{ work.startDate | formatDate("MMM YYYY") }}
                 </time>—
-            {%- endif -%}
+            {% endif -%}
             {%- if work.endDate -%}
                 <time>{{ work.endDate | formatDate("MMM YYYY") }}</time>
             {%- else -%}
