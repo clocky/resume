@@ -136,7 +136,7 @@
         },
         {
             "name": "Three",
-            "location": "Reading, United Kingdom",
+            "location": "Maidenhead, United Kingdom",
             "position": "Handset Product Designer",
             "description": "My 3",
             "startDate": "2004-10-01",
@@ -150,7 +150,7 @@
         },
         {
             "name": "Three",
-            "location": "Reading, United Kingdom",
+            "location": "Maidenhead, United Kingdom",
             "position": "Web Designer",
             "description": "SAIA",
             "startDate": "2001-05-01",
@@ -198,8 +198,8 @@
         {
             "title": "Platinum Sales Award",
             "date": "1998-10-01",
-            "awarder": "Recording Industry Association of America",
-            "summary": "Received a RIAA platinum disc for work on the promotion, launch and support of Korn's 1998 album \"Follow The Leader\""
+            "awarder": "RIAA",
+            "summary": "Received a Recording Industry Association of America (RIAA) platinum disc for the promotion, launch and support of Korn's 1998 album \"Follow The Leader\""
         }
     ],
     "projects": [
