@@ -11,26 +11,39 @@ $fa-font-path: "../webfonts";
   }
 }
 
-h3 {
-  display: inline-block;
-  border-top: #000 4px solid;
-  padding-top: 0.5em;
-}
+$margin-offset: 2.2rem;
 
-/* offset for icons */
-h3 > i {
-  margin-left: -2.5rem;
-  width: 2.15rem;
-}
-
-h4 {
-  > i {
-    margin-left: -1.75rem;
-    width: 1.45rem;
+main {
+  h2 {
+    display: inline-block;
+    padding-top: 0.5rem;
+    border-top: #000 4px solid;
   }
 }
 
-section {
+section.work {
+  > h2 {
+    margin-bottom: 0;
+  }
+  h3 {
+    display: block;
+    margin-bottom: -0.25rem;
+    i {
+      width: $margin-offset - 0.35rem;
+    }
+  }
+  h4,
+  aside,
+  ul,
+  p {
+    margin-left: $margin-offset;
+  }
+}
+
+section.award {
+  @media (min-width: 992px) {
+    margin-left: $margin-offset;
+  }
   hgroup {
     margin-bottom: 0;
     + p {
@@ -40,10 +53,6 @@ section {
 }
 [data-theme="dark"] {
   background-color: #11191f;
-}
-
-section > h3 {
-  margin-bottom: 0;
 }
 
 h4 {
