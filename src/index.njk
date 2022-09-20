@@ -14,27 +14,36 @@ eleventyComputed:
 
 <h2 id="work-experience">Work Experience</h2>
 {% for work in resume.work %}
-    <section id="{{work.name | slugify }}--{{work.description | slugify}}">
+    <section 
+        id="{{work.name | slugify }}--{{work.description | slugify}}" 
+        class="work"
+        itemscope 
+        itemid="{{work.name | slugify }}"
+        itemtype="https://schema.org/Organization"
+    >
         {% if work.name != name %}
-            <h3>
+            <h3 itemprop="name">
                 {{ brand(work.name) }}
                 {{ work.name }}
             </h3>
         {% endif %}
-        <h4>{{ work.position }}, {{ work.description }}</h4>
+        <h4>
+            {{ work.position }}, <span itemprop="subOrganization">{{ work.description }}</span></h4>
         <aside class="headings">
             {% if work.startDate -%}
                 <time datetime="{{ work.startDate | formatDate("YYYY-MM-DD") }}">
-                    {{ work.startDate | formatDate("MMM YYYY") }}
-                </time>—
+                    {{- work.startDate | formatDate("MMMM YYYY") -}}
+                </time> —
             {% endif -%}
             {%- if work.endDate -%}
-                <time>{{ work.endDate | formatDate("MMM YYYY") }}</time>
+                <time datetime="{{ work.endDate | formatDate("YYYY-MM-DD") }}">
+                    {{- work.endDate | formatDate("MMMM YYYY") -}}
+                </time>
             {%- else -%}
                 <span>Present</span>
             {%- endif -%}
             {%- if work.location %}
-                    • <address>{{ work.location }}</address>
+                    • <address itemprop="address">{{ work.location }}</address>
             {%- endif -%}
         </aside>
         <p>{{ work.summary }}</p>
@@ -55,17 +64,21 @@ eleventyComputed:
 {% for group in resume.awards | batch(2) %}
     <div class="grid">
         {% for award in group %}
-            <section id="{{award.awarder | slugify }}--{{award.title | slugify}}" >
+            <!-- {{ award.awarder }}: {{ award.title }} ({{ award.date | formatDate("YYYY")}}) -->
+            <section id="{{award.awarder | slugify }}-{{ award.date | formatDate("YYYY")}}" class="award">
+                <span>
+                    {% if award.awarder == "RIAA" %}
+                        {{ solid("record-vinyl") }}
+                    {% else %}
+                        {{ brand(award.awarder) }}
+                    {% endif %}
+                </span>
                 <hgroup>
                     <h4>
-                        {% if award.awarder == "Recording Industry Association of America" %}
-                            {{ solid("record-vinyl") }}
-                        {% else %}
-                            {{ brand(award.awarder) }}
-                        {% endif %}
                         {{ award.title }}
                     </h4>
-                    <h5>{{ award.awarder }} • <time datetime="{{ award.date | formatDate("YYYY-MM-DD")}}">{{ award.date | formatDate("YYYY")}}</time>
+                    <h5>
+                        {{ award.awarder }} • <time datetime="{{ award.date | formatDate("YYYY-MM-DD")}}">{{ award.date | formatDate("YYYY")}}</time>
                     </h5>
                 </hgroup>
                 <p>{{award.summary}}</p>
