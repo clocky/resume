@@ -9,6 +9,9 @@ $fa-font-path: "../webfonts";
   section {
     width: 72.5%;
   }
+  blockquote {
+    width: 66%;
+  }
 }
 
 $margin-offset: 2.2rem;
@@ -40,6 +43,10 @@ section.work {
   }
 }
 
+blockquote {
+  hanging-punctuation: first last;
+}
+
 section.award {
   @media (min-width: 992px) {
     margin-left: $margin-offset;
@@ -51,6 +58,7 @@ section.award {
     }
   }
 }
+
 [data-theme="dark"] {
   background-color: #11191f;
 }
