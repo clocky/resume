@@ -6,21 +6,7 @@
                     {{ resume.basics.summary }}
                 </small>
             </p>
-            <aside class="grid">
-                <ul>
-                    {% for profile in resume.basics.profiles %}
-                        <li>
-                            <small>
-                                <a href="{{ profile.url }}">
-                                    <i class="fa-brands fa-{{profile.network | slugify }}" 
-                title="View {{profile.username}} on {{profile.network}}"></i>
-                                    <span>{{ profile.network }}</span>
-                                </a>
-                            </small>
-                        </li>
-                        {%endfor%}
-                    </ul>
-                </aside>
-            </nav>
-        </div>
-    </footer>
+            <aside></aside>
+        </nav>
+    </div>
+</footer>
