@@ -86,3 +86,14 @@ eleventyComputed:
         {% endfor %}
     </div>
 {% endfor %}
+
+<h2 id="references">References</h2>
+{% for reference in resume.references %}
+    <!-- {{ reference.name }} -->
+    <figure id="reference--{{ reference.name | slugify }}">
+        <blockquote>&ldquo;{{ reference.reference }}&rdquo;</blockquote>
+        <figcaption>
+                — <cite>{{ reference.name }}</cite>
+        </figcaption>
+    </figure>
+{% endfor %}
