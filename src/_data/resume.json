@@ -229,5 +229,19 @@
             ],
             "entity": "Skype"
         }
+    ],
+    "references": [
+        {
+            "name": "Rick Rubin, American Recordings",
+            "reference": "It is rare in our business to find someone with the talent to effect such important advances for the industry and its artists while maintaining such integrity and enthusiasm."
+        },
+        {
+            "name": "David Powell, Google",
+            "reference": "Mark is a highly capable and very talented individual and I have been fortunate to work with him on projects for both the mobile portal and handsets areas. I have been impressed by the quality of his work, his level of commitment and his pro-active approach."
+        },
+        {
+            "name": "John Chang, Grönska Stadsodling",
+            "reference": "Mark is the man behind the UxD for Skype for iPhone. Back when the iPhone was new to everyone in the world, he somehow immediately \"got\" the look-and-feel of the platform and managed to create a design that has withstood the test of time. He's one of that rare breed who is not only skilled on the design side but groks the technical side as well."
+        }
     ]
 }
