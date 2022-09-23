@@ -72,7 +72,7 @@
         },
         {
             "name": "Microsoft",
-            "location": "Redmond, WA + Raleigh, NC",
+            "location": "Redmond, WA",
             "position": "Senior Design Manager",
             "description": "Azure DevOps",
             "summary": "Managed a team of 8 designers in Raleigh, NC and Redmond, WA, supporting a product organization of over 100 product managers across Azure Boards, Repos and Pipelines (CI/CD) feature sets.",
@@ -190,7 +190,7 @@
             "summary": "\"Visual Studio Code remains the preferred IDE across all developers.\""
         },
         {
-            "title": "Most downloaded free app of all time",
+            "title": "Most downloaded free iPad app",
             "date": "2013-06-01",
             "awarder": "Apple",
             "summary": "Skype for iPad was recognized by Apple as the most downloaded iPad app of all time."
@@ -199,7 +199,7 @@
             "title": "Platinum Sales Award",
             "date": "1998-10-01",
             "awarder": "RIAA",
-            "summary": "Received a Recording Industry Association of America (RIAA) platinum disc for the promotion, launch and support of Korn's 1998 album \"Follow The Leader\""
+            "summary": "Received a Recording Industry Association of America award for the promotion and launch of Korn's 1998 album \"Follow The Leader\""
         }
     ],
     "projects": [
