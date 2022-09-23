@@ -1,12 +1,24 @@
 <footer class="container-fluid" data-theme="dark">
     <div class="container">
-        <nav class="grid">
-            <p>
-                <small>
-                    {{ resume.basics.summary }}
-                </small>
-            </p>
-            <aside></aside>
+        <nav>
+            <ul>
+                <li>&copy; {{ page.date | formatDate("YYYY")}}
+                    {{resume.basics.name}}</li>
+            </ul>
+            <menu>
+                {# Loop through social network profiles #}
+                {% for profile in resume.basics.profiles %}
+                    <li>
+                        <a href="{{ profile.url }}">
+                            <i 
+                        aria-hidden="true" 
+                        class="fa-brands fa-{{profile.network | slugify }}" 
+                        title="View {{profile.username}} on {{profile.network}}"></i>
+                            <span class="fa-sr-only">{{ profile.network }}</span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </menu>
         </nav>
     </div>
 </footer>
