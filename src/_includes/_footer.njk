@@ -5,7 +5,7 @@
                 <li>&copy; {{ page.date | formatDate("YYYY")}}
                     {{resume.basics.name}}</li>
             </ul>
-            <menu>
+            <ul>
                 {# Loop through social network profiles #}
                 {% for profile in resume.basics.profiles %}
                     <li>
@@ -18,7 +18,7 @@
                         </a>
                     </li>
                 {% endfor %}
-            </menu>
+            </ul>
         </nav>
     </div>
 </footer>
