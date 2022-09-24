@@ -1,4 +1,4 @@
-<nav class="container">
+<nav class="container" id="top">
     <ul>
         <li>
             <strong>
@@ -7,20 +7,14 @@
         </li>
     </ul>
     <ul>
-        <li>
-            <small>
-                <a href="#work-experience">Work</a>
-            </small>
-        </li>
-        <li>
-            <small>
-                <a href="#awards">Awards</a>
-            </small>
-        </li>
-        <li>
-            <small>
-                <a href="#references">References</a>
-            </small>
-        </li>
+        {% for key, value in resume %}
+            {% if key not in["$schema", "basics"] %}
+                <li>
+                    <small>
+                        <a href="#{{ key }}">{{ key | capitalize }}</a>
+                    </small>
+                </li>
+            {% endif %}
+        {% endfor %}
     </ul>
 </nav>
