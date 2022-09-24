@@ -4,6 +4,14 @@ eleventyComputed:
     title: "{{resume.basics.name }}"
 ---
 
+{% macro back_to_top() %}
+    <p>
+        <small>
+            <a href="#top">{{ solid("arrow-up") }} Back to top</a>
+        </small>
+    </p>
+{% endmacro %}
+
 {% macro brand(glyph) %}
     <i class="fa-brands fa-{{ glyph| slugify }}"></i>
 {% endmacro %}
@@ -12,88 +20,7 @@ eleventyComputed:
     <i class="fa-solid fa-{{ glyph| slugify }}"></i>
 {% endmacro %}
 
-<h2 id="work-experience">Work Experience</h2>
-{% for work in resume.work %}
-    <section 
-        id="{{work.name | slugify }}--{{work.description | slugify}}" 
-        class="work"
-        itemscope 
-        itemid="{{work.name | slugify }}"
-        itemtype="https://schema.org/Organization"
-    >
-        {% if work.name != name %}
-            <h3 itemprop="name">
-                {{ brand(work.name) }}
-                {{ work.name }}
-            </h3>
-        {% endif %}
-        <h4>
-            {{ work.position }}, <span itemprop="subOrganization">{{ work.description }}</span></h4>
-        <aside class="headings">
-            {% if work.startDate -%}
-                <time datetime="{{ work.startDate | formatDate("YYYY-MM-DD") }}">
-                    {{- work.startDate | formatDate("MMMM YYYY") -}}
-                </time> —
-            {% endif -%}
-            {%- if work.endDate -%}
-                <time datetime="{{ work.endDate | formatDate("YYYY-MM-DD") }}">
-                    {{- work.endDate | formatDate("MMMM YYYY") -}}
-                </time>
-            {%- else -%}
-                <span>Present</span>
-            {%- endif -%}
-            {%- if work.location %}
-                    • <address itemprop="address">{{ work.location }}</address>
-            {%- endif -%}
-        </aside>
-        <p>{{ work.summary }}</p>
-        {% if work.highlights%}
-            <ul>
-                {% for highlight in work.highlights %}
-                    <li>{{highlight}}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </section>
-    {% set name = work.name %}
-{% endfor %}
-
-<!-- Awards -->
-
-<h2 id="awards">Awards</h2>
-{% for group in resume.awards | batch(2) %}
-    <div class="grid">
-        {% for award in group %}
-            <!-- {{ award.awarder }}: {{ award.title }} ({{ award.date | formatDate("YYYY")}}) -->
-            <section id="{{award.awarder | slugify }}-{{ award.date | formatDate("YYYY")}}" class="award">
-                <span>
-                    {% if award.awarder == "RIAA" %}
-                        {{ solid("record-vinyl") }}
-                    {% else %}
-                        {{ brand(award.awarder) }}
-                    {% endif %}
-                </span>
-                <hgroup>
-                    <h4>
-                        {{ award.title }}
-                    </h4>
-                    <h5>
-                        {{ award.awarder }} • <time datetime="{{ award.date | formatDate("YYYY-MM-DD")}}">{{ award.date | formatDate("YYYY")}}</time>
-                    </h5>
-                </hgroup>
-                <p>{{award.summary}}</p>
-            </section>
-        {% endfor %}
-    </div>
-{% endfor %}
-
-<h2 id="references">References</h2>
-{% for reference in resume.references %}
-    <!-- {{ reference.name }} -->
-    <figure id="reference--{{ reference.name | slugify }}">
-        <blockquote>&ldquo;{{ reference.reference }}&rdquo;</blockquote>
-        <figcaption>
-                — <cite>{{ reference.name }}</cite>
-        </figcaption>
-    </figure>
-{% endfor %}
+{% include "resume/work.njk" %}
+{% include "resume/awards.njk" %}
+{% include "resume/volunteer.njk" %}
+{% include "resume/references.njk" %}

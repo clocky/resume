@@ -1,0 +1,45 @@
+<h2 id="volunteer">Volunteering</h2>
+{% for volunteer in resume.volunteer %}
+    <section 
+        id="{{volunteer.organization | slugify }}--{{volunteer.position | slugify}}" 
+        itemscope 
+        itemid="{{volunteer.name | slugify }}"
+        itemtype="https://schema.org/Organization"
+    >
+        <hgroup>
+            <h3 itemprop="name">
+                {{ volunteer.organization }}
+            </h3>
+            <h4>
+                {{ volunteer.position }} • <span>{{ volunteer.url }}</span>
+            </h4>
+        </hgroup>
+        <aside class="headings">
+            {% if volunteer.startDate -%}
+                <time datetime="{{ volunteer.startDate | formatDate("YYYY-MM-DD") }}">
+                    {{- volunteer.startDate | formatDate("MMMM YYYY") -}}
+                </time> —
+            {% endif -%}
+            {%- if volunteer.endDate -%}
+                <time datetime="{{ work.endDate | formatDate("YYYY-MM-DD") }}">
+                    {{- volunteer.endDate | formatDate("MMMM YYYY") -}}
+                </time>
+            {%- else -%}
+                <span>Present</span>
+            {%- endif -%}
+            {%- if volunteer.url %}
+                    • <address itemprop="address">{{ volunteer.url }}</address>
+            {%- endif -%}
+        </aside>
+        <p>{{ volunteer.summary }}</p>
+        {% if volunteer.highlight %}
+            <ul>
+                {% for highlight in volunteer.highlights %}
+                    <li>{{highlight}}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </section>
+{% endfor %}
+
+{{ back_to_top() }}
