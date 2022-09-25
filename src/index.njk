@@ -4,14 +4,6 @@ eleventyComputed:
     title: "{{resume.basics.name }}"
 ---
 
-{% macro back_to_top() %}
-    <p>
-        <small>
-            <a href="#top">{{ solid("arrow-up") }} Back to top</a>
-        </small>
-    </p>
-{% endmacro %}
-
 {% macro brand(glyph) %}
     <i class="fa-brands fa-{{ glyph | slugify }}"></i>
 {% endmacro %}
@@ -20,8 +12,5 @@ eleventyComputed:
     <i class="fa-solid fa-{{ glyph | slugify }}"></i>
 {% endmacro %}
 
+{% include "_header.njk" %}
 {% include "resume/work.njk" %}
-{% include "resume/awards.njk" %}
-{% include "resume/volunteer.njk" %}
-{% include "resume/projects.njk" %}
-{% include "resume/references.njk" %}

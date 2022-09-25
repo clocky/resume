@@ -2,46 +2,16 @@
 {% for work in resume.work %}
     <section 
         id="{{work.name | slugify }}--{{work.description | slugify}}" 
-        class="work"
-        itemscope 
-        itemid="{{ work.name | slugify }}"
-        itemtype="https://schema.org/Organization"
     >
-        {% if work.name != name %}
-            <h3 itemprop="name">
-                {{ brand(work.name) }}
-                {{ work.name }}
-            </h3>
-        {% endif %}
-        <h4>
-            {{ work.position }}, <span itemprop="subOrganization">{{ work.description }}</span></h4>
-        <aside class="headings">
-            {% if work.startDate -%}
-                <time datetime="{{ work.startDate | formatDate("YYYY-MM-DD") }}">
-                    {{- work.startDate | formatDate("MMMM YYYY") -}}
-                </time> —
-            {% endif -%}
-            {%- if work.endDate -%}
-                <time datetime="{{ work.endDate | formatDate("YYYY-MM-DD") }}">
-                    {{- work.endDate | formatDate("MMMM YYYY") -}}
-                </time>
-            {%- else -%}
-                <span>Present</span>
-            {%- endif -%}
-            {%- if work.location %}
-                    • <address itemprop="address">{{ work.location }}</address>
-            {%- endif -%}
-        </aside>
+        <h3>{{ work.position }}, {{ work.name }}
+            {{ work.description }}</h3>
         <p>{{ work.summary }}</p>
         {% if work.highlights%}
-            <ul>
-                {% for highlight in work.highlights %}
-                    <li>{{highlight}}</li>
-                {% endfor %}
-            </ul>
+            {% for highlight in work.highlights %}
+                <blockquote>
+                    <p>{{highlight}}</p>
+                </blockquote>
+            {% endfor %}
         {% endif %}
     </section>
-    {% set name = work.name %}
 {% endfor %}
-
-{{ back_to_top() }}

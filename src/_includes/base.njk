@@ -9,10 +9,8 @@
         <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
     </head>
     <body>
-        {% include "_nav.njk" %}
-        <main class="container">
+        <article>
             {{ content | safe }}
-        </main>
-        {% include "_footer.njk" %}
+        </article>
     </body>
 </html>
