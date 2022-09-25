@@ -13,14 +13,15 @@ eleventyComputed:
 {% endmacro %}
 
 {% macro brand(glyph) %}
-    <i class="fa-brands fa-{{ glyph| slugify }}"></i>
+    <i class="fa-brands fa-{{ glyph | slugify }}"></i>
 {% endmacro %}
 
 {% macro solid(glyph) %}
-    <i class="fa-solid fa-{{ glyph| slugify }}"></i>
+    <i class="fa-solid fa-{{ glyph | slugify }}"></i>
 {% endmacro %}
 
 {% include "resume/work.njk" %}
 {% include "resume/awards.njk" %}
 {% include "resume/volunteer.njk" %}
+{% include "resume/projects.njk" %}
 {% include "resume/references.njk" %}
