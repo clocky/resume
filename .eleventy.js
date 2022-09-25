@@ -14,6 +14,11 @@ module.exports = function (eleventyConfig) {
     "node_modules/@fortawesome/fontawesome-free/webfonts": "webfonts",
   });
 
+  eleventyConfig.addFilter("host", function (url) {
+    const obj = new URL(url);
+    return obj.host;
+  });
+
   /** Add a filter to format inline dates for <time> tags */
   const formatDate = (date, format) => dayjs(date).format(format);
   eleventyConfig.addFilter("formatDate", formatDate);
