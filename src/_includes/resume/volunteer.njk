@@ -11,27 +11,25 @@
                 {{ volunteer.organization }}
             </h3>
             <h4>
-                {{ volunteer.position }} • <span>{{ volunteer.url }}</span>
+                {{ volunteer.position }} • 
+                {% if volunteer.startDate -%}
+                    <time datetime="{{ volunteer.startDate | formatDate("YYYY-MM-DD") }}">
+                        {{- volunteer.startDate | formatDate("MMMM YYYY") -}}
+                    </time> —
+            {% endif -%}
+                {%- if volunteer.endDate -%}
+                    <time datetime="{{ work.endDate | formatDate("YYYY-MM-DD") }}">
+                        {{- volunteer.endDate | formatDate("MMMM YYYY") -}}
+                    </time>
+                {%- else -%}
+                    <span>Present</span>
+                {%- endif -%}
             </h4>
         </hgroup>
-        <aside class="headings">
-            {% if volunteer.startDate -%}
-                <time datetime="{{ volunteer.startDate | formatDate("YYYY-MM-DD") }}">
-                    {{- volunteer.startDate | formatDate("MMMM YYYY") -}}
-                </time> —
-            {% endif -%}
-            {%- if volunteer.endDate -%}
-                <time datetime="{{ work.endDate | formatDate("YYYY-MM-DD") }}">
-                    {{- volunteer.endDate | formatDate("MMMM YYYY") -}}
-                </time>
-            {%- else -%}
-                <span>Present</span>
-            {%- endif -%}
-            {%- if volunteer.url %}
-                    • <address itemprop="address">{{ volunteer.url }}</address>
-            {%- endif -%}
-        </aside>
-        <p>{{ volunteer.summary }}</p>
+
+        <summary>
+            <p>{{ volunteer.summary }}</p>
+        </summary>
         {% if volunteer.highlight %}
             <ul>
                 {% for highlight in volunteer.highlights %}

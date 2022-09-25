@@ -48,13 +48,17 @@ blockquote {
 }
 
 section.award {
-  @media (min-width: 992px) {
-  }
   hgroup {
     margin-bottom: 0;
     + p {
       margin-top: 0;
     }
+  }
+}
+
+section#projects {
+  hgroup {
+    margin-bottom: 0;
   }
 }
 
