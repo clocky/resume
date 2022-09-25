@@ -164,18 +164,6 @@
             ]
         }
     ],
-    "volunteer": [
-        {
-            "organization": "ADPList",
-            "position": "Mentor",
-            "url": "https://adplist.org/",
-            "startDate": "2022-06-24",
-            "summary": "Weekly open hours with students and professionals to discuss career paths, interview techniques and resume writing.",
-            "highlights": [
-                "Completed 100 mentorship minutes."
-            ]
-        }
-    ],
     "awards": [
         {
             "title": "Most Loved IDE",
@@ -202,6 +190,31 @@
             "summary": "Received a Recording Industry Association of America award for the promotion and launch of Korn's 1998 album \"Follow The Leader\""
         }
     ],
+    "volunteer": [
+        {
+            "organization": "ADPList",
+            "position": "Mentor",
+            "url": "https://adplist.org/mentors/mark-mclaughlin",
+            "startDate": "2022-06-24",
+            "summary": "Weekly open hours with students and early-career UX professionals to discuss career paths, interview techniques and portfolio reviews."
+        },
+        {
+            "organization": "Out Of Office Hours",
+            "position": "Mentor",
+            "url": "https://twitter.com/ooohours",
+            "startDate": "2018-02-22",
+            "endDate": "2021-04-19",
+            "summary": "Ad-hoc mentoring sessions with early career designers, especially those who were entering the industry from non-traditional career paths and backgrounds."
+        },
+        {
+            "organization": "AFC Wimbledon",
+            "position": "Consultant",
+            "url": "https://afcwimbledon.co.uk",
+            "startDate": "2006-11-02",
+            "endDate": "2012-07-10",
+            "summary": "Contributed early iterations of the club's online presence, including setting up iCal feeds, RSS feeds and their social media identities."
+        }
+    ],
     "projects": [
         {
             "name": "Webview UI Toolkit for Visual Studio Code",
@@ -211,23 +224,37 @@
                 "Web Components",
                 "Open Source"
             ],
-            "roles": [
-                "Design Director"
-            ],
+            "entity": "Microsoft"
+        },
+        {
+            "name": "Azure DevOps",
+            "description": "A set of services for collaborating on code and managing software development projects.",
+            "url": "https://dev.azure.com",
             "entity": "Microsoft"
         },
         {
             "name": "Skype for iOS",
-            "description": "A component library for building webview-based extensions in Visual Studio Code.",
-            "url": "https://backstreetboys.com",
-            "keywords": [
-                "ios",
-                "mobile"
-            ],
-            "roles": [
-                "Webmaster"
-            ],
+            "description": "The first mobile video calling app to launch on iOS.",
+            "url": "https://apps.apple.com/app/skype",
             "entity": "Skype"
+        },
+        {
+            "name": "Korn",
+            "description": "Design and launch of the official site supporting 1998's \"Follow The Leader\" release.",
+            "url": "https://korn.com",
+            "entity": "ARTISTdirect"
+        },
+        {
+            "name": "Backstreet Boys",
+            "description": "Design and launch of the official site supporting 1999's \"Millennium\" release.",
+            "url": "https://backstreetboys.com",
+            "entity": "ARTISTdirect"
+        },
+        {
+            "name": "Rage Against The Machine",
+            "description": "Design and launch of the official site supporting 1999's \"The Battle of Los Angeles\" release.",
+            "url": "https://ratm.com",
+            "entity": "ARTISTdirect"
         }
     ],
     "references": [
