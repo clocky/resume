@@ -89,7 +89,7 @@
             "description": "Gaming & Entertainment",
             "startDate": "2013-04-01",
             "endDate": "2014-09-01",
-            "summary": "Design and prototyping lead for Skype integration on gaming and entertainment products, focusing on Xbox One and casual gaming. ",
+            "summary": "Design and prototyping lead for Skype integration on gaming and entertainment products, focusing on Hololens, Xbox One and casual gaming. ",
             "highlights": [
                 "Lead designer for the UWP (Universal Windows Platform) powered iteration of Skype for Xbox One.",
                 "Shipped v1.0 of Skype for HoloLens, including a successful deployment to the International Space Station.",
@@ -136,7 +136,7 @@
             ]
         },
         {
-            "name": "Three",
+            "name": "3",
             "location": "Maidenhead, United Kingdom",
             "position": "Handset Product Designer",
             "description": "My 3",
@@ -150,7 +150,7 @@
             ]
         },
         {
-            "name": "Three",
+            "name": "3",
             "location": "Maidenhead, United Kingdom",
             "position": "Web Designer",
             "description": "SAIA",
@@ -235,7 +235,13 @@
         {
             "name": "Skype for iOS",
             "description": "The first mobile video calling app to launch on iOS.",
-            "url": "https://apps.apple.com/app/skype",
+            "url": "https://skype.com/en/get-skype/",
+            "entity": "Skype"
+        },
+        {
+            "name": "Skype for Android",
+            "description": "Free calling and texting for early Android OS versions through to Honeycomb.",
+            "url": "https://skype.com/en/get-skype/",
             "entity": "Skype"
         },
         {

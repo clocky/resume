@@ -1,28 +1,26 @@
 <h2 id="awards">Awards</h2>
-{% for group in resume.awards | batch(2) %}
-    <div class="grid">
+{% for group in resume.awards | batch(3) %}
+    <div class="grid grid-cols-3 grid-flow-row auto-rows-max mt-8 gap-8">
         {% for award in group %}
-            <!-- {{ award.awarder }}: {{ award.title }} ({{ award.date | formatDate("YYYY")}}) -->
-            <section id="{{award.awarder | slugify }}-{{ award.date | formatDate("YYYY")}}" class="award">
-                <span>
-                    {% if award.awarder == "RIAA" %}
-                        {{ solid("record-vinyl") }}
-                    {% else %}
-                        {{ brand(award.awarder) }}
-                    {% endif %}
-                </span>
+            <section 
+                id="{{award.awarder | slugify }}-{{ award.date | formatDate("YYYY")}}" 
+                class="drop-shadow-xl px-8 py-8 bg-white rounded-lg"
+            >
                 <hgroup>
-                    <h4>
+                    <h4 class="font-semibold text-slate-700 text-xl text-center">
                         {{ award.title }}
                     </h4>
-                    <h5>
-                        {{ award.awarder }} • <time datetime="{{ award.date | formatDate("YYYY-MM-DD")}}">{{ award.date | formatDate("YYYY")}}</time>
+                    <h5 class="text-slate-500 font-normal text-center">
+                        {{ award.awarder }} • 
+                        <time datetime="{{ award.date | formatDate("YYYY-MM-DD")}}">
+                            {{ award.date | formatDate("YYYY")}}
+                        </time>
                     </h5>
                 </hgroup>
-                <p>{{award.summary}}</p>
+                <summary>
+                    <p class="text-body text-slate-600 mt-2 hanging-punctuation">{{award.summary}}</p>
+                </summary>
             </section>
         {% endfor %}
     </div>
 {% endfor %}
-
-{{ back_to_top() }}

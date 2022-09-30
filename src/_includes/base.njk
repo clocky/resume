@@ -8,11 +8,9 @@
         <title>{{ title }}</title>
         <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
     </head>
-    <body>
-        {% include "_nav.njk" %}
-        <main class="container">
+    <body class="bg-slate-50">
+        <main class="container lg:px-12 md:px-8 px-4">
             {{ content | safe }}
         </main>
-        {% include "_footer.njk" %}
     </body>
 </html>

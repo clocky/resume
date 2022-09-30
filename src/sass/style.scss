@@ -1,75 +1,14 @@
-$fa-font-path: "../webfonts";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@import "../../node_modules/@picocss/pico/scss/pico";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands";
-
-@media (min-width: 992px) {
-  section {
-    width: 72.5%;
-  }
-  blockquote {
-    width: 66%;
-  }
-}
-
-$margin-offset: 2.2rem;
-
-main {
-  h2 {
-    display: inline-block;
-    padding-top: 0.5rem;
-    border-top: #000 4px solid;
-  }
-}
-
-section.work {
-  > h2 {
-    margin-bottom: 0;
-  }
-  h3 {
-    display: block;
-    margin-bottom: -0.25rem;
-    i {
-      width: $margin-offset - 0.35rem;
-    }
-  }
-  h4,
-  aside,
-  ul,
-  p {
-    margin-left: $margin-offset;
-  }
-}
-
-blockquote {
-  hanging-punctuation: first last;
-}
-
-section.award {
-  hgroup {
-    margin-bottom: 0;
-    + p {
-      margin-top: 0;
-    }
-  }
-}
-
-section#projects {
-  hgroup {
-    margin-bottom: 0;
-  }
-}
-
-[data-theme="dark"] {
-  background-color: #11191f;
+h2 {
+  @apply mt-16 text-3xl italic font-extrabold tracking-tight bg-blue-600 rounded -rotate-2 inline-block text-white p-3;
 }
 
 h4 {
-  margin-bottom: 0;
+  @apply font-semibold text-slate-700 text-xl;
 }
-
-address {
-  display: inline;
+h5 {
+  @apply text-slate-500 font-normal;
 }

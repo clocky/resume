@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "watch:sass": "sass  --no-source-map --watch src/sass:dist/css",
+    "watch:sass": "tailwindcss -i ./src/sass/style.scss -o ./dist/css/style.css --watch",
     "watch:eleventy": "eleventy --serve",
-    "build:sass": "sass  --no-source-map src/sass:dist/css",
+    "build:sass": "tailwindcss -i ./src/sass/style.scss -o ./dist/css/style.css",
     "build:eleventy": "eleventy",
-    "postbuild": "lightningcss --minify --targets '> 0.5%, not IE 11' dist/css/style.css -o dist/css/style.css",
+    "postbuild": "lightningcss --minify --targets '> 0.25%, not IE 11' dist/css/style.css -o dist/css/style.css",
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:sass build:eleventy"
   },
@@ -17,7 +17,6 @@
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@fortawesome/fontawesome-free": "^6.2.0",
-    "@picocss/pico": "^1.5.5",
     "cross-env": "^7.0.3",
     "dayjs": "^1.11.5",
     "lightningcss-cli": "^1.15.1",
@@ -29,6 +28,7 @@
     "not IE 11"
   ],
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.1.8"
   }
 }

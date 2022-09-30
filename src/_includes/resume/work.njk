@@ -1,47 +1,31 @@
 <h2 id="work-experience">Work Experience</h2>
 {% for work in resume.work %}
-    <section 
-        id="{{work.name | slugify }}--{{work.description | slugify}}" 
-        class="work"
-        itemscope 
-        itemid="{{ work.name | slugify }}"
-        itemtype="https://schema.org/Organization"
-    >
-        {% if work.name != name %}
-            <h3 itemprop="name">
-                {{ brand(work.name) }}
-                {{ work.name }}
-            </h3>
-        {% endif %}
-        <h4>
-            {{ work.position }}, <span itemprop="subOrganization">{{ work.description }}</span></h4>
-        <aside class="headings">
-            {% if work.startDate -%}
-                <time datetime="{{ work.startDate | formatDate("YYYY-MM-DD") }}">
-                    {{- work.startDate | formatDate("MMMM YYYY") -}}
-                </time> —
-            {% endif -%}
-            {%- if work.endDate -%}
-                <time datetime="{{ work.endDate | formatDate("YYYY-MM-DD") }}">
-                    {{- work.endDate | formatDate("MMMM YYYY") -}}
-                </time>
-            {%- else -%}
-                <span>Present</span>
-            {%- endif -%}
-            {%- if work.location %}
-                    • <address itemprop="address">{{ work.location }}</address>
-            {%- endif -%}
-        </aside>
-        <p>{{ work.summary }}</p>
-        {% if work.highlights%}
-            <ul>
-                {% for highlight in work.highlights %}
-                    <li>{{highlight}}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </section>
-    {% set name = work.name %}
-{% endfor %}
+  <section id="{{ work.name | slugify }}" class="mt-8 mb-4 lg:w-2/3">
+    <aside>
+      {% if work.name != name %}
+        <h3 class="font-semibold text-m uppercase tracking-tight text-blue-600 inline-block mt-4 pt-4">{{ work.name }}</h3>
+      {% endif %}
+      <h4 class="font-semibold text-slate-700 text-xl">
+        {{ work.position }} • <span class="text-slate-500 font-normal">{{ work.description }}</span>
+      </h4>
+      {{ timespan(work.startDate, work.endDate) }}
+      {% if work.location %}
+      • <address class="inline not-italic text-slate-600 text-sm">{{ work.location }}</address>
+      {% endif %}
+    </aside>
+    <summary>
+      <p class="my-2">{{ work.summary }}</p>
 
-{{ back_to_top() }}
+      {% if work.highlights %}
+        <ul class="list-disc text-slate-500 my-4 pl-8">
+          {% for highlight in work.highlights %}
+            <li>
+              {{ highlight }}
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </summary>
+  </section>
+  {% set name = work.name %}
+{% endfor %}

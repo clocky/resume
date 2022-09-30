@@ -1,23 +1,20 @@
 <h2 id="projects">Selected Projects</h2>
-<section id="projects">
-    {% for group in resume.projects | batch(2) %}
-        <div class="grid">
+<section id="projects" class="mb-16">
+    {% for group in resume.projects | batch(3) %}
+        <div class="grid grid-cols-3 grid-flow-row auto-rows-max mt-8 gap-8">
             {% for project in group %}
-                <div>
+                <div class="">
                     <hgroup>
-                        <h4>
-                            {{ project.name }}
-                        </h4>
-                        <h5>
-                            {{ project.entity }} • <a href="{{project.url}}">{{ project.url | host }}</a>
+                        <h4>{{ project.name }}</h4>
+                        <h5 class="text-sm">
+                            {{ project.entity }} • <a href="{{project.url}}" class="text-blue-500">{{ project.url | host }}</a>
                         </h5>
                     </hgroup>
-                    <summary>
-                        <p>{{ project.description }}</p>
+                    <summary class="text-slate-600 text-body">
+                        {{ project.description }}
                     </summary>
                 </div>
             {% endfor %}
         </div>
     {% endfor %}
 </section>
-{{ back_to_top() }}

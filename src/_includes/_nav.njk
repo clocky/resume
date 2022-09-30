@@ -6,7 +6,7 @@
             </strong>
         </li>
     </ul>
-    <ul>
+    <menu>
         {% for key, value in resume %}
             {% if key not in["$schema", "basics"] %}
                 <li>
@@ -16,5 +16,5 @@
                 </li>
             {% endif %}
         {% endfor %}
-    </ul>
+    </menu>
 </nav>
