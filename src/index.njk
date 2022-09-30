@@ -3,25 +3,23 @@ layout: base.njk
 eleventyComputed:
     title: "{{resume.basics.name }}"
 ---
-
-{% macro back_to_top() %}
-    <p>
-        <small>
-            <a href="#top">{{ solid("arrow-up") }} Back to top</a>
-        </small>
-    </p>
-{% endmacro %}
-
-{% macro brand(glyph) %}
-    <i class="fa-brands fa-{{ glyph | slugify }}"></i>
-{% endmacro %}
-
-{% macro solid(glyph) %}
-    <i class="fa-solid fa-{{ glyph | slugify }}"></i>
+{% macro timespan(start, end) %}
+    <div class="text-sm font-semibold text-slate-600 inline">
+        {% if start %}
+            <time datetime="{{ start | formatDate("YYYY-MM-DD") }}">
+                {{- start| formatDate("MMMM YYYY") -}}
+            </time> —
+            {% endif %}
+        {% if end %}
+            <time datetime="{{ end | formatDate("YYYY-MM-DD") }}">
+            {{ end | formatDate("MMMM YYYY") }}
+        </time>
+    {% else %}
+        <span class="text-slate-600">Present</span>
+    {%- endif -%}
+</div>
 {% endmacro %}
 
 {% include "resume/work.njk" %}
 {% include "resume/awards.njk" %}
-{% include "resume/volunteer.njk" %}
 {% include "resume/projects.njk" %}
-{% include "resume/references.njk" %}
