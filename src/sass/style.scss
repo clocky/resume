@@ -148,6 +148,9 @@ body {
       text-transform: uppercase;
       font-weight: 600;
       margin-top: 1.5rem;
+      @media (max-width: 575px) {
+        line-height: 2rem;
+      }
     }
     li,
     /* flex to separate date and */
@@ -156,6 +159,9 @@ body {
       flex-direction: row;
       gap: 1rem;
       margin: 0;
+      @media (max-width: 575px) {
+        line-height: 1.6rem;
+      }
       a {
         color: var(--color-link);
         text-decoration: none;
