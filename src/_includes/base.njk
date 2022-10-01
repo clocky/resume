@@ -16,5 +16,9 @@
         <main>
             {{ content | safe }}
         </main>
+        <footer>
+            &copy; <span rel="author">{{ resume.basics.name }}</span>
+            <time>{{ page.date | formatDate("YYYY") }}</time>
+        </footer>
     </body>
 </html>

@@ -5,7 +5,7 @@
         "label": "UX Design Manager at Google",
         "email": "mark@mclaughlin.me.uk",
         "url": "https://mark.mclaughlin.me.uk",
-        "summary": "Mark is a design leader with over 20 years background creating end-to-end experiences for web, cloud, mobile, desktop and consumer electronics platforms.",
+        "summary": "Design leader with over 20 years background creating end-to-end experiences for web, cloud, mobile, desktop and consumer electronics platforms.",
         "profiles": [
             {
                 "network": "Twitter",
@@ -153,11 +153,11 @@
         {
             "name": "Three",
             "location": "Maidenhead, United Kingdom",
-            "position": "Web Designer",
+            "position": "Web Developer",
             "description": "retail applications",
             "startDate": "2001-05-01",
             "endDate": "2004-10-01",
-            "summary": "Web designer for the first 3G carrier in the United Kingdom.",
+            "summary": "Web developer for the first 3G carrier in the United Kingdom.",
             "highlights": [
                 "Designed and built internal intranet using the Movable Type blogging platform",
                 "Designed in-store purchase flows for 1st and 3rd party retailer terminals",
@@ -178,9 +178,34 @@
             "location": "London",
             "position": "Web Designer",
             "description": "e-commerce",
-            "startDate": "1998-03-01",
-            "endDate": "1999-05-01",
+            "startDate": "1998-02-01",
+            "endDate": "1999-03-01",
             "summary": "Web designer for e-commerce sites, including the first online portal for Endsleigh Insurance."
+        },
+        {
+            "name": "Wick Hill",
+            "location": "Guildford",
+            "position": "Consultant",
+            "description": "Wick Hill Associates",
+            "startDate": "1997-06-01",
+            "endDate": "1998-01-01"
+        },
+        {
+            "name": "Wick Hill",
+            "location": "Guildford",
+            "position": "Technical Support",
+            "description": "Internal Systems",
+            "startDate": "1994-01-01",
+            "endDate": "1997-06-01"
+        },
+        {
+            "name": "Wick Hill",
+            "location": "Woking",
+            "position": "Sales Administrator",
+            "description": "WRQ Reflection",
+            "startDate": "1992-10-01",
+            "endDate": "1994-02-01",
+            "summary": "Sales processing, customer services and marketing administration duties."
         }
     ],
     "awards": [
@@ -276,6 +301,11 @@
             "entity": "Microsoft"
         },
         {
+            "name": "Visual Studio for Mac 2022",
+            "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-is-now-available/",
+            "entity": "Microsoft"
+        },
+        {
             "name": "Visual Studio 2022",
             "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2022-now-available/",
             "entity": "Microsoft"
@@ -308,6 +338,11 @@
             "name": "Skype for Android",
             "description": "Design and launch of Skype for Android phones and tablets.",
             "url": "https://play.google.com/store/apps/details?id=com.skype.raider",
+            "entity": "Skype"
+        },
+        {
+            "name": "Skype for Samsung SMART TV",
+            "url": "https://www.samsung.com/us/css/support/UN60ES8000FXZA_features.html",
             "entity": "Skype"
         },
         {
