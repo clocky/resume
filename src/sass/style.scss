@@ -24,6 +24,7 @@ h1 {
 
 h2,
 h3 {
+  font-weight: 500;
   font-size: 0.85rem;
   margin: 0.5rem 0 0 0;
 }
@@ -36,7 +37,6 @@ h3 {
 
 body {
   line-height: 1.333rem;
-  font-size: 0.85rem;
 
   font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
@@ -47,21 +47,25 @@ body {
   @media (min-width: 992px) {
     padding: 2rem 3rem;
     max-width: 40vw;
+    font-size: 0.85rem;
   }
 
   @media (min-width: 768px) and (max-width: 991px) {
     padding: 2rem 2rem;
     max-width: 60vw;
+    font-size: 0.85rem;
   }
 
   @media (min-width: 576px) and (max-width: 767px) {
     padding: 2rem 1rem;
     max-width: 80vw;
+    font-size: 1rem;
   }
 
   @media (max-width: 575px) {
-    padding: 2rem1rem;
+    padding: 2rem 1rem;
     max-width: 100vw;
+    font-size: 1rem;
   }
 
   p#summary {
@@ -121,6 +125,9 @@ body {
     &#work {
       dt {
         margin-left: 3.05rem;
+        @media (max-width: 767px) {
+          margin-left: 3.5rem;
+        }
       }
     }
     dt {
