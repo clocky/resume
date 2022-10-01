@@ -26,7 +26,6 @@
     "not IE 11"
   ],
   "devDependencies": {
-    "normalize.css": "^8.0.1",
     "prettier": "^2.7.1"
   }
 }

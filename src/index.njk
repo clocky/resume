@@ -29,7 +29,7 @@ eleventyComputed:
         <span>
           {% if a.summary %}
             {{ a.summary }} //
-                    {% endif %}
+          {% endif %}
           {{ a.title }}
         </span>
       </li>
@@ -61,7 +61,7 @@ eleventyComputed:
           {% if p.url %}
             <a href="{{ p.url }}" rel="external" {%- if p.description -%}title="{{ p.description }}"{%- endif -%}>{{ p.name }}</a>
           {% else %}
-            {{p.name}}
+            {{ p.name }}
           {% endif %}
         </dd>
       {% endfor %}
@@ -76,7 +76,7 @@ eleventyComputed:
       <li id="{{ c.name | slug }}-{{ c.issuer | slug }}-{{ c.date | formatDate("YYYY")}}">
         <time datetime="{{ c.date | formatDate("YYYY-MM-DD")}}">{{ c.date | formatDate("YYYY")}}</time>
         <span>
-          {{ c.name }}, {{ c.issuer }}
+          {{ c.issuer }}: <a href="{{ c.url }}" rel="external">{{ c.name }}</a>
         </span>
       </li>
     {% endfor %}
