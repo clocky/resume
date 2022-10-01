@@ -9,11 +9,6 @@ module.exports = function (eleventyConfig) {
   /** Watch data source file for changes */
   eleventyConfig.addWatchTarget("./src/_data/");
 
-  eleventyConfig.addFilter("host", function (url) {
-    const obj = new URL(url);
-    return obj.host;
-  });
-
   /** Add a filter to format inline dates for <time> tags */
   const formatDate = (date, format) => dayjs(date).format(format);
   eleventyConfig.addFilter("formatDate", formatDate);
