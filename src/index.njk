@@ -27,12 +27,7 @@ eleventyComputed:
       <li id="{{ v.organization | slug }}--{{ v.position | slug }}">
         <time datetime="{{ v.startDate | formatDate("YYYY-MM-DD")}}">{{ v.startDate | formatDate("YYYY")}}</time>
         <span>
-          {{ v.position }} at
-                <a 
-                    href="{{v.url}}" 
-                    rel="external" 
-                    title="{{ v.summary }}"
-                    >{{ v.organization }}</a>
+          {{ v.position }} at <a href="{{v.url}}" rel="external" title="{{ v.summary }}">{{ v.organization }}</a>
         </span>
       </li>
     {% endfor %}
@@ -43,7 +38,7 @@ eleventyComputed:
   <h2 title="Awards">🏆<span class="sr-only">Awards</span></h2>
   <ul>
     {% for a in resume.awards | sort(true, false, "date") %}
-      <li id="{{ a.title | slug }}-{{ a.awarder | slug }}">
+      <li id="{{ a.title | slug }}-{{ a.awarder | slug }}-{{ a.date | formatDate("YYYY")}}">
         <time datetime="{{ a.date | formatDate("YYYY-MM-DD")}}">{{ a.date | formatDate("YYYY")}}</time>
         <span>
           {% if a.summary %}
