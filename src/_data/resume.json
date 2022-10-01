@@ -76,7 +76,8 @@
             "location": "Redmond, WA",
             "position": "Senior Design Manager",
             "description": "Azure DevOps",
-            "startDate": "2017-01-01",
+            "startDate": "2017-05-01",
+            "endDate": "2018-11-01",
             "summary": "Managed a team of 8 designers in Raleigh, NC and Redmond, WA, supporting a product organization of over 100 product managers across Azure Boards, Repos and Pipelines (CI/CD) feature sets.",
             "highlights": [
                 "Introduced briefs, process and design systems to a legacy product team, including adoption of Figma and shared team component libraries.",
@@ -86,16 +87,25 @@
         {
             "name": "Microsoft",
             "location": "Redmond, WA",
-            "position": "Senior Design Manager",
+            "position": "Senior Designer",
             "description": "Gaming & Entertainment",
-            "startDate": "2013-04-01",
-            "endDate": "2014-09-01",
+            "startDate": "2014-09-01",
+            "endDate": "2017-05-01",
             "summary": "Design and prototyping lead for Skype integration on gaming and entertainment products, focusing on Xbox One and casual gaming. ",
             "highlights": [
                 "Lead designer for the UWP (Universal Windows Platform) powered iteration of Skype for Xbox One.",
                 "Shipped v1.0 of Skype for HoloLens, including a successful deployment to the International Space Station.",
                 "Prototyped deep integration of Skype into the Xbox core platform."
             ]
+        },
+        {
+            "name": "Microsoft",
+            "location": "Redmond, WA",
+            "position": "Senior Design Manager",
+            "description": "Skype for Business",
+            "startDate": "2013-07-01",
+            "endDate": "2014-09-01",
+            "summary": "Design lead for Skype and Lync web applications, integrating rich audio, video and text-based communications into Microsoft's consumer and enterprise properties on the web focusing on Office 365, Outlook.com, Dynamics and OneDrive."
         },
         {
             "name": "Skype",
@@ -121,6 +131,15 @@
                 "Launched first mobile Skype video calling UX on Nokia N900 flagship device",
                 "Interaction design for Philips VOIP855 cordless phone, with the highest ARPU of any Skype product"
             ]
+        },
+        {
+            "name": "Skype",
+            "position": "Interaction Designer",
+            "description": "Mobile",
+            "location": "London, United Kingdom",
+            "startDate": "2006-07-04",
+            "endDate": "2007-04-30",
+            "summary": "Application UI design for S60, UIQ, Maemo, Java and Windows Mobile devices."
         },
         {
             "name": "Ericsson",
@@ -467,6 +486,26 @@
         {
             "name": "John Chang, Grönska Stadsodling",
             "reference": "Mark is the man behind the UxD for Skype for iPhone. Back when the iPhone was new to everyone in the world, he somehow immediately \"got\" the look-and-feel of the platform and managed to create a design that has withstood the test of time. He's one of that rare breed who is not only skilled on the design side but groks the technical side as well."
+        }
+    ],
+    "certificates": [
+        {
+            "name": "Certified Scrum Product Owner",
+            "date": "2010-12-01",
+            "issuer": "Scrum Alliance",
+            "url": "https://www.scrumalliance.org/get-certified/product-owner-track/certified-scrum-product-owner"
+        },
+        {
+            "name": "Accessibility in Action",
+            "date": "2022-01-28",
+            "issuer": "Microsoft",
+            "url": "https://www.credly.com/badges/12cc6be0-2100-427c-b72a-9348cd67c79e"
+        },
+        {
+            "name": "100 Mentorship Minutes",
+            "date": "2022-07-29",
+            "issuer": "ADPList",
+            "url": "https://adplist.org/certifications/26540"
         }
     ]
 }
