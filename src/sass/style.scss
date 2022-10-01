@@ -2,7 +2,16 @@
 @import url("https://fonts.googleapis.com/css?family=Noto+Emoji&display=swap");
 
 :root {
-  --color-primary: #0078d4;
+  @supports (color: color(display-p3 1 1 1)) {
+    --color-primary: color(display-p3 1 0.352 0.285);
+    --color-link: color(display-p3 0 0.5 1 / 1);
+    --color-background: color(display-p3 0.98 0.98 0.98);
+  }
+  @supports not (color: color(display-p3 1 1 1)) {
+    --color-primary: #ff5a46;
+    --color-link: #007bff;
+    --color-background: #f8f9fa;
+  }
 }
 
 h1 {
@@ -25,10 +34,6 @@ h3 {
   }
 }
 
-mark {
-  background-color: #f8f8a8;
-}
-
 body {
   line-height: 1.333rem;
   font-size: 0.85rem;
@@ -37,7 +42,7 @@ body {
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   text-transform: lowercase;
-  background-color: whitesmoke;
+  background-color: var(--color-background);
 
   @media (min-width: 992px) {
     padding: 2rem 3rem;
@@ -68,14 +73,39 @@ body {
     }
   }
 
+  .sr-only {
+    display: none;
+    text-transform: capitalize;
+  }
+
+  footer {
+    border-top: black 1px solid;
+    padding-top: 1rem;
+    text-transform: capitalize;
+  }
+
   section {
-    &#projects dl {
-      column-count: 2;
-      column-width: 50%;
-      dt {
-        text-transform: uppercase;
+    figure {
+      margin: 2rem 0;
+      blockquote {
+        margin-left: 0.25rem;
+        border-left: var(--color-primary) 1px solid;
+        padding-left: 0.75rem;
+      }
+      figcaption {
         font-weight: 600;
-        column-span: all;
+        text-transform: uppercase;
+      }
+    }
+    &#projects dl {
+      @media (min-width: 768px) {
+        column-count: 2;
+        column-width: 50%;
+        dt {
+          text-transform: uppercase;
+          font-weight: 600;
+          column-span: all;
+        }
       }
     }
     margin-top: 4rem;
@@ -106,23 +136,10 @@ body {
       gap: 1rem;
       margin: 0;
       a {
-        color: #0078d4;
+        color: var(--color-link);
         text-decoration: none;
         &:hover {
           text-decoration: underline;
-        }
-      }
-    }
-    /** add unicode to show external link icon */
-    a[href^="https://"]
-    {
-      &:after {
-        padding-left: 0.125rem;
-        margin-top: 1rem;
-        content: "↗";
-        font-size: 1.125rem;
-        &:hover {
-          text-decoration: none;
         }
       }
     }
