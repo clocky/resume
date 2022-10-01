@@ -9,11 +9,6 @@ module.exports = function (eleventyConfig) {
   /** Watch data source file for changes */
   eleventyConfig.addWatchTarget("./src/_data/");
 
-  /** Manually copy Font Awesome webfonts */
-  eleventyConfig.addPassthroughCopy({
-    "node_modules/@fortawesome/fontawesome-free/webfonts": "webfonts",
-  });
-
   eleventyConfig.addFilter("host", function (url) {
     const obj = new URL(url);
     return obj.host;
