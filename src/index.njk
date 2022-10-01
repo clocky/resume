@@ -76,12 +76,10 @@ eleventyComputed:
 
 <section id="references">
   <h2 title="References">👍<span class="sr-only">References</span></h2>
-  <dl>
-    {% for r in resume.references %}
-      <figure>
-        <blockquote>{{ r.reference }}</blockquote>
-        <figcaption>{{ r.name }}</figcaption>
-      </figure>
-    {% endfor %}
-  </dl>
+  {% for r in resume.references %}
+    <figure>
+      <blockquote>{{ r.reference }}</blockquote>
+      <figcaption>{{ r.name }}</figcaption>
+    </figure>
+  {% endfor %}
 </section>
