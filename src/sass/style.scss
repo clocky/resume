@@ -14,6 +14,14 @@
   }
 }
 
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+/* Heading styles */
+
 h1 {
   font-size: 1.5rem;
   margin: 0;
@@ -27,12 +35,6 @@ h3 {
   font-weight: 500;
   font-size: 0.85rem;
   margin: 0.5rem 0 0 0;
-}
-
-@keyframes cursor-blink {
-  0% {
-    opacity: 0;
-  }
 }
 
 body {
@@ -89,6 +91,9 @@ body {
   }
 
   section {
+    margin-top: 4rem;
+
+    /* Render block quote for references */
     figure {
       margin: 2rem 0;
       blockquote {
@@ -101,6 +106,8 @@ body {
         text-transform: uppercase;
       }
     }
+
+    /* Show projects in two-column layout */
     &#projects dl {
       @media (min-width: 768px) {
         column-count: 2;
@@ -112,16 +119,22 @@ body {
         }
       }
     }
-    margin-top: 4rem;
+
+    /* Use Emoji's for H2 */
     h2 {
       font-size: 1.7rem;
       font-family: "Noto Emoji";
       color: var(--color-primary);
       margin: 0;
     }
+
+    /* Time stamps at 60% opacity */
+
     time {
-      color: #808080;
+      opacity: 60%;
     }
+
+    /* Indent company names */
     &#work {
       dt {
         margin-left: 3.05rem;
@@ -130,6 +143,8 @@ body {
         }
       }
     }
+
+    /* Pseudo headers for DT in DL */
     dt {
       text-transform: uppercase;
       font-weight: 600;
