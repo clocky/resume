@@ -5,7 +5,7 @@
         "label": "UX Design Manager at Google",
         "email": "mark@mclaughlin.me.uk",
         "url": "https://mark.mclaughlin.me.uk",
-        "summary": "Mark is an experienced design leader with over 20 years background creating end-to-end experiences for web, cloud, mobile, desktop and consumer electronics platforms.",
+        "summary": "Design leader with over 20 years background creating end-to-end experiences for web, cloud, mobile, desktop and consumer electronics platforms.",
         "profiles": [
             {
                 "network": "Twitter",
@@ -76,6 +76,7 @@
             "location": "Redmond, WA",
             "position": "Senior Design Manager",
             "description": "Azure DevOps",
+            "startDate": "2017-01-01",
             "summary": "Managed a team of 8 designers in Raleigh, NC and Redmond, WA, supporting a product organization of over 100 product managers across Azure Boards, Repos and Pipelines (CI/CD) feature sets.",
             "highlights": [
                 "Introduced briefs, process and design systems to a legacy product team, including adoption of Figma and shared team component libraries.",
@@ -152,42 +153,115 @@
         {
             "name": "Three",
             "location": "Maidenhead, United Kingdom",
-            "position": "Web Designer",
-            "description": "SAIA",
+            "position": "Web Developer",
+            "description": "retail applications",
             "startDate": "2001-05-01",
             "endDate": "2004-10-01",
-            "summary": "Web designer for the first 3G carrier in the United Kingdom.",
+            "summary": "Web developer for the first 3G carrier in the United Kingdom.",
             "highlights": [
                 "Designed and built internal intranet using the Movable Type blogging platform",
                 "Designed in-store purchase flows for 1st and 3rd party retailer terminals",
                 "Designed web-based 'self-care' portal that helped customers manage their accounts online"
             ]
+        },
+        {
+            "name": "ARTISTdirect",
+            "location": "Los Angeles, CA",
+            "position": "Webmaster",
+            "description": "Artist presence",
+            "startDate": "1999-09-01",
+            "endDate": "2001-03-01",
+            "summary": "Web designer for the official artist sites, including Backstreet Boys, STEPS, Korn and Rage Against The Machine."
+        },
+        {
+            "name": "Tamar",
+            "location": "London",
+            "position": "Web Designer",
+            "description": "e-commerce",
+            "startDate": "1998-02-01",
+            "endDate": "1999-03-01",
+            "summary": "Web designer for e-commerce sites, including the first online portal for Endsleigh Insurance."
+        },
+        {
+            "name": "Wick Hill",
+            "location": "Guildford",
+            "position": "Consultant",
+            "description": "Wick Hill Associates",
+            "startDate": "1997-06-01",
+            "endDate": "1998-01-01"
+        },
+        {
+            "name": "Wick Hill",
+            "location": "Guildford",
+            "position": "Technical Support",
+            "description": "Internal Systems",
+            "startDate": "1994-01-01",
+            "endDate": "1997-06-01"
+        },
+        {
+            "name": "Wick Hill",
+            "location": "Woking",
+            "position": "Sales Administrator",
+            "description": "WRQ Reflection",
+            "startDate": "1992-10-01",
+            "endDate": "1994-02-01",
+            "summary": "Sales processing, customer services and marketing administration duties."
         }
     ],
     "awards": [
         {
             "title": "Most Loved IDE",
-            "date": "2021-06-01",
+            "date": "2022-06-01",
             "awarder": "Stack Overflow",
-            "summary": "\"Visual Studio Code has a significant lead as the IDE of choice across all developers.\""
+            "summary": "Visual Studio Code"
         },
         {
             "title": "Most Loved IDE",
-            "date": "2022-06-01",
+            "date": "2021-06-01",
             "awarder": "Stack Overflow",
-            "summary": "\"Visual Studio Code remains the preferred IDE across all developers.\""
+            "summary": "Visual Studio Code"
         },
         {
             "title": "Most downloaded free iPad app",
             "date": "2013-06-01",
             "awarder": "Apple",
-            "summary": "Skype for iPad was recognized by Apple as the most downloaded iPad app of all time."
+            "summary": "Skype for iPad"
+        },
+        {
+            "title": "People's Voice Winner",
+            "date": "2012-05-02",
+            "awarder": "Webby Awards",
+            "summary": "Skype for iPad"
+        },
+        {
+            "title": "Best Mobile Handset or Device",
+            "date": "2008-02-14",
+            "awarder": "GSMA",
+            "summary": "3 Skypephone"
         },
         {
             "title": "Platinum Sales Award",
-            "date": "1998-10-01",
-            "awarder": "RIAA",
-            "summary": "Received a Recording Industry Association of America award for the promotion and launch of Korn's 1998 album \"Follow The Leader\""
+            "date": "1999-10-01",
+            "awarder": "Recording Industry Assocation of America",
+            "summary": "Korn \"Follow The Leader\""
+        },
+        {
+            "title": "Best Artist Site",
+            "date": "1999-10-01",
+            "awarder": "Recording Industry Assocation of America",
+            "summary": "Rage Against The Machine"
+        },
+        {
+            "title": "Project Sidekick",
+            "date": "2015-12-01",
+            "awarder": "NASA",
+            "summary": "NASA"
+        },
+        {
+            "title": "O-1 Alien of Extraordinary Ability",
+            "date": "1999-09-01",
+            "awarder": "US Citizenship and Immigration Services",
+            "summary": "USCIS"
         }
     ],
     "volunteer": [
@@ -208,7 +282,7 @@
         },
         {
             "organization": "AFC Wimbledon",
-            "position": "Consultant",
+            "position": "Founder",
             "url": "https://afcwimbledon.co.uk",
             "startDate": "2006-11-02",
             "endDate": "2012-07-10",
@@ -217,7 +291,7 @@
     ],
     "projects": [
         {
-            "name": "Webview UI Toolkit for Visual Studio Code",
+            "name": "Visual Studio Code",
             "description": "A component library for building webview-based extensions in Visual Studio Code.",
             "url": "https://github.com/microsoft/vscode-webview-ui-toolkit",
             "keywords": [
@@ -227,15 +301,107 @@
             "entity": "Microsoft"
         },
         {
+            "name": "Visual Studio for Mac 2022",
+            "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-is-now-available/",
+            "entity": "Microsoft"
+        },
+        {
+            "name": "Visual Studio 2022",
+            "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2022-now-available/",
+            "entity": "Microsoft"
+        },
+        {
             "name": "Azure DevOps",
             "description": "A set of services for collaborating on code and managing software development projects.",
             "url": "https://dev.azure.com",
             "entity": "Microsoft"
         },
         {
+            "name": "Skype for Xbox One",
+            "description": "UWP application for Xbox One that allows users to make and receive Skype calls.",
+            "url": "https://www.theverge.com/2017/4/13/15291216/skype-xbox-one-update-universal-windows-app",
+            "entity": "Microsoft"
+        },
+        {
+            "name": "Skype for HoloLens",
+            "description": "UWP application for Xbox One that allows users to make and receive Skype calls.",
+            "url": "https://www.theverge.com/2017/4/13/15291216/skype-xbox-one-update-universal-windows-app",
+            "entity": "Microsoft"
+        },
+        {
             "name": "Skype for iOS",
             "description": "The first mobile video calling app to launch on iOS.",
             "url": "https://apps.apple.com/app/skype",
+            "entity": "Skype"
+        },
+        {
+            "name": "Skype for Android",
+            "description": "Design and launch of Skype for Android phones and tablets.",
+            "url": "https://play.google.com/store/apps/details?id=com.skype.raider",
+            "entity": "Skype"
+        },
+        {
+            "name": "Skype for Samsung SMART TV",
+            "url": "https://www.samsung.com/us/css/support/UN60ES8000FXZA_features.html",
+            "entity": "Skype"
+        },
+        {
+            "name": "Skype for WebOS",
+            "description": "Design and launch of Skype for Palm Pre and HP TouchPad.",
+            "url": "https://zatznotfunny.com/2010-11/first-look-at-skype-for-webos-on-palm-pre/",
+            "entity": "Skype"
+        },
+        {
+            "name": "Skype for Panasonic VIERA",
+            "description": "Design direction for Skype on Panasonic smart TV.",
+            "url": "https://markmclaughlin.info/hardware/smart-tv/panasonic/",
+            "entity": "Skype"
+        },
+        {
+            "name": "Skype for LG NetCast",
+            "description": "Design direction for Skype on LG smart TV.",
+            "url": "https://markmclaughlin.info/hardware/smart-tv/lg/",
+            "entity": "Skype"
+        },
+        {
+            "name": "Skype for Series 60",
+            "url": "https://www.youtube.com/watch?v=KBIPhv_vYRw",
+            "entity": "Skype"
+        },
+        {
+            "name": "Skype for Nokia N800",
+            "url": "https://www.engadget.com/2007-07-06-nokia-updates-n800-with-skype-and-more.html",
+            "entity": "Skype"
+        },
+        {
+            "name": "3 Skypephone S1",
+            "url": "https://en.wikipedia.org/wiki/3_Skypephone",
+            "entity": "Three"
+        },
+        {
+            "name": "Skype for BlackBerry",
+            "url": "https://www.cnet.com/tech/mobile/skypes-verizon-deal-spells-blackberry/",
+            "entity": "Skype"
+        },
+        {
+            "name": "3 Skypephone S2",
+            "url": "https://en.wikipedia.org/wiki/3_Skypephone_S2",
+            "entity": "Three"
+        },
+        {
+            "name": "Asus AiGuru SV1",
+            "url": "https://www.pocket-lint.com/gadgets/reviews/asus/70902-asus-eee-aiguru-sv1-videophone",
+            "entity": "Skype"
+        },
+        {
+            "name": "Philips VOIP855 ",
+            "url": "https://www.usa.philips.com/c-p/VOIP8551B_26/design-collection-cordless-phone-with-answering-machine",
+            "entity": "Skype"
+        },
+        {
+            "name": "Skype for Windows Phone",
+            "description": "Design and launch of Skype for Windows Phone 7.",
+            "url": "https://markmclaughlin.info/mobile/windows-phone-7/",
             "entity": "Skype"
         },
         {
@@ -254,6 +420,38 @@
             "name": "Rage Against The Machine",
             "description": "Design and launch of the official site supporting 1999's \"The Battle of Los Angeles\" release.",
             "url": "https://ratm.com",
+            "entity": "ARTISTdirect"
+        },
+        {
+            "name": "Indigo Girls",
+            "description": "Design and launch of the official site supporting 1999's \"Come On Now Social\" release.",
+            "url": "https://indigogirls.com",
+            "entity": "ARTISTdirect"
+        },
+        {
+            "name": "Kenny G",
+            "description": "Design and launch of the official site supporting 1999's \"Faith: A Holiday Album\" release.",
+            "url": "https://kennyg.com",
+            "entity": "ARTISTdirect"
+        },
+        {
+            "name": "Fastball",
+            "url": "https://fastballmusic.com",
+            "entity": "ARTISTdirect"
+        },
+        {
+            "name": "STEPS",
+            "url": "https://stepsofficial.com",
+            "entity": "ARTISTdirect"
+        },
+        {
+            "name": "Mercury Rev",
+            "url": "https://mercuryrev.com",
+            "entity": "Ignition Management"
+        },
+        {
+            "name": "Long Beach Dub Allstars",
+            "url": "https://lbdamusic.com",
             "entity": "ARTISTdirect"
         }
     ],

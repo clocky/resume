@@ -9,10 +9,16 @@
         <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
     </head>
     <body>
-        {% include "_nav.njk" %}
-        <main class="container">
+        <header>
+            <h1>{{ resume.basics.name  }}</h1>
+            <p id="summary">{{ resume.basics.summary | trim }}</p>
+        </header>
+        <main>
             {{ content | safe }}
         </main>
-        {% include "_footer.njk" %}
+        <footer>
+            &copy; <span rel="author">{{ resume.basics.name }}</span>
+            <time>{{ page.date | formatDate("YYYY") }}</time>
+        </footer>
     </body>
 </html>
