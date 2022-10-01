@@ -5,70 +5,82 @@ eleventyComputed:
 ---
 
 <section id="work">
-    <h2 title="Work Experience">🏢</h2>
-    <dl>
-        {% for name, roles in resume.work | groupby("name") %}
-            <dt>{{ name }}</dt>
-            {% for r in roles | sort(true, false, "startDate") %}
-                <dd id="{{ name | slug }}--{{ r.description | slug }}">
-                    <time>{{ r.startDate | formatDate("YYYY")}}</time>
-                    <span>{{ r.position }}, {{ r.description }}</span>
-                </dd>
-            {% endfor %}
-        {% endfor %}
-    </dl>
+  <h2 title="Work Experience">🏢<span class="sr-only">Work Experience</span></h2>
+  <dl>
+    {% for name, roles in resume.work | groupby("name") %}
+      <dt>{{ name }}</dt>
+      {% for r in roles | sort(true, false, "startDate") %}
+        <dd id="{{ name | slug }}--{{ r.description | slug }}">
+          <time>{{ r.startDate | formatDate("YYYY")}}</time>
+          <span>{{ r.position }}, {{ r.description }}</span>
+        </dd>
+      {% endfor %}
+    {% endfor %}
+  </dl>
 </section>
 
 <section id="volunteer">
-    <h2 title="Volunterring">🫶</h2>
-    <ul>
-        {% for v in resume.volunteer %}
-            <li id="{{ v.organization | slug }}--{{ v.position | slug }}">
-                <time>{{ v.startDate | formatDate("YYYY")}}</time>
-                <span>
-                    {{ v.position }} at
+  <h2 title="Volunterring">🫶<span class="sr-only">Volunteering</span></h2>
+  <ul>
+    {% for v in resume.volunteer %}
+      <li id="{{ v.organization | slug }}--{{ v.position | slug }}">
+        <time>{{ v.startDate | formatDate("YYYY")}}</time>
+        <span>
+          {{ v.position }} at
                 <a 
                     href="{{v.url}}" 
                     rel="external" 
                     title="{{ v.summary }}"
                     >{{ v.organization }}</a>
-                </span>
-            </li>
-        {% endfor %}
-    </ul>
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
 </section>
 
 <section id="awards">
-    <h2 title="Awards">🏆</h2>
-    <ul>
-        {% for a in resume.awards | sort(true, false, "date") %}
-            <li id="{{ a.title | slug }}-{{ a.awarder | slug }}">
-                <time datetime="{{ a.date | formatDate("YYYY-MM-DD")}}">{{ a.date | formatDate("YYYY")}}</time>
-                <span>
-                    {% if a.summary %}
-                        {{ a.summary }} //
+  <h2 title="Awards">🏆<span class="sr-only">Awards</span></h2>
+  <ul>
+    {% for a in resume.awards | sort(true, false, "date") %}
+      <li id="{{ a.title | slug }}-{{ a.awarder | slug }}">
+        <time datetime="{{ a.date | formatDate("YYYY-MM-DD")}}">{{ a.date | formatDate("YYYY")}}</time>
+        <span>
+          {% if a.summary %}
+            {{ a.summary }} //
                     {% endif %}
-                    {{ a.title }}
-                </span>
-            </li>
-        {% endfor %}
-    </ul>
+          {{ a.title }}
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
 </section>
 
 <section id="projects">
-    <h2 title="Projects">⚒️</h2>
-    <dl>
-        {% for entity, projects in resume.projects | groupby("entity") %}
-            <dt>{{ entity }}</dt>
-            {% for p in projects | sort(false, false, "name") %}
-                <dd>
-                    {% if p.url %}
-                        <a href="{{ p.url }}" rel="external" {%- if p.description -%}title="{{ p.description }}"{%- endif -%}>{{ p.name }}</a>
-                    {% else %}
-                        {{p.name}}
-                    {% endif %}
-                </dd>
-            {% endfor %}
-        {% endfor %}
-    </dl>
+  <h2 title="Projects">⚒️<span class="sr-only">Projects</span></h2>
+  <dl>
+    {% for entity, projects in resume.projects | groupby("entity") %}
+      <dt>{{ entity }}</dt>
+      {% for p in projects | sort(false, false, "name") %}
+        <dd>
+          {% if p.url %}
+            <a href="{{ p.url }}" rel="external" {%- if p.description -%}title="{{ p.description }}"{%- endif -%}>{{ p.name }}</a>
+          {% else %}
+            {{p.name}}
+          {% endif %}
+        </dd>
+      {% endfor %}
+    {% endfor %}
+  </dl>
+</section>
+
+<section id="references">
+  <h2 title="References">👍<span class="sr-only">References</span></h2>
+  <dl>
+    {% for r in resume.references %}
+      <figure>
+        <blockquote>{{ r.reference }}</blockquote>
+        <figcaption>{{ r.name }}</figcaption>
+      </figure>
+    {% endfor %}
+  </dl>
 </section>
