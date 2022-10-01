@@ -16,7 +16,6 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
-    "@picocss/pico": "^1.5.5",
     "cross-env": "^7.0.3",
     "dayjs": "^1.11.5",
     "lightningcss-cli": "^1.15.1",
