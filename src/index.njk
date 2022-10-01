@@ -20,20 +20,6 @@ eleventyComputed:
   </dl>
 </section>
 
-<section id="volunteer">
-  <h2 title="Volunterring">🫶<span class="sr-only">Volunteering</span></h2>
-  <ul>
-    {% for v in resume.volunteer %}
-      <li id="{{ v.organization | slug }}--{{ v.position | slug }}">
-        <time datetime="{{ v.startDate | formatDate("YYYY-MM-DD")}}">{{ v.startDate | formatDate("YYYY")}}</time>
-        <span>
-          {{ v.position }} at <a href="{{v.url}}" rel="external" title="{{ v.summary }}">{{ v.organization }}</a>
-        </span>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
-
 <section id="awards">
   <h2 title="Awards">🏆<span class="sr-only">Awards</span></h2>
   <ul>
@@ -45,6 +31,20 @@ eleventyComputed:
             {{ a.summary }} //
                     {% endif %}
           {{ a.title }}
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="volunteer">
+  <h2 title="Volunterring">🫶<span class="sr-only">Volunteering</span></h2>
+  <ul>
+    {% for v in resume.volunteer %}
+      <li id="{{ v.organization | slug }}--{{ v.position | slug }}">
+        <time datetime="{{ v.startDate | formatDate("YYYY-MM-DD")}}">{{ v.startDate | formatDate("YYYY")}}</time>
+        <span>
+          {{ v.position }} at <a href="{{v.url}}" rel="external" title="{{ v.summary }}">{{ v.organization }}</a>
         </span>
       </li>
     {% endfor %}
@@ -67,6 +67,20 @@ eleventyComputed:
       {% endfor %}
     {% endfor %}
   </dl>
+</section>
+
+<section id="certificates">
+  <h2 title="Certificates">📄<span class="sr-only">Certificates</span></h2>
+  <ul>
+    {% for c in resume.certificates | sort(true, false, "date") %}
+      <li id="{{ c.name | slug }}-{{ c.issuer | slug }}-{{ c.date | formatDate("YYYY")}}">
+        <time datetime="{{ c.date | formatDate("YYYY-MM-DD")}}">{{ c.date | formatDate("YYYY")}}</time>
+        <span>
+          {{ c.name }}, {{ c.issuer }}
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
 </section>
 
 <section id="references">
