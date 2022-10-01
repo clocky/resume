@@ -11,7 +11,8 @@ eleventyComputed:
       <dt>{{ name }}</dt>
       {% for r in roles | sort(true, false, "startDate") %}
         <dd id="{{ name | slug }}--{{ r.description | slug }}">
-          <time>{{ r.startDate | formatDate("YYYY")}}</time>
+          <time datetime="{{ v.startDate | formatDate("YYYY-MM-DD")}}">
+            {{- r.startDate | formatDate("YYYY") -}}</time>
           <span>{{ r.position }}, {{ r.description }}</span>
         </dd>
       {% endfor %}
@@ -24,7 +25,7 @@ eleventyComputed:
   <ul>
     {% for v in resume.volunteer %}
       <li id="{{ v.organization | slug }}--{{ v.position | slug }}">
-        <time>{{ v.startDate | formatDate("YYYY")}}</time>
+        <time datetime="{{ v.startDate | formatDate("YYYY-MM-DD")}}">{{ v.startDate | formatDate("YYYY")}}</time>
         <span>
           {{ v.position }} at
                 <a 
