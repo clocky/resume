@@ -17,9 +17,17 @@
             {{ content | safe }}
         </main>
         <footer>
-            © <span rel="author">{{ resume.basics.name }}</span>
-            <time>{{ page.date | formatDate("YYYY") }}</time>
-            / <a href="https://github.com/clocky/resume">GitHub</a>
+            <p>
+            © <time>{{ page.date | formatDate("YYYY") }}</time>
+                <span rel="author">{{ resume.basics.name }}</span>
+            </p>
+            <ul>
+                {% for profile in resume.basics.profiles %}
+                    <li>
+                        <a href="{{ profile.url }}" rel="me">{{ profile.network }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
         </footer>
     </body>
 </html>
