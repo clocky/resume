@@ -5,7 +5,7 @@ eleventyComputed:
 ---
 
 <section id="work">
-  <h2 title="Work Experience">🏢<span class="sr-only">Work Experience</span></h2>
+  <h2 title="Work Experience">💼<span class="sr-only">Work Experience</span></h2>
   <dl>
     {% for name, roles in resume.work | groupby("name") %}
       <dt>{{ name }}</dt>
@@ -13,7 +13,16 @@ eleventyComputed:
         <dd id="{{ name | slug }}--{{ r.description | slug }}">
           <time datetime="{{ v.startDate | formatDate("YYYY-MM-DD")}}">
             {{- r.startDate | formatDate("YYYY") -}}</time>
-          <span>{{ r.position }}, {{ r.description }}</span>
+          <span>
+            {{ r.position }}, 
+            {% if r.url %}
+              <a href="{{ r.url }}">
+                {{ r.description }}
+              </a>
+            {% else %}
+              {{ r.description }}
+            {% endif %}
+          </span>
         </dd>
       {% endfor %}
     {% endfor %}
@@ -27,9 +36,7 @@ eleventyComputed:
       <li id="{{ a.title | slug }}-{{ a.awarder | slug }}-{{ a.date | formatDate("YYYY")}}">
         <time datetime="{{ a.date | formatDate("YYYY-MM-DD")}}">{{ a.date | formatDate("YYYY")}}</time>
         <span>
-          {% if a.summary %}
-            {{ a.summary }} //
-          {% endif %}
+          {{a.awarder}} //
           {{ a.title }}
         </span>
       </li>
@@ -38,7 +45,7 @@ eleventyComputed:
 </section>
 
 <section id="volunteer">
-  <h2 title="Volunterring">🫶<span class="sr-only">Volunteering</span></h2>
+  <h2 title="Volunteering">🫶<span class="sr-only">Volunteering</span></h2>
   <ul>
     {% for v in resume.volunteer %}
       <li id="{{ v.organization | slug }}--{{ v.position | slug }}">
@@ -76,7 +83,7 @@ eleventyComputed:
       <li id="{{ c.name | slug }}-{{ c.issuer | slug }}-{{ c.date | formatDate("YYYY")}}">
         <time datetime="{{ c.date | formatDate("YYYY-MM-DD")}}">{{ c.date | formatDate("YYYY")}}</time>
         <span>
-          {{ c.issuer }}: <a href="{{ c.url }}" rel="external">{{ c.name }}</a>
+          <a href="{{ c.url }}" rel="external">{{ c.name }}</a> [{{ c.issuer }}] 
         </span>
       </li>
     {% endfor %}
