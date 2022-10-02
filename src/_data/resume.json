@@ -35,6 +35,7 @@
             "location": "Kirkland, WA",
             "position": "UX Design Manager",
             "description": "Google Cloud",
+            "url": "https://cloud.google.com",
             "summary": "UX design manager for a multinational team of designers and researchers building the next generation of tooling to empower Google's product teams to onboard, deploy, monitor and manage their cloud services.",
             "startDate": "2022-05-23",
             "highlights": [
@@ -49,6 +50,7 @@
             "position": "Principal Design Director",
             "startDate": "2021-07-01",
             "endDate": "2022-04-27",
+            "url": "https://visualstudio.microsoft.com",
             "description": "Visual Studio",
             "summary": "Design director for the multi-disciplinary design teams that create the Visual Studio family of products for millions of developers worldwide; including Visual Studio Code, Visual Studio 2022, Visual Studio for Mac, Azure Lab Services and Azure Notebooks.",
             "highlights": [
@@ -62,6 +64,7 @@
             "location": "Redmond, WA",
             "position": "Principal Design Manager",
             "description": "Developer Division",
+            "url": "https://visualstudio.microsoft.com/careers/",
             "startDate": "2018-01-01",
             "endDate": "2021-06-01",
             "summary": "DesignOps lead for the Developer Division at Microsoft; introducing best practices for tooling, design systems and prototyping across over 25 designers working in Redmond and remote locations on Visual Studio, VS Code and Azure developer products.",
@@ -76,6 +79,7 @@
             "location": "Redmond, WA",
             "position": "Senior Design Manager",
             "description": "Azure DevOps",
+            "url": "https://dev.azure.com",
             "startDate": "2017-05-01",
             "endDate": "2018-11-01",
             "summary": "Managed a team of 8 designers in Raleigh, NC and Redmond, WA, supporting a product organization of over 100 product managers across Azure Boards, Repos and Pipelines (CI/CD) feature sets.",
@@ -88,12 +92,26 @@
             "name": "Microsoft",
             "location": "Redmond, WA",
             "position": "Senior Designer",
-            "description": "Gaming & Entertainment",
-            "startDate": "2014-09-01",
+            "description": "Skype for Xbox",
+            "url": "https://dynamics.microsoft.com/en-us/mixed-reality/remote-assist/",
+            "startDate": "2016-10-13",
             "endDate": "2017-05-01",
             "summary": "Design and prototyping lead for Skype integration on gaming and entertainment products, focusing on Xbox One and casual gaming. ",
             "highlights": [
                 "Lead designer for the UWP (Universal Windows Platform) powered iteration of Skype for Xbox One.",
+                "Prototyped deep integration of Skype into the Xbox core platform."
+            ]
+        },
+        {
+            "name": "Microsoft",
+            "location": "Redmond, WA",
+            "position": "Senior Designer Manager",
+            "description": "Skype for HoloLens",
+            "url": "https://dynamics.microsoft.com/en-us/mixed-reality/remote-assist/",
+            "startDate": "2014-09-01",
+            "endDate": "2016-10-13",
+            "summary": "Design and prototyping lead for Skype integration on gaming and entertainment products, focusing on Xbox One and casual gaming. ",
+            "highlights": [
                 "Shipped v1.0 of Skype for HoloLens, including a successful deployment to the International Space Station.",
                 "Prototyped deep integration of Skype into the Xbox core platform."
             ]
@@ -103,6 +121,7 @@
             "location": "Redmond, WA",
             "position": "Senior Design Manager",
             "description": "Skype for Business",
+            "url": "https://www.microsoft.com/en-us/microsoft-365/previous-versions/skype-for-business-online",
             "startDate": "2013-07-01",
             "endDate": "2014-09-01",
             "summary": "Design lead for Skype and Lync web applications, integrating rich audio, video and text-based communications into Microsoft's consumer and enterprise properties on the web focusing on Office 365, Outlook.com, Dynamics and OneDrive."
@@ -160,6 +179,7 @@
             "location": "Maidenhead, United Kingdom",
             "position": "Handset Product Designer",
             "description": "My 3",
+            "url": "https://www.three.co.uk/New_My3/My3_Home",
             "startDate": "2004-10-01",
             "endDate": "2006-02-01",
             "summary": "Interface design for 3's \"My 3\" self-care product for early mobile browsers.",
@@ -241,6 +261,12 @@
             "summary": "Visual Studio Code"
         },
         {
+            "title": "1bn mobile downloads",
+            "date": "2016-04-28",
+            "awarder": "Skype",
+            "summary": "Skype"
+        },
+        {
             "title": "Most downloaded free iPad app",
             "date": "2013-06-01",
             "awarder": "Apple",
@@ -248,6 +274,12 @@
         },
         {
             "title": "People's Voice Winner",
+            "date": "2012-05-02",
+            "awarder": "Webby Awards",
+            "summary": "Skype for iPad"
+        },
+        {
+            "title": "Winner: Social, Tablet and other devices",
             "date": "2012-05-02",
             "awarder": "Webby Awards",
             "summary": "Skype for iPad"
@@ -261,25 +293,25 @@
         {
             "title": "Platinum Sales Award",
             "date": "1999-10-01",
-            "awarder": "Recording Industry Assocation of America",
+            "awarder": "RIAA",
             "summary": "Korn \"Follow The Leader\""
         },
         {
             "title": "Best Artist Site",
             "date": "1999-10-01",
-            "awarder": "Recording Industry Assocation of America",
+            "awarder": "Wammy Awards",
             "summary": "Rage Against The Machine"
         },
         {
             "title": "Project Sidekick",
             "date": "2015-12-01",
             "awarder": "NASA",
-            "summary": "NASA"
+            "summary": "Skype for HoloLens"
         },
         {
             "title": "O-1 Alien of Extraordinary Ability",
             "date": "1999-09-01",
-            "awarder": "US Citizenship and Immigration Services",
+            "awarder": "USCIS",
             "summary": "USCIS"
         }
     ],
@@ -455,18 +487,18 @@
         },
         {
             "name": "Fastball",
-            "url": "https://fastballmusic.com",
+            "url": "https://www.fastballtheband.com",
             "entity": "ARTISTdirect"
         },
         {
             "name": "STEPS",
-            "url": "https://stepsofficial.com",
+            "url": "https://www.stepsofficial.co.uk",
             "entity": "ARTISTdirect"
         },
         {
             "name": "Mercury Rev",
             "url": "https://mercuryrev.com",
-            "entity": "Ignition Management"
+            "entity": "V2 Records"
         },
         {
             "name": "Long Beach Dub Allstars",
