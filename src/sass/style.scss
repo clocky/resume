@@ -84,9 +84,33 @@ body {
   }
 
   footer {
-    border-top: black 1px solid;
+    border-top: var(--color-primary) 1px solid;
     padding-top: 1rem;
     text-transform: capitalize;
+    @media (min-width: 575px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    ul {
+      display: inline;
+      list-style: none;
+      padding-left: 0;
+      li {
+        display: inline;
+        &:not(:last-child):after {
+          content: "/";
+        }
+      }
+      a {
+        color: var(--color-link);
+        text-transform: lowercase;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 
   section {
