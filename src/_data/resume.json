@@ -193,7 +193,7 @@
             "name": "Three",
             "location": "Maidenhead, United Kingdom",
             "position": "Web Developer",
-            "description": "retail applications",
+            "description": "Point-of-Sale applications",
             "startDate": "2001-05-01",
             "endDate": "2004-10-01",
             "summary": "Web developer for the first 3G carrier in the United Kingdom.",
@@ -362,9 +362,21 @@
             "entity": "Microsoft"
         },
         {
-            "name": "Azure DevOps",
-            "description": "A set of services for collaborating on code and managing software development projects.",
-            "url": "https://dev.azure.com",
+            "name": "Azure Boards",
+            "url": "https://azure.microsoft.com/en-us/products/devops/boards/",
+            "description": "Plan, track, and discuss work across teams.",
+            "entity": "Microsoft"
+        },
+        {
+            "name": "Azure Pipelines",
+            "description": "Continuously build, test, and deploy to any platform and cloud",
+            "url": "https://azure.microsoft.com/en-us/products/devops/pipelines/",
+            "entity": "Microsoft"
+        },
+        {
+            "name": "Azure Repos",
+            "description": "Unlimited, cloud-hosted private Git repos for developers",
+            "url": "https://azure.microsoft.com/en-us/products/devops/repos/",
             "entity": "Microsoft"
         },
         {
@@ -375,7 +387,7 @@
         },
         {
             "name": "Skype for HoloLens",
-            "description": "UWP application for Xbox One that allows users to make and receive Skype calls.",
+            "description": "Application for Windows Holographic that allows users to make and receive Skype calls.",
             "url": "https://www.theverge.com/2017/4/13/15291216/skype-xbox-one-update-universal-windows-app",
             "entity": "Microsoft"
         },
