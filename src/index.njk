@@ -58,6 +58,20 @@ eleventyComputed:
   </ul>
 </section>
 
+<section id="certificates">
+  <h2 title="Certificates">📄<span class="sr-only">Certificates</span></h2>
+  <ul>
+    {% for c in resume.certificates | sort(true, false, "date") %}
+      <li id="{{ c.name | slug }}-{{ c.issuer | slug }}-{{ c.date | formatDate("YYYY")}}">
+        <time datetime="{{ c.date | formatDate("YYYY-MM-DD")}}">{{ c.date | formatDate("YYYY")}}</time>
+        <span>
+         [{{ c.issuer }}]  <a href="{{ c.url }}" rel="external">{{ c.name }}</a>
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
 <section id="projects">
   <h2 title="Projects">⚒️<span class="sr-only">Projects</span></h2>
   <dl>
@@ -76,20 +90,7 @@ eleventyComputed:
   </dl>
 </section>
 
-<section id="certificates">
-  <h2 title="Certificates">📄<span class="sr-only">Certificates</span></h2>
-  <ul>
-    {% for c in resume.certificates | sort(true, false, "date") %}
-      <li id="{{ c.name | slug }}-{{ c.issuer | slug }}-{{ c.date | formatDate("YYYY")}}">
-        <time datetime="{{ c.date | formatDate("YYYY-MM-DD")}}">{{ c.date | formatDate("YYYY")}}</time>
-        <span>
-          <a href="{{ c.url }}" rel="external">{{ c.name }}</a> [{{ c.issuer }}] 
-        </span>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
-
+{# 
 <section id="references">
   <h2 title="References">👍<span class="sr-only">References</span></h2>
   {% for r in resume.references %}
@@ -99,3 +100,4 @@ eleventyComputed:
     </figure>
   {% endfor %}
 </section>
+#}
