@@ -19,12 +19,12 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
 
-      - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+      - name: Deploy via SSH
+        uses: SamKirkland/web-deploy@v1
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          target-server: ${{ secrets.SSH_SERVER }}
+          remote-user: ${{ secrets.SSH_USER }}
+          private-ssh-key: ${{ secrets.SSH_KEY }}
           local-dir: ./dist/
           protocol: ftps
           port: 22
