@@ -33,3 +33,4 @@ jobs:
           password: ${{ secrets.SSH_PASSWORD }}
           local_path: "./dist/*"
           remote_path: "/home/public/"
+          sftpArgs: "-r"
