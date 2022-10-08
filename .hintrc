@@ -1,0 +1,4 @@
+"ignoredUrls": [{
+    "domain": ".*\\.googleapis\\.com/.*",
+    "hints": ["*"]
+}
