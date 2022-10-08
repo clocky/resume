@@ -25,5 +25,6 @@ jobs:
           server: ${{ secrets.SSH_SERVER }}
           username: ${{ secrets.SSH_USER }}
           ssh_private_key: ${{ secrets.SSH_KEY }}
+          password: ${{ secrets.SSH_PASSWORD }}
           local_path: "./dist/*"
           remote_path: "/home/public/"
