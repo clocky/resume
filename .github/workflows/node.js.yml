@@ -25,6 +25,4 @@ jobs:
           target-server: ${{ secrets.SSH_SERVER }}
           remote-user: ${{ secrets.SSH_USER }}
           private-ssh-key: ${{ secrets.SSH_KEY }}
-          local-dir: ./dist/
-          protocol: ftps
-          port: 22
+          source-path: ./dist/
