@@ -19,10 +19,11 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
 
-      - name: Deploy via SSH
-        uses: SamKirkland/web-deploy@v1
+      - name: Deploy via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          target-server: ${{ secrets.SSH_SERVER }}
-          remote-user: ${{ secrets.SSH_USER }}
-          private-ssh-key: ${{ secrets.SSH_KEY }}
-          source-path: ./dist/
+          server: ${{ secrets.SSH_SERVER }}
+          username: ${{ secrets.SSH_USER }}
+          ssh_private_key: ${{ secrets.SSH_KEY }}
+          local_path: "./dist/*"
+          remote_path: "/home/public/"
