@@ -65,14 +65,14 @@ body {
 
   @media (min-width: 768px) {
     #projects dl {
-      @supports (columns) {
+      @supports (column-count: 2) {
         column-count: 2;
         column-width: 50%;
       }
       dt {
         text-transform: uppercase;
         font-weight: 600;
-        @supports (columns) {
+        @supports (column-count: 2) {
           column-span: all;
         }
       }
