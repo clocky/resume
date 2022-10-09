@@ -3,6 +3,9 @@ const path = require("path");
 const prettier = require("prettier");
 
 module.exports = function (eleventyConfig) {
+  /** Copy Netlify Headers file */
+  eleventyConfig.addPassthroughCopy("_headers");
+
   /** Watch SASS files for changes */
   eleventyConfig.addWatchTarget("./src/sass/");
 
