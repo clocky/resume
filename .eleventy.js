@@ -6,6 +6,11 @@ module.exports = function (eleventyConfig) {
   /** Copy Netlify Headers file */
   eleventyConfig.addPassthroughCopy("_headers");
 
+  /** Copy Favicons */
+  eleventyConfig.addPassthroughCopy("src/*.png");
+  eleventyConfig.addPassthroughCopy("src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("src/site.webmanifest");
+
   /** Watch SASS files for changes */
   eleventyConfig.addWatchTarget("./src/sass/");
 
