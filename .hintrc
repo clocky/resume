@@ -1,4 +1,11 @@
-"ignoredUrls": [{
-    "domain": ".*\\.googleapis\\.com/.*",
-    "hints": ["*"]
+{
+    "extends": ["web-recommended"],
+    "ignoredUrls": [{
+        "domain": ".*\\.googleapis\\.com/.*",
+        "hints": ["*"]
+    },
+    {
+        "domain": ".*\\.gstatic\\.com/.*",
+        "hints": ["*"]
+    }]
 }
