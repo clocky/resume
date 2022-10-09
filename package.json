@@ -9,7 +9,7 @@
     "watch:eleventy": "ELEVENTY_ENV=development eleventy --serve",
     "build:sass": "sass  --no-source-map src/sass:dist/css",
     "build:eleventy": "ELEVENTY_ENV=prod eleventy",
-    "postbuild": "lightningcss --minify --targets '> 0.25%, not IE 11' dist/css/style.css -o dist/css/style.css && gzipper compress --zopfli --brotli ./dist",
+    "postbuild": "lightningcss --minify --targets '> 0.25%, not IE 11' dist/css/style.css -o dist/css/style.css && gzipper compress --zopfli --brotli --include css,map,html ./dist",
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:sass build:eleventy"
   },
