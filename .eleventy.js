@@ -3,9 +3,6 @@ const path = require("path");
 const prettier = require("prettier");
 
 module.exports = function (eleventyConfig) {
-  /** Manually copy htaccess to target folder */
-  eleventyConfig.addPassthroughCopy("./.htaccess");
-
   /** Watch SASS files for changes */
   eleventyConfig.addWatchTarget("./src/sass/");
 
