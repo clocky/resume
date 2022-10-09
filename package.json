@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.html",
   "scripts": {
+    "webhint": "npx hint -c .hintrc http://mark.mclaughlin.me.uk",
     "watch:sass": "sass  --no-source-map --watch src/sass:dist/css",
     "watch:eleventy": "eleventy --serve",
     "build:sass": "sass  --no-source-map src/sass:dist/css",
     "build:eleventy": "eleventy",
-    "postbuild": "lightningcss --minify --targets '> 0.25%, not IE 11' dist/css/style.css -o dist/css/style.css",
+    "postbuild": "lightningcss --minify --targets '> 0.25%, not IE 11' dist/css/style.css -o dist/css/style.css && gzipper compress --zopfli --brotli ./dist",
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:sass build:eleventy"
   },
@@ -26,6 +27,7 @@
     "not IE 11"
   ],
   "devDependencies": {
+    "gzipper": "^7.1.0",
     "prettier": "^2.7.1"
   }
 }
