@@ -65,12 +65,16 @@ body {
 
   @media (min-width: 768px) {
     #projects dl {
-      column-count: 2;
-      column-width: 50%;
+      @supports (columns) {
+        column-count: 2;
+        column-width: 50%;
+      }
       dt {
         text-transform: uppercase;
         font-weight: 600;
-        column-span: all;
+        @supports (columns) {
+          column-span: all;
+        }
       }
       dd {
         display: block;
