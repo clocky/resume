@@ -6,6 +6,9 @@
         <meta name="author" content="{{ resume.basics.name }}">
         <meta name="description" content="{{ resume.basics.summary }}">
         <title>{{ title }}</title>
+        {%- if env.environment == "prod" %}
+            <script defer data-domain="mark.mclaughlin.me.uk" src="https://plausible.io/js/plausible.js"></script>
+        {%- endif %}
         <link rel="stylesheet" href="{{ '/css/style.css' | url }}"/>
     </head>
     <body>
