@@ -72,7 +72,7 @@ body {
       dt {
         text-transform: uppercase;
         font-weight: 600;
-        @supports (column-count: 2) {
+        @supports (column-span: all) {
           column-span: all;
         }
       }
