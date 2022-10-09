@@ -1,3 +1,5 @@
 /*
     X-Content-Type-Options: nosniff
     Cache-Control: public, max-age=180, immutable
+/site.webmanifest
+    Content-Type: application/manifest+json; charset=utf-8
