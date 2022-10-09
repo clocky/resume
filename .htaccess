@@ -8,13 +8,50 @@
     Header unset Expires
     Header always set X-Content-Type-Options nosniff
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    <IfModule mod_rewrite.c>
+        RewriteEngine On
+        Options +FollowSymlinks
+
+        # Brotli
+        RewriteCond "%{HTTP:Accept-encoding}" "br"
+        RewriteCond "%{HTTPS}" "on"
+        RewriteCond "%{REQUEST_FILENAME}\.br" "-s"
+        RewriteRule "^(.*)" "$1\.br" [QSA]
+        RewriteRule "\.css\.br$"            "-" [T=text/css,E=no-brotli:1,E=no-gzip:1]
+        RewriteRule "\.html?\.br$"          "-" [T=text/html,E=no-brotli:1,E=no-gzip:1
+        <FilesMatch "\.br$">
+            Header append Content-Encoding br
+        </FilesMatch>
+
+        # Zopfli
+        RewriteCond "%{HTTP:Accept-encoding}" "gzip"
+        RewriteCond "%{REQUEST_FILENAME}\.gz" "-s"
+        RewriteRule "^(.*)" "$1\.gz" [QSA]
+        RewriteRule "\.css\.gz$"            "-" [T=text/css,E=no-brotli:1,E=no-gzip:1]
+        RewriteRule "\.html?\.gz$"          "-" [T=text/html,E=no-brotli:1,E=no-gzip:1]
+        <FilesMatch "\.gz$">
+            Header append Content-Encoding gzip
+        </FilesMatch>
+        <FilesMatch "\.(br|gz)$">
+            Header append Vary Accept-Encoding
+        </FilesMatch>
+    </IfModule>
 </IfModule>
 
 <IfModule mod_expires.c>
     ExpiresActive on
     ExpiresDefault                               "access plus 1 year"
+    ExpiresByType text/html                      "access plus 0 seconds"
     ExpiresByType text/cache-manifest            "access plus 0 seconds"
+    
     <Files "favicon.ico">
         ExpiresByType image/x-icon               "access plus 1 hour"
     </Files>
+    
+    <IfModule mod_headers.c>
+        Header merge Cache-Control immutable
+        <FilesMatch "\.(appcache|cur|geojson|ico|json(ld)?|x?html?|topojson|xml)$">
+            Header edit Cache-Control immutable ""
+        </FilesMatch>
+    </IfModule>
 </IfModule>
