@@ -18,7 +18,7 @@
         RewriteCond "%{REQUEST_FILENAME}\.br" "-s"
         RewriteRule "^(.*)" "$1\.br" [QSA]
         RewriteRule "\.css\.br$"            "-" [T=text/css,E=no-brotli:1,E=no-gzip:1]
-        RewriteRule "\.html?\.br$"          "-" [T=text/html,E=no-brotli:1,E=no-gzip:1
+        RewriteRule "\.html?\.br$"          "-" [T=text/html,E=no-brotli:1,E=no-gzip:1]
         <FilesMatch "\.br$">
             Header append Content-Encoding br
         </FilesMatch>

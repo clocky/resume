@@ -10,5 +10,9 @@
     {
         "domain": ".*\\.gstatic\\.com/.*",
         "hints": ["*"]
+    },
+    {
+        "domain": ".*\\.plausible\\.io/.*",
+        "hints": ["*"]
     }]
 }
