@@ -10,7 +10,7 @@ eleventyComputed:
     {% for name, roles in resume.work | groupby("name") %}
       <dt>{{ name }}</dt>
       {% for r in roles | sort(true, false, "startDate") %}
-        <dd id="{{ name | slug }}--{{ r.description | slug }}">
+        <dd id="{{ name | slug }}--{{ r.position | slug }}-{{ r.description | slug }}">
           <time datetime="{{ v.startDate | formatDate("YYYY-MM-DD")}}">
             {{- r.startDate | formatDate("YYYY") -}}</time>
           <span>
