@@ -9,9 +9,11 @@
     "watch:eleventy": "ELEVENTY_ENV=development eleventy --serve",
     "build:sass": "sass  --no-source-map src/sass:dist/css",
     "build:eleventy": "ELEVENTY_ENV=prod eleventy",
-    "postbuild": "lightningcss --minify --targets '> 0.25%, not IE 11' dist/css/style.css -o dist/css/style.css && gzipper compress --zopfli --brotli --include css,map,html ./dist",
+    "postbuild": "npm-run-all postbuild:css postbuild:compress",
     "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "npm-run-all build:sass build:eleventy"
+    "build": "npm-run-all build:sass build:eleventy",
+    "postbuild:css": "lightningcss --minify --targets '> 0.25%, not IE 11' dist/css/style.css -o dist/css/style.css",
+    "postbuild:compress": "gzipper compress --zopfli --brotli --include css,map,webmanifest,html ./dist"
   },
   "author": "clocky",
   "license": "ISC",
