@@ -1,12 +1,14 @@
 const pretty = require("pretty");
 const moment = require("moment");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const pluginEleventyNavigation = require("@11ty/eleventy-navigation");
+const pluginEleventyVite = require("@11ty/eleventy-plugin-vite");
 const markdownItAttrs = require("markdown-it-attrs");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(pluginEleventyVite);
+  eleventyConfig.addPlugin(pluginEleventyNavigation);
 
   /**
    * Plugin: Embed YouTube
