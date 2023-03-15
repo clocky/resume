@@ -4,10 +4,20 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginEleventyNavigation = require("@11ty/eleventy-navigation");
 const pluginEleventyVite = require("@11ty/eleventy-plugin-vite");
 const markdownItAttrs = require("markdown-it-attrs");
+const path = require("path");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginEleventyVite);
+  eleventyConfig.addPlugin(pluginEleventyVite),
+    {
+      viteOptions: {
+        resolve: {
+          alias: {
+            "bootstrap/": path.resolve(__dirname, "node_modules/bootstrap/"),
+          },
+        },
+      },
+    };
   eleventyConfig.addPlugin(pluginEleventyNavigation);
 
   /**
@@ -37,7 +47,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/images/": "img" });
   eleventyConfig.addPassthroughCopy({ "src/_assets/js/": "/js" });
   eleventyConfig.addPassthroughCopy({ "src/assets/images/favicon/": "/" });
-  eleventyConfig.addPassthroughCopy({ "src/_assets/css/": "/css" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/css/": "css" });
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   /**
