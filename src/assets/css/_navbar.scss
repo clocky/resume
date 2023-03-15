@@ -1,0 +1,25 @@
+.icon-bar {
+  width: 22px;
+  height: 2px;
+  background-color: rgb(52, 58, 64);
+  display: block;
+  transition: all 0.2s;
+  margin-top: 4px;
+}
+.navbar-brand {
+  font-family: $headings-font-family;
+  font-size: $h3-font-size;
+}
+
+.navbar-toggler {
+  border: none;
+  background: transparent !important;
+}
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height 0.35s ease;
+  -o-transition: height 0.35s ease;
+  transition: height 0.35s ease;
+}

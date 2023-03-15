@@ -1,0 +1,11 @@
+.parallax {
+  min-height: 50vh;
+  background-size: cover;
+  background-position: 50% 20%;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:900%7CSource+Sans+Pro:300,400&display=swap");
+
+@import "variables";
+@import "bootstrap/scss/bootstrap";
+@import "navbar";
