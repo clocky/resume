@@ -34,9 +34,9 @@ module.exports = function (eleventyConfig) {
    * Passthrough copy of assets
    */
 
-  eleventyConfig.addPassthroughCopy({ "src/_assets/img/": "/img" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/images/": "img" });
   eleventyConfig.addPassthroughCopy({ "src/_assets/js/": "/js" });
-  eleventyConfig.addPassthroughCopy({ "src/_assets/favicon/": "/" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/images/favicon/": "/" });
   eleventyConfig.addPassthroughCopy({ "src/_assets/css/": "/css" });
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
@@ -120,7 +120,7 @@ module.exports = function (eleventyConfig) {
       input: "src",
       includes: "_templates",
       data: "_data",
-      output: "public",
+      output: "dist",
     },
   };
 };
