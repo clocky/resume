@@ -17,14 +17,12 @@
   },
   "author": "clocky",
   "license": "MIT",
-  "dependencies": {
-    "@11ty/eleventy": "^1.0.2"
-  },
   "browserslist": [
     "> 0.25%",
     "not IE 11"
   ],
   "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
     "dayjs": "^1.11.7",
     "gzipper": "^7.2.0",
     "lightningcss-cli": "^1.19.0",
