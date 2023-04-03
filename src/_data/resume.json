@@ -442,6 +442,11 @@
             "entity": "Three"
         },
         {
+            "name": "My 3",
+            "url": "https://three.co.uk",
+            "entity": "Three"
+        },
+        {
             "name": "Skype for BlackBerry",
             "url": "https://www.cnet.com/tech/mobile/skypes-verizon-deal-spells-blackberry/",
             "entity": "Skype"
@@ -516,6 +521,26 @@
             "name": "Long Beach Dub Allstars",
             "url": "https://lbdamusic.com",
             "entity": "ARTISTdirect"
+        },
+        {
+            "name": "Endsleigh Insurance",
+            "url": "https://www.endsleigh.co.uk",
+            "entity": "Tamar"
+        },
+        {
+            "name": "J Sainsbury plc",
+            "url": "https://www.about.sainsburys.co.uk",
+            "entity": "Tamar"
+        },
+        {
+            "name": "Travers Smith Braithwaite",
+            "url": "https://www.traverssmith.com",
+            "entity": "Tamar"
+        },
+        {
+            "name": "Macfarlanes",
+            "url": "https://www.macfarlanes.com/",
+            "entity": "Tamar"
         }
     ],
     "references": [
@@ -546,10 +571,10 @@
             "url": "https://www.credly.com/badges/12cc6be0-2100-427c-b72a-9348cd67c79e"
         },
         {
-            "name": "100 Mentorship Minutes",
-            "date": "2022-07-29",
+            "name": "500 Mentorship Minutes",
+            "date": "2023-02-03",
             "issuer": "ADPList",
-            "url": "https://adplist.org/certifications/26540"
+            "url": "https://adplist.org/certifications/80710"
         }
     ]
 }
