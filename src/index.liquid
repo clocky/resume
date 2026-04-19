@@ -1,0 +1,109 @@
+---
+layout: base.liquid
+eleventyComputed:
+    title: "{{ resume.basics.name }}"
+---
+
+<section id="work">
+  <h2 title="Work Experience">💼<span class="sr-only">Work Experience</span></h2>
+  <dl>
+    {% assign work_groups = resume.work | group_by: "name" %}
+    {% for group in work_groups %}
+      <dt>{{ group.name }}</dt>
+      {% assign roles = group.items | sort: "startDate" | reverse %}
+      {% for r in roles %}
+        <dd id="{{ group.name | slug }}--{{ r.position | slug }}-{{ r.description | slug }}">
+          <time datetime="{{ r.startDate | formatDate: "YYYY-MM-DD" }}">
+            {{- r.startDate | formatDate: "YYYY" -}}</time>
+          <span>
+            {{ r.position }},
+            {% if r.url %}
+              <a href="{{ r.url }}" rel="external noopener noreferrer" target="_blank">
+                {{ r.description }}
+              </a>
+            {% else %}
+              {{ r.description }}
+            {% endif %}
+          </span>
+        </dd>
+      {% endfor %}
+    {% endfor %}
+  </dl>
+</section>
+
+<section id="awards">
+  <h2 title="Awards">🏆<span class="sr-only">Awards</span></h2>
+  <ul>
+    {% assign awards = resume.awards | sort: "date" | reverse %}
+    {% for a in awards %}
+      <li id="{{ a.title | slug }}-{{ a.awarder | slug }}-{{ a.date | formatDate: "YYYY" }}">
+        <time datetime="{{ a.date | formatDate: "YYYY-MM-DD" }}">{{ a.date | formatDate: "YYYY" }}</time>
+        <span>
+          {{ a.awarder }} //
+          {{ a.title }}
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="volunteer">
+  <h2 title="Volunteering">🫶<span class="sr-only">Volunteering</span></h2>
+  <ul>
+    {% for v in resume.volunteer %}
+      <li id="{{ v.organization | slug }}--{{ v.position | slug }}">
+        <time datetime="{{ v.startDate | formatDate: "YYYY-MM-DD" }}">{{ v.startDate | formatDate: "YYYY" }}</time>
+        <span>
+          {{ v.position }} at <a href="{{ v.url }}" rel="external noopener noreferrer" target="_blank" title="{{ v.summary | escape }}">{{ v.organization }}</a>
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="certificates">
+  <h2 title="Certificates">📄<span class="sr-only">Certificates</span></h2>
+  <ul>
+    {% assign certificates = resume.certificates | sort: "date" | reverse %}
+    {% for c in certificates %}
+      <li id="{{ c.name | slug }}-{{ c.issuer | slug }}-{{ c.date | formatDate: "YYYY" }}">
+        <time datetime="{{ c.date | formatDate: "YYYY-MM-DD" }}">{{ c.date | formatDate: "YYYY" }}</time>
+        <span>
+         [{{ c.issuer }}]  <a href="{{ c.url }}" rel="external noopener noreferrer" target="_blank">{{ c.name }}</a>
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="projects">
+  <h2 title="Projects">📁<span class="sr-only">Projects</span></h2>
+  <dl>
+    {% assign project_groups = resume.projects | group_by: "entity" %}
+    {% for group in project_groups %}
+      <dt>{{ group.name }}</dt>
+      {% assign projects = group.items | sort_natural: "name" %}
+      {% for p in projects %}
+        <dd>
+          {% if p.url %}
+            <a href="{{ p.url }}" rel="external noopener noreferrer" target="_blank"{%- if p.description %} title="{{ p.description | escape }}"{%- endif %}>{{ p.name }}</a>
+          {% else %}
+            {{ p.name }}
+          {% endif %}
+        </dd>
+      {% endfor %}
+    {% endfor %}
+  </dl>
+</section>
+
+{% comment %}
+<section id="references">
+  <h2 title="References">👍<span class="sr-only">References</span></h2>
+  {% for r in resume.references %}
+    <figure>
+      <blockquote>{{ r.reference }}</blockquote>
+      <figcaption>{{ r.name }}</figcaption>
+    </figure>
+  {% endfor %}
+</section>
+{% endcomment %}
