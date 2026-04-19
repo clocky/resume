@@ -9,7 +9,7 @@ eleventyComputed:
   <dl>
     {% assign work_groups = resume.work | group_by: "name" %}
     {% for group in work_groups %}
-      <dt>{{ group.name }}</dt>
+      <dt id="work--{{ group.name | slug }}">{{ group.name }}</dt>
       {% assign roles = group.items | sort: "startDate" | reverse %}
       {% for r in roles %}
         <dd id="{{ group.name | slug }}--{{ r.position | slug }}-{{ r.description | slug }}">
@@ -81,10 +81,10 @@ eleventyComputed:
   <dl>
     {% assign project_groups = resume.projects | group_by: "entity" %}
     {% for group in project_groups %}
-      <dt>{{ group.name }}</dt>
+      <dt id="projects--{{ group.name | slug }}">{{ group.name }}</dt>
       {% assign projects = group.items | sort_natural: "name" %}
       {% for p in projects %}
-        <dd>
+        <dd id="projects--{{ group.name | slug }}--{{ p.name | slug }}">
           {% if p.url %}
             <a href="{{ p.url }}" rel="external noopener noreferrer" target="_blank"{%- if p.description %} title="{{ p.description | escape }}"{%- endif %}>{{ p.name }}</a>
           {% else %}

@@ -34,7 +34,7 @@ Content, templates, and styles are separated so that resume updates never requir
 
 ## Conventions
 
-- `<dd>` elements (in `#work`) and `<li>` elements (in `#awards`, `#volunteer`, `#certificates`) are given stable `id` attributes built from `slug`-filtered fields (e.g. `{{ group.name | slug }}--{{ r.position | slug }}-...`) to enable deep links. `<dt>` elements and the `#projects` `<dd>`s currently don't have ids — preserve and expand this pattern when adding sections.
+- `<dt>`, `<dd>`, and `<li>` elements are all given stable `id` attributes built from `slug`-filtered fields to enable deep links. Because work `name` and project `entity` values overlap heavily (e.g. `Google`, `Microsoft`), the `<dl>`-based sections namespace their `<dt>` ids with a section prefix: `work--{{ group.name | slug }}`, `projects--{{ group.name | slug }}`. Preserve this pattern — any new `<dl>` section that could share group-name values with another should prefix its `<dt>` ids.
 - Emoji section headings use the "Noto Emoji" web font loaded with a `text=` subset in `style.scss`. When adding a new emoji heading, add that emoji to the `text=` list in the `@import url(...)` at the top of `src/sass/style.scss`, or it won't render in the intended font.
 - `_headers` (Netlify) sets long-cache immutable headers on all assets and short cache on HTML; it is copied into `dist/` as a passthrough.
 - The whole body uses `text-transform: lowercase` — content in `resume.json` can be written in natural case.
