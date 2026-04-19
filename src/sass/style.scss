@@ -65,16 +65,10 @@ body {
 
   @media (min-width: 768px) {
     #projects dl {
-      @supports (column-count: 2) {
-        column-count: 2;
-        column-width: 50%;
-      }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       dt {
-        text-transform: uppercase;
-        font-weight: 600;
-        @supports (column-span: all) {
-          column-span: all;
-        }
+        grid-column: 1 / -1;
       }
       dd {
         display: block;
