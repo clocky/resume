@@ -8,9 +8,9 @@
         "summary": "Design leader with over 20 years background creating end-to-end experiences for web, cloud, mobile, desktop and consumer electronics platforms.",
         "profiles": [
             {
-                "network": "Twitter",
+                "network": "X",
                 "username": "clocky",
-                "url": "https://twitter.com/clocky"
+                "url": "https://x.com/clocky"
             },
             {
                 "network": "GitHub",
@@ -18,12 +18,17 @@
                 "url": "https://github.com/clocky"
             },
             {
+                "network": "Bluesky",
+                "username": "mark.mclaughlin.uk",
+                "url": "https://bsky.app/profile/mark.mclaughlin.uk"
+            },
+            {
                 "network": "Instagram",
                 "username": "clocky",
                 "url": "https://instagram.com/clocky"
             },
             {
-                "network": "Linkedin",
+                "network": "LinkedIn",
                 "username": "markmclaughlin",
                 "url": "https://linkedin.com/in/markmclaughlin"
             }
@@ -33,11 +38,26 @@
         {
             "name": "Google",
             "location": "Kirkland, WA",
+            "position": "Staff UX Designer",
+            "description": "Gemini CLI",
+            "url": "https://geminicli.com",
+            "summary": "UX design manager for a multinational team of designers and researchers building the next generation of tooling to empower Google's product teams to onboard, deploy, monitor and manage their cloud services.",
+            "startDate": "2026-01-01",
+            "highlights": [
+                "Presenting at internal summits demonstrating open-source tooling and extensibility models.",
+                "Aligning multiple stakeholders around a common brand identity for the product family.",
+                "Defining principles and guidelines for showing health, status and performance of cloud services."
+            ]
+        },
+        {
+            "name": "Google",
+            "location": "Kirkland, WA",
             "position": "UX Design Manager",
             "description": "Google Cloud",
             "url": "https://cloud.google.com",
             "summary": "UX design manager for a multinational team of designers and researchers building the next generation of tooling to empower Google's product teams to onboard, deploy, monitor and manage their cloud services.",
             "startDate": "2022-05-23",
+            "endDate": "2025-12-31",
             "highlights": [
                 "Presenting at internal summits demonstrating open-source tooling and extensibility models.",
                 "Aligning multiple stakeholders around a common brand identity for the product family.",
@@ -105,7 +125,7 @@
         {
             "name": "Microsoft",
             "location": "Redmond, WA",
-            "position": "Senior Designer Manager",
+            "position": "Senior Design Manager",
             "description": "Skype for HoloLens",
             "url": "https://dynamics.microsoft.com/en-us/mixed-reality/remote-assist/",
             "startDate": "2014-09-01",
