@@ -13,6 +13,7 @@
     "start": "npm-run-all build:sass --parallel watch:*",
     "build": "npm-run-all build:sass build:eleventy"
   },
+  "packageManager": "pnpm@8.15.4",
   "author": "clocky",
   "license": "MIT",
   "browserslist": [
