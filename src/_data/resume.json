@@ -363,6 +363,22 @@
     ],
     "projects": [
         {
+            "name": "Gemini CLI",
+            "description": "An open-source AI agent that brings Gemini into the terminal. Contributed a two-tier theme system with automatic terminal capability detection, a Card UI component library, and UX writing guidelines baked into the agent as a skill.",
+            "url": "https://geminicli.com",
+            "keywords": [
+                "Open Source",
+                "AI"
+            ],
+            "entity": "Google"
+        },
+        {
+            "name": "App Lifecycle Manager",
+            "description": "A fully managed service for building, deploying, and operating SaaS applications at scale on Google Cloud, providing opinionated blueprints, automated tenant lifecycle management, and infrastructure-as-code principles to reduce time-to-market.",
+            "url": "https://cloud.google.com/products/saas-runtime",
+            "entity": "Google"
+        },
+        {
             "name": "Visual Studio Code",
             "description": "A component library for building webview-based extensions in Visual Studio Code.",
             "url": "https://github.com/microsoft/vscode-webview-ui-toolkit",
