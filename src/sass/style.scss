@@ -120,7 +120,15 @@ p#summary {
 }
 
 .sr-only {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
   text-transform: capitalize;
 }
 
@@ -194,12 +202,15 @@ dd {
     color: var(--color-link);
     text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       text-decoration: none;
       color: #fff;
       background-color: var(--color-link);
       padding: 0.125rem 0.33rem;
       margin: -0.125rem -0.33rem;
+      outline: 2px solid var(--color-link);
+      outline-offset: 2px;
     }
   }
   span {
