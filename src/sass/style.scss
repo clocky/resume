@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Emoji&display=swap&text=💼🏢🏆🫶⚒️📄👍");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&display=swap&text=📁💼🏢🏆🫶🛠️📄👍");
 
 :root {
   @supports (color: color(display-p3 1 1 1)) {
@@ -45,7 +45,8 @@ h3 {
 body {
   line-height: 1.333rem;
 
-  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+  font-family:
+    ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
     "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   text-transform: lowercase;
@@ -67,6 +68,7 @@ body {
     #projects dl {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      column-gap: 2rem;
       dt {
         grid-column: 1 / -1;
       }
