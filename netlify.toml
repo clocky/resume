@@ -2,5 +2,4 @@
   command = "pnpm run build"
 
 [build.environment]
-  NODE_VERSION = "20"
   PNPM_VERSION = "8"
