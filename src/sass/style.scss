@@ -202,7 +202,13 @@ dd {
     color: var(--color-link);
     text-decoration: none;
 
-    &:hover,
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+      background-color: var(--color-link);
+      padding: 0.125rem 0.33rem;
+      margin: -0.125rem -0.33rem;
+    }
     &:focus-visible {
       text-decoration: none;
       color: #fff;
