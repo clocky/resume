@@ -41,12 +41,13 @@
             "position": "Staff UX Designer",
             "description": "Gemini CLI",
             "url": "https://geminicli.com",
-            "summary": "UX design manager for a multinational team of designers and researchers building the next generation of tooling to empower Google's product teams to onboard, deploy, monitor and manage their cloud services.",
+            "summary": "Staff UX designer contributing directly to Gemini CLI, an open-source AI agent that brings Gemini into the terminal. Working embedded with the engineering team on visual design, terminal UI components, theme systems, and UX writing quality across the product.",
             "startDate": "2026-01-01",
             "highlights": [
-                "Presenting at internal summits demonstrating open-source tooling and extensibility models.",
-                "Aligning multiple stakeholders around a common brand identity for the product family.",
-                "Defining principles and guidelines for showing health, status and performance of cloud services."
+                "Designed and shipped a two-tier theme system — Material Design 3-inspired rich themes for true-color terminals, and refined safe themes for 256-color environments — with automatic terminal capability detection.",
+                "Authored the string-reviewer skill, a comprehensive UX writing guide baked into the AI agent itself, covering error message patterns, terminology standards, and copy principles for contributors.",
+                "Built the foundational Card UI component with information, success, warning, error, and confirmation variants, establishing a reusable pattern for structured terminal output.",
+                "Drove UX writing consistency across authentication flows, standardizing sign-in/sign-out terminology and improving error message clarity for personal and workspace accounts."
             ]
         },
         {

@@ -1,2 +1,5 @@
 [build]
   command = "pnpm run build"
+
+[build.environment]
+  PNPM_VERSION = "8"
