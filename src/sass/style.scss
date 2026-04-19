@@ -209,6 +209,7 @@ dd {
       background-color: var(--color-link);
       padding: 0.125rem 0.33rem;
       margin: -0.125rem -0.33rem;
+      outline: none;
     }
     &:focus-visible {
       text-decoration: none;
