@@ -20,28 +20,47 @@ const projectGroups = groupBy(resume.projects, "entity");
       {
         workGroups.map((group) => (
           <>
-            <dt id={`work--${slug(group.name)}`}>{group.name}</dt>
+            <dt
+              id={`work--${slug(group.name)}`}
+              itemscope
+              itemtype="https://schema.org/Organization"
+            >
+              <span itemprop="name">{group.name}</span>
+            </dt>
             {[...group.items]
               .sort((a, b) => b.startDate.localeCompare(a.startDate))
               .map((r) => (
                 <dd
                   id={`${slug(group.name)}--${slug(r.position)}-${slug(r.description)}`}
+                  itemscope
+                  itemtype="https://schema.org/EmployeeRole"
                 >
+                  <meta
+                    itemprop="startDate"
+                    content={formatDate(r.startDate, "YYYY-MM-DD")}
+                  />
+                  {r.endDate && (
+                    <meta
+                      itemprop="endDate"
+                      content={formatDate(r.endDate, "YYYY-MM-DD")}
+                    />
+                  )}
                   <time datetime={formatDate(r.startDate, "YYYY-MM-DD")}>
                     {formatDate(r.startDate, "YYYY")}
                   </time>
                   <span>
-                    {r.position},
+                    <span itemprop="roleName">{r.position}</span>
                     {r.url ? (
                       <a
                         href={r.url}
                         rel="external noopener noreferrer"
                         target="_blank"
+                        itemprop="url"
                       >
                         {r.description}
                       </a>
                     ) : (
-                      r.description
+                      <span itemprop="description">{r.description}</span>
                     )}
                   </span>
                 </dd>
@@ -59,13 +78,22 @@ const projectGroups = groupBy(resume.projects, "entity");
         awards.map((a) => (
           <li
             id={`${slug(a.title)}-${slug(a.awarder)}-${formatDate(a.date, "YYYY")}`}
+            itemscope
+            itemtype="https://schema.org/Award"
           >
-            <time datetime={formatDate(a.date, "YYYY-MM-DD")}>
+            <time
+              datetime={formatDate(a.date, "YYYY-MM-DD")}
+              itemprop="dateAwarded"
+            >
               {formatDate(a.date, "YYYY")}
             </time>
             <span>
-              {a.awarder} // {a.title}
+              <span itemprop="givenBy">{a.awarder}</span> //{" "}
+              <span itemprop="name">{a.title}</span>
             </span>
+            {a.summary && (
+              <meta itemprop="description" content={a.summary} />
+            )}
           </li>
         ))
       }
@@ -105,14 +133,16 @@ const projectGroups = groupBy(resume.projects, "entity");
         certificates.map((c) => (
           <li
             id={`${slug(c.name)}-${slug(c.issuer)}-${formatDate(c.date, "YYYY")}`}
+            itemscope
+            itemtype="https://schema.org/EducationalOccupationalCredential"
           >
             <time datetime={formatDate(c.date, "YYYY-MM-DD")}>
               {formatDate(c.date, "YYYY")}
             </time>
             <span>
-              [{c.issuer}]{" "}
-              <a href={c.url} rel="external noopener noreferrer" target="_blank">
-                {c.name}
+              [<span itemprop="recognizedBy">{c.issuer}</span>]{" "}
+              <a href={c.url} rel="external noopener noreferrer" target="_blank" itemprop="url">
+                <span itemprop="name">{c.name}</span>
               </a>
             </span>
           </li>
@@ -127,21 +157,43 @@ const projectGroups = groupBy(resume.projects, "entity");
       {
         projectGroups.map((group) => (
           <>
-            <dt id={`projects--${slug(group.name)}`}>{group.name}</dt>
+            <dt
+              id={`projects--${slug(group.name)}`}
+              itemscope
+              itemtype="https://schema.org/Organization"
+            >
+              <span itemprop="name">{group.name}</span>
+            </dt>
             {sortNatural(group.items, "name").map((p) => (
-              <dd id={`projects--${slug(group.name)}--${slug(p.name)}`}>
-                {p.url ? (
-                  <a
-                    href={p.url}
-                    rel="external noopener noreferrer"
-                    target="_blank"
-                    title={p.description}
-                  >
-                    {p.name}
-                  </a>
-                ) : (
-                  p.name
+              <dd
+                id={`projects--${slug(group.name)}--${slug(p.name)}`}
+                itemscope
+                itemtype="https://schema.org/CreativeWork"
+                itemprop="owns"
+              >
+                <span itemprop="name">
+                  {p.url ? (
+                    <a
+                      href={p.url}
+                      rel="external noopener noreferrer"
+                      target="_blank"
+                      title={p.description}
+                      itemprop="url"
+                    >
+                      {p.name}
+                    </a>
+                  ) : (
+                    p.name
+                  )}
+                </span>
+                {p.description && (
+                  <meta itemprop="description" content={p.description} />
                 )}
+                <meta itemprop="creator" content={resume.basics.name} />
+                {p.keywords &&
+                  p.keywords.map((keyword) => (
+                    <meta itemprop="keywords" content={keyword} />
+                  ))}
               </dd>
             ))}
           </>

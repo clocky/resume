@@ -12,12 +12,16 @@ const currentYear = new Date().getFullYear();
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Person">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content={resume.basics.name} />
     <meta name="description" content={resume.basics.summary} />
+    <meta itemprop="name" content={resume.basics.name} />
+    <meta itemprop="email" content={resume.basics.email} />
+    <meta itemprop="url" content={resume.basics.url} />
+    <meta itemprop="jobTitle" content={resume.basics.label} />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -42,8 +46,8 @@ const currentYear = new Date().getFullYear();
   </head>
   <body>
     <header>
-      <h1>{resume.basics.name}</h1>
-      <p id="summary">{resume.basics.summary.trim()}</p>
+      <h1 itemprop="name">{resume.basics.name}</h1>
+      <p id="summary" itemprop="description">{resume.basics.summary.trim()}</p>
     </header>
     <main>
       <slot />
@@ -57,7 +61,7 @@ const currentYear = new Date().getFullYear();
         {
           resume.basics.profiles.map((profile) => (
             <li>
-              <a href={profile.url} rel="me">
+              <a href={profile.url} rel="me" itemprop="sameAs">
                 {profile.network}
               </a>
             </li>
