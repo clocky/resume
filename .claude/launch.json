@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "start",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["run", "start"],
+      "port": 4321
+    },
+    {
+      "name": "watch:eleventy",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["run", "watch:eleventy"],
+      "port": 8080
+    }
+  ]
+}
