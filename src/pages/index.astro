@@ -35,7 +35,7 @@ const projectGroups = groupBy(resume.projects, "entity");
                   id={`${slug(group.name)}--${slug(r.position)}-${slug(r.description)}`}
                   itemscope
                   itemtype="https://schema.org/EmployeeRole"
-                  itemprop="hasOccupation"
+                  itemprop="worksFor"
                 >
                   <meta
                     itemprop="startDate"
