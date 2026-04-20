@@ -370,13 +370,19 @@
                 "Open Source",
                 "AI"
             ],
-            "entity": "Google"
+            "entity": "Google",
+            "type": "SoftwareApplication",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "macOS, Linux, Windows"
         },
         {
             "name": "App Lifecycle Manager",
             "description": "A fully managed service for building, deploying, and operating SaaS applications at scale on Google Cloud, providing opinionated blueprints, automated tenant lifecycle management, and infrastructure-as-code principles to reduce time-to-market.",
             "url": "https://cloud.google.com/products/saas-runtime",
-            "entity": "Google"
+            "entity": "Google",
+            "type": "SoftwareApplication",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Google Cloud"
         },
         {
             "name": "Visual Studio Code",
@@ -386,92 +392,136 @@
                 "Web Components",
                 "Open Source"
             ],
-            "entity": "Microsoft"
+            "entity": "Microsoft",
+            "type": "SoftwareApplication",
+            "applicationCategory": "DeveloperApplication"
         },
         {
             "name": "Visual Studio for Mac 2022",
             "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2022-for-mac-is-now-available/",
-            "entity": "Microsoft"
+            "entity": "Microsoft",
+            "type": "SoftwareApplication",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "macOS"
         },
         {
             "name": "Visual Studio 2022",
             "url": "https://devblogs.microsoft.com/visualstudio/visual-studio-2022-now-available/",
-            "entity": "Microsoft"
+            "entity": "Microsoft",
+            "type": "SoftwareApplication",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "Windows"
         },
         {
             "name": "Azure Boards",
             "url": "https://azure.microsoft.com/en-us/products/devops/boards/",
             "description": "Plan, track, and discuss work across teams.",
-            "entity": "Microsoft"
+            "entity": "Microsoft",
+            "type": "WebApplication",
+            "applicationCategory": "DeveloperApplication"
         },
         {
             "name": "Azure Pipelines",
             "description": "Continuously build, test, and deploy to any platform and cloud",
             "url": "https://azure.microsoft.com/en-us/products/devops/pipelines/",
-            "entity": "Microsoft"
+            "entity": "Microsoft",
+            "type": "WebApplication",
+            "applicationCategory": "DeveloperApplication"
         },
         {
             "name": "Azure Repos",
             "description": "Unlimited, cloud-hosted private Git repos for developers",
             "url": "https://azure.microsoft.com/en-us/products/devops/repos/",
-            "entity": "Microsoft"
+            "entity": "Microsoft",
+            "type": "WebApplication",
+            "applicationCategory": "DeveloperApplication"
         },
         {
             "name": "Skype for Xbox One",
             "description": "UWP application for Xbox One that allows users to make and receive Skype calls.",
             "url": "https://www.theverge.com/2017/4/13/15291216/skype-xbox-one-update-universal-windows-app",
-            "entity": "Microsoft"
+            "entity": "Microsoft",
+            "type": "SoftwareApplication",
+            "applicationCategory": "CommunicationApplication",
+            "operatingSystem": "Xbox One"
         },
         {
             "name": "Skype for HoloLens",
             "description": "Application for Windows Holographic that allows users to make and receive Skype calls.",
             "url": "https://www.theverge.com/2017/4/13/15291216/skype-xbox-one-update-universal-windows-app",
-            "entity": "Microsoft"
+            "entity": "Microsoft",
+            "type": "SoftwareApplication",
+            "applicationCategory": "CommunicationApplication",
+            "operatingSystem": "Windows Holographic"
         },
         {
             "name": "Skype for iOS",
             "description": "The first mobile video calling app to launch on iOS.",
             "url": "https://apps.apple.com/app/skype",
-            "entity": "Skype"
+            "entity": "Skype",
+            "type": "MobileApplication",
+            "applicationCategory": "CommunicationApplication",
+            "operatingSystem": "iOS"
         },
         {
             "name": "Skype for Android",
             "description": "Design and launch of Skype for Android phones and tablets.",
             "url": "https://play.google.com/store/apps/details?id=com.skype.raider",
-            "entity": "Skype"
+            "entity": "Skype",
+            "type": "MobileApplication",
+            "applicationCategory": "CommunicationApplication",
+            "operatingSystem": "Android"
         },
         {
             "name": "Skype for Samsung SMART TV",
             "url": "https://www.samsung.com/us/css/support/UN60ES8000FXZA_features.html",
-            "entity": "Skype"
+            "entity": "Skype",
+            "type": "SoftwareApplication",
+            "applicationCategory": "CommunicationApplication",
+            "operatingSystem": "Samsung Smart TV"
         },
         {
             "name": "Skype for WebOS",
             "description": "Design and launch of Skype for Palm Pre and HP TouchPad.",
             "url": "https://zatznotfunny.com/2010-11/first-look-at-skype-for-webos-on-palm-pre/",
-            "entity": "Skype"
+            "entity": "Skype",
+            "type": "MobileApplication",
+            "applicationCategory": "CommunicationApplication",
+            "operatingSystem": "webOS"
         },
         {
             "name": "Skype for Panasonic VIERA",
             "description": "Design direction for Skype on Panasonic smart TV.",
             "url": "https://markmclaughlin.info/hardware/smart-tv/panasonic/",
-            "entity": "Skype"
+            "entity": "Skype",
+            "type": "SoftwareApplication",
+            "applicationCategory": "CommunicationApplication",
+            "operatingSystem": "Panasonic VIERA"
         },
         {
             "name": "Skype for LG NetCast",
             "description": "Design direction for Skype on LG smart TV.",
             "url": "https://markmclaughlin.info/hardware/smart-tv/lg/",
-            "entity": "Skype"
+            "entity": "Skype",
+            "type": "SoftwareApplication",
+            "applicationCategory": "CommunicationApplication",
+            "operatingSystem": "LG NetCast"
         },
         {
             "name": "Skype for Series 60",
             "url": "https://www.youtube.com/watch?v=KBIPhv_vYRw",
-            "entity": "Skype"
+            "entity": "Skype",
+            "type": "MobileApplication",
+            "applicationCategory": "CommunicationApplication",
+            "operatingSystem": "Symbian S60"
         },
         {
             "name": "Skype for Nokia N800",
             "url": "https://www.engadget.com/2007-07-06-nokia-updates-n800-with-skype-and-more.html",
-            "entity": "Skype"
+            "entity": "Skype",
+            "type": "MobileApplication",
+            "applicationCategory": "CommunicationApplication",
+            "operatingSystem": "Maemo"
         },
         {
             "name": "3 Skypephone S1",
@@ -481,12 +531,17 @@
         {
             "name": "My 3",
             "url": "https://three.co.uk",
-            "entity": "Three"
+            "entity": "Three",
+            "type": "WebApplication",
+            "applicationCategory": "BusinessApplication"
         },
         {
             "name": "Skype for BlackBerry",
             "url": "https://www.cnet.com/tech/mobile/skypes-verizon-deal-spells-blackberry/",
-            "entity": "Skype"
+            "entity": "Skype",
+            "type": "MobileApplication",
+            "applicationCategory": "CommunicationApplication",
+            "operatingSystem": "BlackBerry OS"
         },
         {
             "name": "3 Skypephone S2",
@@ -507,77 +562,93 @@
             "name": "Skype for Windows Phone",
             "description": "Design and launch of Skype for Windows Phone 7.",
             "url": "https://markmclaughlin.info/mobile/windows-phone-7/",
-            "entity": "Skype"
+            "entity": "Skype",
+            "type": "MobileApplication",
+            "applicationCategory": "CommunicationApplication",
+            "operatingSystem": "Windows Phone 7"
         },
         {
             "name": "Korn",
             "description": "Design and launch of the official site supporting 1998's \"Follow The Leader\" release.",
             "url": "https://korn.com",
-            "entity": "ARTISTdirect"
+            "entity": "ARTISTdirect",
+            "type": "WebSite"
         },
         {
             "name": "Backstreet Boys",
             "description": "Design and launch of the official site supporting 1999's \"Millennium\" release.",
             "url": "https://backstreetboys.com",
-            "entity": "ARTISTdirect"
+            "entity": "ARTISTdirect",
+            "type": "WebSite"
         },
         {
             "name": "Rage Against The Machine",
             "description": "Design and launch of the official site supporting 1999's \"The Battle of Los Angeles\" release.",
             "url": "https://ratm.com",
-            "entity": "ARTISTdirect"
+            "entity": "ARTISTdirect",
+            "type": "WebSite"
         },
         {
             "name": "Indigo Girls",
             "description": "Design and launch of the official site supporting 1999's \"Come On Now Social\" release.",
             "url": "https://indigogirls.com",
-            "entity": "ARTISTdirect"
+            "entity": "ARTISTdirect",
+            "type": "WebSite"
         },
         {
             "name": "Kenny G",
             "description": "Design and launch of the official site supporting 1999's \"Faith: A Holiday Album\" release.",
             "url": "https://kennyg.com",
-            "entity": "ARTISTdirect"
+            "entity": "ARTISTdirect",
+            "type": "WebSite"
         },
         {
             "name": "Fastball",
             "url": "https://www.fastballtheband.com",
-            "entity": "ARTISTdirect"
+            "entity": "ARTISTdirect",
+            "type": "WebSite"
         },
         {
             "name": "STEPS",
             "url": "https://www.stepsofficial.co.uk",
-            "entity": "ARTISTdirect"
+            "entity": "ARTISTdirect",
+            "type": "WebSite"
         },
         {
             "name": "Mercury Rev",
             "url": "https://mercuryrev.com",
-            "entity": "V2 Records"
+            "entity": "V2 Records",
+            "type": "WebSite"
         },
         {
             "name": "Long Beach Dub Allstars",
             "url": "https://lbdamusic.com",
-            "entity": "ARTISTdirect"
+            "entity": "ARTISTdirect",
+            "type": "WebSite"
         },
         {
             "name": "Endsleigh Insurance",
             "url": "https://www.endsleigh.co.uk",
-            "entity": "Tamar"
+            "entity": "Tamar",
+            "type": "WebSite"
         },
         {
             "name": "J Sainsbury plc",
             "url": "https://www.about.sainsburys.co.uk",
-            "entity": "Tamar"
+            "entity": "Tamar",
+            "type": "WebSite"
         },
         {
             "name": "Travers Smith Braithwaite",
             "url": "https://www.traverssmith.com",
-            "entity": "Tamar"
+            "entity": "Tamar",
+            "type": "WebSite"
         },
         {
             "name": "Macfarlanes",
             "url": "https://www.macfarlanes.com/",
-            "entity": "Tamar"
+            "entity": "Tamar",
+            "type": "WebSite"
         }
     ],
     "references": [

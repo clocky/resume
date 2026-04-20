@@ -215,7 +215,7 @@ const projectGroups = groupBy(resume.projects, "entity");
               <dd
                 id={`projects--${slug(group.name)}--${slug(p.name)}`}
                 itemscope
-                itemtype="https://schema.org/CreativeWork"
+                itemtype={`https://schema.org/${p.type ?? "CreativeWork"}`}
               >
                 {p.url ? (
                   <a
@@ -232,6 +232,18 @@ const projectGroups = groupBy(resume.projects, "entity");
                 )}
                 {p.description && (
                   <meta itemprop="description" content={p.description} />
+                )}
+                {p.applicationCategory && (
+                  <meta
+                    itemprop="applicationCategory"
+                    content={p.applicationCategory}
+                  />
+                )}
+                {p.operatingSystem && (
+                  <meta
+                    itemprop="operatingSystem"
+                    content={p.operatingSystem}
+                  />
                 )}
                 <span
                   itemprop="creator"
