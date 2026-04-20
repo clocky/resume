@@ -50,7 +50,7 @@ const currentYear = new Date().getFullYear();
     <header>
       <h1 itemprop="name">{resume.basics.name}</h1>
       <p id="summary" itemprop="description">{resume.basics.summary.trim()}</p>
-      {resume.basics.location && (
+      {(resume.basics.location?.city || resume.basics.location?.postalCode || resume.basics.location?.countryCode || resume.basics.location?.region) && (
         <span itemprop="homeLocation" itemscope itemtype="https://schema.org/Place" hidden>
           <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
             {resume.basics.location.city && <meta itemprop="addressLocality" content={resume.basics.location.city} />}
