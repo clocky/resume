@@ -97,7 +97,7 @@ body {
 
     dd {
       display: block;
-      line-height: 1.33rem;
+      line-height: var(--line-height);
     }
   }
 }
