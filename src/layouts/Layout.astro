@@ -1,6 +1,15 @@
 ---
 import "../styles/style.scss";
 import resume from "../_data/resume.json";
+import Icon from "astro-iconify";
+
+const networkIcons: Record<string, string> = {
+  X: "pixel:twitter",
+  GitHub: "pixel:github",
+  Bluesky: "pixel:bluesky",
+  Instagram: "pixel:instagram",
+  LinkedIn: "pixel:linkedin",
+};
 
 interface Props {
   title: string;
@@ -74,7 +83,8 @@ const currentYear = new Date().getFullYear();
           resume.basics.profiles.map((profile) => (
             <li>
               <a href={profile.url} rel="me" itemprop="sameAs">
-                {profile.network}
+                <Icon name={networkIcons[profile.network] ?? `pixel:${profile.network.toLowerCase()}`} />
+                <span class="sr-only">{profile.network}</span>
               </a>
             </li>
           ))
