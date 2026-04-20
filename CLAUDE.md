@@ -42,5 +42,5 @@ Content, templates, and styles are separated so that resume updates never requir
 
 ## Deployment
 
-- **Netlify** builds from `netlify.toml` (`pnpm run build`, `NODE_VERSION = "20"`, `PNPM_VERSION = "8"`), publishing `dist/`. No adapter; this is a pure static build.
+- **Netlify** builds from `netlify.toml` (`pnpm run build`, `NODE_VERSION = "20"`, `PNPM_VERSION = "8.15.4"` to match `packageManager` in `package.json`), publishing `dist/`. No adapter; this is a pure static build.
 - GitHub Actions only verifies the build passes on push/PR; it does not deploy.
