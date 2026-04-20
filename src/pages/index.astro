@@ -1,0 +1,164 @@
+---
+import Layout from "../layouts/Layout.astro";
+import resume from "../_data/resume.json";
+import { slug, formatDate, groupBy, sortNatural } from "../lib/helpers";
+
+const workGroups = groupBy(resume.work, "name");
+const awards = [...resume.awards].sort((a, b) => b.date.localeCompare(a.date));
+const certificates = [...resume.certificates].sort((a, b) =>
+  b.date.localeCompare(a.date),
+);
+const projectGroups = groupBy(resume.projects, "entity");
+---
+
+<Layout title={resume.basics.name}>
+  <section id="work">
+    <h2 title="Work Experience">
+      💼<span class="sr-only">Work Experience</span>
+    </h2>
+    <dl>
+      {
+        workGroups.map((group) => (
+          <>
+            <dt id={`work--${slug(group.name)}`}>{group.name}</dt>
+            {[...group.items]
+              .sort((a, b) => b.startDate.localeCompare(a.startDate))
+              .map((r) => (
+                <dd
+                  id={`${slug(group.name)}--${slug(r.position)}-${slug(r.description)}`}
+                >
+                  <time datetime={formatDate(r.startDate, "YYYY-MM-DD")}>
+                    {formatDate(r.startDate, "YYYY")}
+                  </time>
+                  <span>
+                    {r.position},
+                    {r.url ? (
+                      <a
+                        href={r.url}
+                        rel="external noopener noreferrer"
+                        target="_blank"
+                      >
+                        {r.description}
+                      </a>
+                    ) : (
+                      r.description
+                    )}
+                  </span>
+                </dd>
+              ))}
+          </>
+        ))
+      }
+    </dl>
+  </section>
+
+  <section id="awards">
+    <h2 title="Awards">🏆<span class="sr-only">Awards</span></h2>
+    <ul>
+      {
+        awards.map((a) => (
+          <li
+            id={`${slug(a.title)}-${slug(a.awarder)}-${formatDate(a.date, "YYYY")}`}
+          >
+            <time datetime={formatDate(a.date, "YYYY-MM-DD")}>
+              {formatDate(a.date, "YYYY")}
+            </time>
+            <span>
+              {a.awarder} // {a.title}
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section id="volunteer">
+    <h2 title="Volunteering">🫶<span class="sr-only">Volunteering</span></h2>
+    <ul>
+      {
+        resume.volunteer.map((v) => (
+          <li id={`${slug(v.organization)}--${slug(v.position)}`}>
+            <time datetime={formatDate(v.startDate, "YYYY-MM-DD")}>
+              {formatDate(v.startDate, "YYYY")}
+            </time>
+            <span>
+              {v.position} at{" "}
+              <a
+                href={v.url}
+                rel="external noopener noreferrer"
+                target="_blank"
+                title={v.summary}
+              >
+                {v.organization}
+              </a>
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section id="certificates">
+    <h2 title="Certificates">📄<span class="sr-only">Certificates</span></h2>
+    <ul>
+      {
+        certificates.map((c) => (
+          <li
+            id={`${slug(c.name)}-${slug(c.issuer)}-${formatDate(c.date, "YYYY")}`}
+          >
+            <time datetime={formatDate(c.date, "YYYY-MM-DD")}>
+              {formatDate(c.date, "YYYY")}
+            </time>
+            <span>
+              [{c.issuer}]{" "}
+              <a href={c.url} rel="external noopener noreferrer" target="_blank">
+                {c.name}
+              </a>
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2 title="Projects">📁<span class="sr-only">Projects</span></h2>
+    <dl>
+      {
+        projectGroups.map((group) => (
+          <>
+            <dt id={`projects--${slug(group.name)}`}>{group.name}</dt>
+            {sortNatural(group.items, "name").map((p) => (
+              <dd id={`projects--${slug(group.name)}--${slug(p.name)}`}>
+                {p.url ? (
+                  <a
+                    href={p.url}
+                    rel="external noopener noreferrer"
+                    target="_blank"
+                    title={p.description}
+                  >
+                    {p.name}
+                  </a>
+                ) : (
+                  p.name
+                )}
+              </dd>
+            ))}
+          </>
+        ))
+      }
+    </dl>
+  </section>
+
+  {/* references section intentionally disabled
+  <section id="references">
+    <h2 title="References">👍<span class="sr-only">References</span></h2>
+    {resume.references.map((r) => (
+      <figure>
+        <blockquote>{r.reference}</blockquote>
+        <figcaption>{r.name}</figcaption>
+      </figure>
+    ))}
+  </section>
+  */}
+</Layout>

@@ -5,5 +5,5 @@
 
 A single page site for Mark's resumé.
 
-* Built with [Eleventy](https://11ty.dev)
+* Built with [Astro](https://astro.build)
 * Data from [JSON Resume](https://jsonresume.org)

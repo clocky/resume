@@ -1,17 +1,16 @@
 {
-  "name": "json-resume",
+  "name": "resume",
   "version": "1.0.0",
+  "private": true,
+  "type": "module",
   "description": "",
-  "main": "index.html",
   "scripts": {
-    "webhint": "npx hint -c .hintrc http://mark.mclaughlin.me.uk",
-    "watch:sass": "sass  --no-source-map --watch src/sass:dist/css",
-    "watch:eleventy": "ELEVENTY_ENV=development eleventy --serve",
-    "build:sass": "sass  --no-source-map src/sass:dist/css",
-    "build:eleventy": "ELEVENTY_ENV=prod eleventy",
-    "postbuild": "lightningcss --minify --targets '> 0.25%, not IE 11' dist/css/style.css -o dist/css/style.css",
-    "start": "npm-run-all build:sass --parallel watch:*",
-    "build": "npm-run-all build:sass build:eleventy"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "webhint": "npx hint -c .hintrc http://mark.mclaughlin.me.uk"
   },
   "packageManager": "pnpm@8.15.4",
   "author": "clocky",
@@ -22,18 +21,16 @@
   ],
   "pnpm": {
     "overrides": {
-      "braces": ">=3.0.3",
       "picomatch": ">=2.3.2",
-      "js-yaml": ">=3.14.2",
-      "brace-expansion": ">=1.1.13"
+      "js-yaml": ">=3.14.2"
     }
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.5",
+    "@astrojs/check": "^0.9.4",
+    "astro": "^5.0.0",
     "dayjs": "^1.11.20",
-    "lightningcss-cli": "^1.32.0",
-    "npm-run-all2": "^7.0.2",
-    "prettier": "^3.8.3",
-    "sass": "^1.99.0"
+    "sass": "^1.99.0",
+    "slugify": "^1.6.6",
+    "typescript": "^5.6.0"
   }
 }
