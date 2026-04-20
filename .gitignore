@@ -2,6 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,node
 
 hint-report/
+.claude/settings.local.json
 
 ### macOS ###
 # General

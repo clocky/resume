@@ -18,6 +18,9 @@ const currentYear = new Date().getFullYear();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content={resume.basics.name} />
     <meta name="description" content={resume.basics.summary} />
+    {resume.meta?.canonical && <link rel="canonical" href={resume.meta.canonical} />}
+    {resume.meta?.version && <meta name="version" content={resume.meta.version} />}
+    {resume.meta?.lastModified && <meta name="last-modified" content={resume.meta.lastModified} />}
     <meta itemprop="email" content={resume.basics.email} />
     <meta itemprop="url" content={resume.basics.url} />
     <meta itemprop="jobTitle" content={resume.basics.label} />
@@ -47,6 +50,16 @@ const currentYear = new Date().getFullYear();
     <header>
       <h1 itemprop="name">{resume.basics.name}</h1>
       <p id="summary" itemprop="description">{resume.basics.summary.trim()}</p>
+      {(resume.basics.location?.city || resume.basics.location?.postalCode || resume.basics.location?.countryCode || resume.basics.location?.region) && (
+        <span itemprop="homeLocation" itemscope itemtype="https://schema.org/Place" hidden>
+          <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            {resume.basics.location.city && <meta itemprop="addressLocality" content={resume.basics.location.city} />}
+            {resume.basics.location.postalCode && <meta itemprop="postalCode" content={resume.basics.location.postalCode} />}
+            {resume.basics.location.countryCode && <meta itemprop="addressCountry" content={resume.basics.location.countryCode} />}
+            {resume.basics.location.region && <meta itemprop="addressRegion" content={resume.basics.location.region} />}
+          </span>
+        </span>
+      )}
     </header>
     <main>
       <slot />

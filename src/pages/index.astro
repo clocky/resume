@@ -210,6 +210,46 @@ const projectGroups = groupBy(resume.projects, "entity");
     </ul>
   </section>
 
+  <section id="publications">
+    <h2 title="Publications">📚<span class="sr-only">Publications</span></h2>
+    <ul>
+      {
+        resume.publications.map((p) => (
+          <li
+            id={`${slug(p.name)}-${slug(p.publisher)}-${formatDate(p.releaseDate, "YYYY")}`}
+            itemscope
+            itemtype="https://schema.org/Book"
+          >
+            <meta itemprop="datePublished" content={formatDate(p.releaseDate, "YYYY-MM-DD")} />
+            {p.summary && <meta itemprop="description" content={p.summary} />}
+            <time datetime={formatDate(p.releaseDate, "YYYY-MM-DD")}>
+              {formatDate(p.releaseDate, "YYYY")}
+            </time>
+            <span>
+              [
+              <span
+                itemprop="publisher"
+                itemscope
+                itemtype="https://schema.org/Organization"
+              >
+                <span itemprop="name">{p.publisher}</span>
+              </span>
+              ]{" "}
+              <a
+                href={p.url}
+                rel="external noopener noreferrer"
+                target="_blank"
+                itemprop="url"
+              >
+                <span itemprop="name">{p.name}</span>
+              </a>
+            </span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
   <section id="projects">
     <h2 title="Projects">📁<span class="sr-only">Projects</span></h2>
     <dl>
