@@ -250,6 +250,27 @@ const projectGroups = groupBy(resume.projects, "entity");
     </ul>
   </section>
 
+  <section id="patents">
+    <h2 title="Patents">💡<span class="sr-only">Patents</span></h2>
+    <ul>
+      {
+        resume.patents.map((p) => (
+          <li id={slug(p.number)}>
+            <a
+              href={p.url}
+              rel="external noopener noreferrer"
+              target="_blank"
+              title={p.summary}
+            >
+              {p.number}
+            </a>
+            <span>{p.name}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
   <section id="projects">
     <h2 title="Projects">📁<span class="sr-only">Projects</span></h2>
     <dl>
