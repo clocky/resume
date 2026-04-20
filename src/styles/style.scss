@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&display=swap&text=📁💼🏢🏆🫶🛠️📄📚👍");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&display=swap&text=📁💼🏢🏆🫶🛠️📄📚👍💡");
 
 :root {
   @supports (color: color(display-p3 1 1 1)) {
@@ -170,6 +170,7 @@ figure {
   }
 }
 
+
 /* Indent company names */
 #work {
   dt {
@@ -206,6 +207,8 @@ dd {
       padding: 0.125rem 0.33rem;
       margin: -0.125rem -0.33rem;
       outline: none;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
     }
     &:focus-visible {
       text-decoration: none;
@@ -215,6 +218,8 @@ dd {
       margin: -0.125rem -0.33rem;
       outline: 2px solid var(--color-link);
       outline-offset: 2px;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
     }
   }
   span {
