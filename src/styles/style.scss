@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&display=swap&text=📁💼🏢🏆🫶🛠️📄📚👍💡");
 
 :root {
+  --border-radius: 2px;
+  --opacity-muted: 0.6;
   @supports (color: color(display-p3 1 1 1)) {
     --color-primary: color(display-p3 1 0.32 0.285);
     --color-link: color(display-p3 0 0.25 1 / 1);
@@ -54,7 +56,7 @@ body {
 
   @media (min-width: 992px) {
     padding: 2rem 3rem;
-    max-width: 40vw;
+    max-width: 44vw;
     font-size: 0.85rem;
   }
 
@@ -141,9 +143,24 @@ footer {
 
     li {
       display: inline;
-      &:not(:last-child):after {
-        content: "/";
-      }
+      margin-left: 0.5rem;
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+  }
+
+  a {
+    display: inline-block;
+    &:hover,
+    &:focus-visible {
+      height: 24px;
+      padding: 4px 4px;
+      margin: -4px -4px;
+      border-radius: var(--border-radius);
     }
   }
 }
@@ -151,7 +168,7 @@ footer {
 section {
   margin-top: 4rem;
   time {
-    opacity: 60%;
+    opacity: var(--opacity-muted);
   }
 }
 
@@ -170,6 +187,9 @@ figure {
   }
 }
 
+.muted {
+  opacity: var(--opacity-muted);
+}
 
 /* Indent company names */
 #work {
@@ -209,6 +229,7 @@ dd {
       outline: none;
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
+      border-radius: var(--border-radius);
     }
     &:focus-visible {
       text-decoration: none;
