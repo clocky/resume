@@ -170,6 +170,20 @@ figure {
   }
 }
 
+#patents {
+  li span a {
+    display: block;
+    &:hover {
+      padding: 0.25rem 0;
+      margin: -0.25rem 0;
+    }
+    &:focus-visible {
+      padding: 0.25rem 0;
+      margin: -0.25rem 0;
+    }
+  }
+}
+
 /* Indent company names */
 #work {
   dt {
