@@ -266,11 +266,10 @@ const projectGroups = groupBy(resume.projects, "entity");
                   href={p.url}
                   rel="external noopener noreferrer"
                   target="_blank"
-                  title={p.summary}
+                  title={p.number}
                 >
-                  {p.number}
-                </a>{" "}
-                {p.name}
+                  {p.name}
+                </a>
               </span>
             </li>
           ))
