@@ -1,0 +1,76 @@
+---
+import "../styles/style.scss";
+import resume from "../_data/resume.json";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const isProd = import.meta.env.PROD;
+const currentYear = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content={resume.basics.name} />
+    <meta name="description" content={resume.basics.summary} />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>{title}</title>
+    {
+      isProd && (
+        <>
+          <script
+            is:inline
+            defer
+            data-domain="mark.mclaughlin.me.uk"
+            src="https://plausible.io/js/plausible.js"
+          />
+          <meta
+            name="google-site-verification"
+            content="2SaJSS986anFYxGRY0-rz6ddYetFNTN5ILAU0zVvcaY"
+          />
+        </>
+      )
+    }
+  </head>
+  <body>
+    <header>
+      <h1>{resume.basics.name}</h1>
+      <p id="summary">{resume.basics.summary.trim()}</p>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>
+        © <time>{currentYear}</time>
+        <span {...{ rel: "author" }}>{resume.basics.name}</span>
+      </p>
+      <ul>
+        {
+          resume.basics.profiles.map((profile) => (
+            <li>
+              <a href={profile.url} rel="me">
+                {profile.network}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </footer>
+    <!-- Cloudflare Web Analytics -->
+    <script
+      is:inline
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "848d81a3a7004763960fa8158cf59596"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
