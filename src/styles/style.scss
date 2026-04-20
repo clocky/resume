@@ -170,19 +170,6 @@ figure {
   }
 }
 
-#patents {
-  li span a {
-    display: block;
-    &:hover {
-      padding: 0.25rem 0;
-      margin: -0.25rem 0;
-    }
-    &:focus-visible {
-      padding: 0.25rem 0;
-      margin: -0.25rem 0;
-    }
-  }
-}
 
 /* Indent company names */
 #work {
@@ -220,6 +207,8 @@ dd {
       padding: 0.125rem 0.33rem;
       margin: -0.125rem -0.33rem;
       outline: none;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
     }
     &:focus-visible {
       text-decoration: none;
@@ -229,6 +218,8 @@ dd {
       margin: -0.125rem -0.33rem;
       outline: 2px solid var(--color-link);
       outline-offset: 2px;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
     }
   }
   span {
