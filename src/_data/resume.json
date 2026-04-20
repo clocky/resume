@@ -14,7 +14,7 @@
             "city": "Kirkland",
             "postalCode": "98034"
         },
-        "summary": "Design leader with almost 30 years background creating end-to-end experiences for web, cloud, terminal, mobile, desktop and consumer electronics platforms.",
+        "summary": "Design leader with over 30 years background creating end-to-end experiences for web, cloud, terminal, mobile, desktop and consumer electronics platforms.",
         "profiles": [
             {
                 "network": "X",
@@ -438,6 +438,18 @@
             "entity": "Microsoft"
         },
         {
+            "name": "Windows 10",
+            "description": "Design and prototyping lead for Skype Video and Messaging integration at the launch of Windows 10.",
+            "url": "https://www.microsoft.com/en-us/windows",
+            "entity": "Microsoft"
+        },
+        {
+            "name": "Office 365",
+            "description": "Design lead for the initial integration of real-time Skype communications into the Office 365 web suite, including Outlook.com and OneDrive.",
+            "url": "https://www.microsoft.com/en-us/microsoft-365",
+            "entity": "Microsoft"
+        },
+        {
             "name": "Skype for iOS",
             "description": "The first mobile video calling app to launch on iOS.",
             "url": "https://apps.apple.com/app/skype",
@@ -508,6 +520,11 @@
             "entity": "Skype"
         },
         {
+            "name": "Intel MID",
+            "description": "Collaboration with Intel to develop VoIP calling for its Mobile Internet Device concept.",
+            "entity": "Skype"
+        },
+        {
             "name": "Philips VOIP855 ",
             "url": "https://www.usa.philips.com/c-p/VOIP8551B_26/design-collection-cordless-phone-with-answering-machine",
             "entity": "Skype"
@@ -517,6 +534,12 @@
             "description": "Design and launch of Skype for Windows Phone 7.",
             "url": "https://markmclaughlin.info/mobile/windows-phone-7/",
             "entity": "Skype"
+        },
+        {
+            "name": "Monty Python",
+            "description": "Webmaster for the Monty Python online archive of Terry Gilliam artwork and Eric Idle live shows.",
+            "url": "https://montypython.com",
+            "entity": "ARTISTdirect"
         },
         {
             "name": "Korn",
@@ -610,6 +633,50 @@
         {
             "name": "John Chang, Grönska Stadsodling",
             "reference": "Mark is the man behind the UxD for Skype for iPhone. Back when the iPhone was new to everyone in the world, he somehow immediately \"got\" the look-and-feel of the platform and managed to create a design that has withstood the test of time. He's one of that rare breed who is not only skilled on the design side but groks the technical side as well."
+        }
+    ],
+    "patents": [
+        {
+            "name": "Distributing Presence Information",
+            "number": "US8473545B2",
+            "url": "https://patents.google.com/patent/US8473545B2",
+            "summary": "Setting IM availability based on calendar data."
+        },
+        {
+            "name": "Communication system and method",
+            "number": "US8407749B2",
+            "url": "https://patents.google.com/patent/US8407749B2",
+            "summary": "Handling incoming call notifications via a TV remote control."
+        },
+        {
+            "name": "Communication system and method",
+            "number": "US8473994B2",
+            "url": "https://patents.google.com/patent/US8473994B2",
+            "summary": "Generating social avatars from live TV content."
+        },
+        {
+            "name": "Indicia of contact viewing activity",
+            "number": "US9258511B2",
+            "url": "https://patents.google.com/patent/US9258511B2",
+            "summary": "Shared TV viewing indicators — watch shows together across platforms."
+        },
+        {
+            "name": "Logging communication events",
+            "number": "US20110201313A1",
+            "url": "https://patents.google.com/patent/US20110201313A1",
+            "summary": "Location-aware phone call log."
+        },
+        {
+            "name": "Switching between user devices during a VoIP call",
+            "number": "GB2479180A",
+            "url": "https://patents.google.com/patent/GB2479180A",
+            "summary": "Seamlessly transfer active calls between home electronics devices."
+        },
+        {
+            "name": "Location information in a communications system",
+            "number": "US9565261B2",
+            "url": "https://patents.google.com/patent/US9565261B2",
+            "summary": "Displaying location and timezone context within a contact list."
         }
     ],
     "certificates": [
