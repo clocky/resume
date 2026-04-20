@@ -254,19 +254,26 @@ const projectGroups = groupBy(resume.projects, "entity");
     <h2 title="Patents">💡<span class="sr-only">Patents</span></h2>
     <ul>
       {
-        resume.patents.map((p) => (
-          <li id={slug(p.number)}>
-            <a
-              href={p.url}
-              rel="external noopener noreferrer"
-              target="_blank"
-              title={p.summary}
-            >
-              {p.number}
-            </a>
-            <span>{p.name}</span>
-          </li>
-        ))
+        [...resume.patents]
+          .sort((a, b) => b.date.localeCompare(a.date))
+          .map((p) => (
+            <li id={slug(p.number)}>
+              <time datetime={formatDate(p.date, "YYYY-MM-DD")}>
+                {formatDate(p.date, "YYYY")}
+              </time>
+              <span>
+                <a
+                  href={p.url}
+                  rel="external noopener noreferrer"
+                  target="_blank"
+                  title={p.summary}
+                >
+                  {p.number}
+                </a>{" "}
+                {p.name}
+              </span>
+            </li>
+          ))
       }
     </ul>
   </section>

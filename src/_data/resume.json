@@ -640,60 +640,70 @@
         {
             "name": "Distributing presence information",
             "number": "US8473545B2",
+            "date": "2013-06-25",
             "url": "https://patents.google.com/patent/US8473545B2/en",
             "summary": "Setting IM availability based on calendar data."
         },
         {
             "name": "Communication system and method",
             "number": "US8407749B2",
+            "date": "2013-03-26",
             "url": "https://patents.google.com/patent/US8407749B2/en",
             "summary": "Handling incoming call notifications via a TV remote control."
         },
         {
             "name": "Communication system and method",
             "number": "US8473994B2",
+            "date": "2013-06-25",
             "url": "https://patents.google.com/patent/US8473994B2/en",
             "summary": "Generating social avatars from live TV content."
         },
         {
             "name": "Communication system and method",
             "number": "EP2335411B1",
+            "date": "2017-03-01",
             "url": "https://patents.google.com/patent/EP2335411B1/en",
             "summary": "Bidirectional video calling over packet-based networks."
         },
         {
             "name": "Displaying graphical representations of contacts",
             "number": "US9128592B2",
+            "date": "2015-09-08",
             "url": "https://patents.google.com/patent/US9128592B2/en",
             "summary": "Dynamic resizing of contact avatars within a display region."
         },
         {
             "name": "Indicia of contact viewing activity",
             "number": "US9258511B2",
+            "date": "2016-02-09",
             "url": "https://patents.google.com/patent/US9258511B2/en",
             "summary": "Shared TV viewing indicators — watch shows together across platforms."
         },
         {
             "name": "Logging communication events using location information",
             "number": "US9544377B2",
+            "date": "2017-01-10",
             "url": "https://patents.google.com/patent/US9544377B2/en",
             "summary": "Location-aware phone call log."
         },
         {
             "name": "Switching between user devices during a VoIP call",
             "number": "GB2479180A",
+            "date": "2011-10-05",
             "url": "https://patents.google.com/patent/GB2479180A/en",
             "summary": "Seamlessly transfer active calls between home electronics devices."
         },
         {
             "name": "Location information in a communications system",
             "number": "US9565261B2",
+            "date": "2017-02-07",
             "url": "https://patents.google.com/patent/US9565261B2/en",
             "summary": "Displaying location and timezone context within a contact list."
         },
         {
             "name": "Location information in a communications system",
             "number": "US10524091B2",
+            "date": "2019-12-31",
             "url": "https://patents.google.com/patent/US10524091B2/en",
             "summary": "Displaying location and timezone context within a contact list."
         }
