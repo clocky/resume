@@ -53,14 +53,17 @@ const projectGroups = groupBy(resume.projects, "entity");
                   <span>
                     <span itemprop="roleName">{r.position}</span>
                     {r.url ? (
-                      <a
-                        href={r.url}
-                        rel="external noopener noreferrer"
-                        target="_blank"
-                        itemprop="url"
-                      >
-                        {r.description}
-                      </a>
+                      <>
+                        <a
+                          href={r.url}
+                          rel="external noopener noreferrer"
+                          target="_blank"
+                          itemprop="url"
+                        >
+                          {r.description}
+                        </a>
+                        <meta itemprop="description" content={r.description} />
+                      </>
                     ) : (
                       <span itemprop="description">{r.description}</span>
                     )}
@@ -172,7 +175,6 @@ const projectGroups = groupBy(resume.projects, "entity");
                 id={`projects--${slug(group.name)}--${slug(p.name)}`}
                 itemscope
                 itemtype="https://schema.org/CreativeWork"
-                itemprop="owns"
               >
                 <span itemprop="name">
                   {p.url ? (
