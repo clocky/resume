@@ -24,6 +24,7 @@ const projectGroups = groupBy(resume.projects, "entity");
               id={`work--${slug(group.name)}`}
               itemscope
               itemtype="https://schema.org/Organization"
+              itemprop="worksFor"
             >
               <span itemprop="name">{group.name}</span>
             </dt>
@@ -34,6 +35,7 @@ const projectGroups = groupBy(resume.projects, "entity");
                   id={`${slug(group.name)}--${slug(r.position)}-${slug(r.description)}`}
                   itemscope
                   itemtype="https://schema.org/EmployeeRole"
+                  itemprop="hasOccupation"
                 >
                   <meta
                     itemprop="startDate"
@@ -79,16 +81,16 @@ const projectGroups = groupBy(resume.projects, "entity");
           <li
             id={`${slug(a.title)}-${slug(a.awarder)}-${formatDate(a.date, "YYYY")}`}
             itemscope
-            itemtype="https://schema.org/Award"
+            itemtype="https://schema.org/Thing"
+            itemprop="award"
           >
             <time
               datetime={formatDate(a.date, "YYYY-MM-DD")}
-              itemprop="dateAwarded"
             >
               {formatDate(a.date, "YYYY")}
             </time>
             <span>
-              <span itemprop="givenBy">{a.awarder}</span> //{" "}
+              <span>{a.awarder}</span> //{" "}
               <span itemprop="name">{a.title}</span>
             </span>
             {a.summary && (
@@ -135,6 +137,7 @@ const projectGroups = groupBy(resume.projects, "entity");
             id={`${slug(c.name)}-${slug(c.issuer)}-${formatDate(c.date, "YYYY")}`}
             itemscope
             itemtype="https://schema.org/EducationalOccupationalCredential"
+            itemprop="hasCredential"
           >
             <time datetime={formatDate(c.date, "YYYY-MM-DD")}>
               {formatDate(c.date, "YYYY")}
