@@ -55,7 +55,13 @@ const projectGroups = groupBy(resume.projects, "entity");
                     >
                       <meta itemprop="name" content={group.name} />
                       {r.location && (
-                        <meta itemprop="location" content={r.location} />
+                        <span
+                          itemprop="location"
+                          itemscope
+                          itemtype="https://schema.org/Place"
+                        >
+                          <meta itemprop="name" content={r.location} />
+                        </span>
                       )}
                       <span
                         itemprop="department"
@@ -118,7 +124,7 @@ const projectGroups = groupBy(resume.projects, "entity");
             id={`${slug(v.organization)}--${slug(v.position)}`}
             itemprop="affiliation"
             itemscope
-            itemtype="https://schema.org/Role"
+            itemtype="https://schema.org/OrganizationRole"
           >
             <meta
               itemprop="startDate"
