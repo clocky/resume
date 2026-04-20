@@ -1,10 +1,19 @@
 {
     "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+    "meta": {
+        "canonical": "https://mark.mclaughlin.me.uk",
+        "version": "1.0.0",
+        "lastModified": "2026-04-19"
+    },
     "basics": {
         "name": "Mark McLaughlin",
         "label": "UX Design Manager at Google",
         "email": "mark@mclaughlin.me.uk",
         "url": "https://mark.mclaughlin.me.uk",
+        "location": {
+            "city": "Kirkland",
+            "postalCode": "98034"
+        },
         "summary": "Design leader with almost 30 years background creating end-to-end experiences for web, cloud, terminal, mobile, desktop and consumer electronics platforms.",
         "profiles": [
             {
@@ -578,6 +587,15 @@
             "name": "Macfarlanes",
             "url": "https://www.macfarlanes.com/",
             "entity": "Tamar"
+        }
+    ],
+    "publications": [
+        {
+            "name": "The Icon Handbook",
+            "publisher": "Five Simple Steps",
+            "releaseDate": "2011-12-01",
+            "url": "https://www.fivesimplesteps.com/products/the-icon-handbook",
+            "summary": "Quoted on pages 47–49 in Jon Hicks' definitive guide to icon design. ISBN: 978-1-907828-04-1."
         }
     ],
     "references": [
