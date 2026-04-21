@@ -9,8 +9,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check",
-    "webhint": "npx hint -c .hintrc http://mark.mclaughlin.me.uk"
+    "check": "astro check"
   },
   "packageManager": "pnpm@8.15.4",
   "author": "clocky",
