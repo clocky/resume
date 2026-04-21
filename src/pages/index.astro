@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import resume from "../_data/resume.json";
 import { slug, formatDate, groupBy, sortNatural } from "../lib/helpers";
+import { Icon } from "astro-icon/components";
 
 const workGroups = groupBy(resume.work, "name");
 const awards = [...resume.awards].sort((a, b) => b.date.localeCompare(a.date));
@@ -14,7 +15,7 @@ const projectGroups = groupBy(resume.projects, "entity");
 <Layout title={resume.basics.name}>
   <section id="work">
     <h2 title="Work Experience">
-      💼<span class="sr-only">Work Experience</span>
+      <Icon name="pixel:briefcase" /><span class="sr-only">Work Experience</span>
     </h2>
     <dl>
       {
@@ -93,7 +94,7 @@ const projectGroups = groupBy(resume.projects, "entity");
   </section>
 
   <section id="awards">
-    <h2 title="Awards">🏆<span class="sr-only">Awards</span></h2>
+    <h2 title="Awards"><Icon name="pixel:trophy" /><span class="sr-only">Awards</span></h2>
     <ul>
       {
         awards.map((a) => (
@@ -117,7 +118,7 @@ const projectGroups = groupBy(resume.projects, "entity");
   </section>
 
   <section id="volunteer">
-    <h2 title="Volunteering">🫶<span class="sr-only">Volunteering</span></h2>
+    <h2 title="Volunteering"><Icon name="pixel:heart" /><span class="sr-only">Volunteering</span></h2>
     <ul>
       {
         resume.volunteer.map((v) => (
@@ -168,7 +169,7 @@ const projectGroups = groupBy(resume.projects, "entity");
   </section>
 
   <section id="certificates">
-    <h2 title="Certificates">📄<span class="sr-only">Certificates</span></h2>
+    <h2 title="Certificates"><Icon name="pixel:badge-check" /><span class="sr-only">Certificates</span></h2>
     <ul>
       {
         certificates.map((c) => (
@@ -212,7 +213,7 @@ const projectGroups = groupBy(resume.projects, "entity");
   </section>
 
   <section id="publications">
-    <h2 title="Publications">📚<span class="sr-only">Publications</span></h2>
+    <h2 title="Publications"><Icon name="pixel:book" /><span class="sr-only">Publications</span></h2>
     <ul>
       {
         resume.publications.map((p) => (
@@ -252,7 +253,7 @@ const projectGroups = groupBy(resume.projects, "entity");
   </section>
 
   <section id="patents">
-    <h2 title="Patents">💡<span class="sr-only">Patents</span></h2>
+    <h2 title="Patents"><Icon name="pixel:lightbulb" /><span class="sr-only">Patents</span></h2>
     <ul>
       {
         [...resume.patents]
@@ -279,7 +280,7 @@ const projectGroups = groupBy(resume.projects, "entity");
   </section>
 
   <section id="projects">
-    <h2 title="Projects">📁<span class="sr-only">Projects</span></h2>
+    <h2 title="Projects"><Icon name="pixel:folder" /><span class="sr-only">Projects</span></h2>
     <dl>
       {
         projectGroups.map((group) => (
