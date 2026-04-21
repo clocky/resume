@@ -61,6 +61,8 @@ body {
     transparent 1px
   );
   background-size: 16px 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   @media (min-width: 992px) {
     padding: 2rem 3rem;
