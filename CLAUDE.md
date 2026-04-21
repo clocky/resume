@@ -14,7 +14,6 @@ Package manager is **pnpm** (v8, pinned via `packageManager`). Node version is *
 - `pnpm build` — production build; outputs to `dist/`.
 - `pnpm preview` — serve the built `dist/` locally for a final smoke test.
 - `pnpm check` — run `astro check` for type errors in `.astro` files.
-- `pnpm webhint` — run webhint accessibility/best-practices check against the deployed site (`http://mark.mclaughlin.me.uk`), not the local build.
 
 There is no test suite and no lint script. CI (`.github/workflows/node.js.yml`) only runs `pnpm install && pnpm build`.
 
@@ -42,5 +41,5 @@ Content, templates, and styles are separated so that resume updates never requir
 
 ## Deployment
 
-- **Netlify** builds from `netlify.toml` (`pnpm run build`, `NODE_VERSION = "20"`, `PNPM_VERSION = "8.15.4"` to match `packageManager` in `package.json`), publishing `dist/`. No adapter; this is a pure static build.
+- **Netlify** builds from `netlify.toml` (`pnpm run build`, `NODE_VERSION = "22"`, `PNPM_VERSION = "8.15.4"` to match `packageManager` in `package.json`), publishing `dist/`. No adapter; this is a pure static build.
 - GitHub Actions only verifies the build passes on push/PR; it does not deploy.
