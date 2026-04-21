@@ -8,7 +8,7 @@ A single-page static resume site for Mark McLaughlin, built with [Astro](https:/
 
 ## Commands
 
-Package manager is **pnpm** (v8, pinned via `packageManager`). Node version is **20** (`.node-version`).
+Package manager is **pnpm** (v8, pinned via `packageManager`). Node version is **22** (`.node-version`); Astro 6 requires `>=22.12.0`.
 
 - `pnpm dev` (alias `pnpm start`) — run the Astro dev server with HMR.
 - `pnpm build` — production build; outputs to `dist/`.
