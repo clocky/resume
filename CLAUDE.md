@@ -26,7 +26,7 @@ Content, templates, and styles are separated so that resume updates never requir
 - **Templates** are `.astro` files. `src/pages/index.astro` is the single page; it wraps its sections in `src/layouts/Layout.astro`. Each section iterates `resume.work`, `resume.awards`, `resume.volunteer`, `resume.certificates`, `resume.projects` using `.map()` and the helpers in `src/lib/helpers.ts`.
 - **Helpers** (`src/lib/helpers.ts`): `formatDate` (dayjs), `slug` (uses the `slugify` package with Eleventy-compatible options for id parity), `groupBy` (order-preserving), `sortNatural` (Intl.Collator with `sensitivity: "base"`, `numeric: true`).
 - **Styles**: `src/styles/style.scss` is compiled by Vite/Sass and injected as a hashed `<link>` by Astro.
-- **Astro config** (`astro.config.mjs`): minimal; static output, no integrations.
+- **Astro config** (`astro.config.mjs`): minimal; static output with the `astro-icon` integration enabled.
 - **Environment switching**: `import.meta.env.PROD` is true during `astro build`, false during `astro dev`. `Layout.astro` only injects Plausible and the Google site-verification meta when `PROD` is true.
 - **Third-party scripts**: Plausible and the Cloudflare beacon use `is:inline` so Astro emits them verbatim instead of trying to bundle them through Vite.
 
