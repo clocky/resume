@@ -18,6 +18,12 @@ interface Props {
 const { title } = Astro.props;
 const isProd = import.meta.env.PROD;
 const currentYear = new Date().getFullYear();
+const location = (resume.basics.location ?? {}) as {
+  city?: string;
+  postalCode?: string;
+  countryCode?: string;
+  region?: string;
+};
 ---
 
 <!doctype html>
@@ -60,13 +66,13 @@ const currentYear = new Date().getFullYear();
     <header>
       <h1 itemprop="name">{resume.basics.name}</h1>
       <p id="summary" itemprop="description">{resume.basics.summary.trim()}</p>
-      {(resume.basics.location?.city || resume.basics.location?.postalCode || resume.basics.location?.countryCode || resume.basics.location?.region) && (
+      {(location.city || location.postalCode || location.countryCode || location.region) && (
         <span itemprop="homeLocation" itemscope itemtype="https://schema.org/Place" hidden>
           <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-            {resume.basics.location.city && <meta itemprop="addressLocality" content={resume.basics.location.city} />}
-            {resume.basics.location.postalCode && <meta itemprop="postalCode" content={resume.basics.location.postalCode} />}
-            {resume.basics.location.countryCode && <meta itemprop="addressCountry" content={resume.basics.location.countryCode} />}
-            {resume.basics.location.region && <meta itemprop="addressRegion" content={resume.basics.location.region} />}
+            {location.city && <meta itemprop="addressLocality" content={location.city} />}
+            {location.postalCode && <meta itemprop="postalCode" content={location.postalCode} />}
+            {location.countryCode && <meta itemprop="addressCountry" content={location.countryCode} />}
+            {location.region && <meta itemprop="addressRegion" content={location.region} />}
           </span>
         </span>
       )}
