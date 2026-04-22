@@ -89,7 +89,7 @@ Available section icons: `pixel:briefcase` (work), `pixel:trophy` (awards), `pix
 - `margin-top: 4rem` for vertical rhythm between every section.
 
 ### Date / muted text
-- `opacity: 0.6` via `.muted` class or `time` element selector inside `section`.
+- `opacity: var(--opacity-muted)` via `.muted` class or `time` element selector inside `section`.
 
 ### Figure / blockquote
 - `margin: 2rem 0`
@@ -138,7 +138,7 @@ Available section icons: `pixel:briefcase` (work), `pixel:trophy` (awards), `pix
 
 There are **no shadows**. The design is entirely flat. Surface hierarchy is established exclusively through:
 - Typography weight and case (`uppercase` labels vs `lowercase` body)
-- Opacity (muted dates at 0.6)
+- Opacity (muted dates at `var(--opacity-muted)`)
 - Color (primary accent for headings and structural borders)
 - Whitespace (4 rem section gaps)
 
@@ -154,7 +154,7 @@ Do not add `box-shadow` or `drop-shadow` to any element.
 - Keep interactive highlight states consistent: white text on `--color-link` background with `border-radius: 2px` and `box-decoration-break: clone`.
 - Add `rel="external noopener noreferrer" target="_blank"` to all outbound links except footer profile links (which use `rel="me"`).
 - Prefix `<dt>` ids in new `<dl>` sections to avoid clashes: e.g. `work--{slug}`, `projects--{slug}`.
-- Use `opacity: 0.6` (`.muted`) for secondary information like dates and separators rather than a separate grey colour.
+- Use `var(--opacity-muted)` (`.muted`) for secondary information like dates and separators rather than a separate gray color.
 - Use `pixel:` icons exclusively for section headings; pick from the declared subset in `astro.config.mjs`.
 
 ### Don't
@@ -162,9 +162,9 @@ Do not add `box-shadow` or `drop-shadow` to any element.
 - Don't use border-radius values other than `2px` (`--border-radius`).
 - Don't add shadows, cards, or elevated surfaces.
 - Don't use `text-transform: capitalize` on visible text (it's reserved for `.sr-only` to fix screen-reader pronunciation).
-- Don't introduce new accent colours. The palette is intentionally minimal: one warm accent, one cool link colour, one near-white background.
+- Don't introduce new accent colors. The palette is intentionally minimal: one warm accent, one cool link color, one near-white background.
 - Don't add `text-decoration: underline` to links; hover highlight is the only affordance.
-- Don't inject analytics scripts or third-party resources outside the `isProd` guard in `Layout.astro`.
+- Don't inject analytics scripts or third-party resources outside the `isProd` guard in `Layout.astro`, except the Cloudflare Web Analytics beacon which is intentionally always loaded (including in dev).
 
 ---
 
@@ -181,9 +181,9 @@ Do not add `box-shadow` or `drop-shadow` to any element.
 
 **Projects grid:** At ≥ 768 px the projects `<dl>` renders as `grid-template-columns: 1fr 1fr` with `<dt>` spanning both columns (`grid-column: 1 / -1`).
 
-**Footer:** Single column (stacked) on mobile; `display: flex; justify-content: space-between` at ≥ 575 px.
+**Footer:** Single column (stacked) on mobile; `display: flex; justify-content: space-between` at ≥ 576 px.
 
-**Work `dt` indent:** `calc(3.1rem - 2px)` at ≥ 768 px; `calc(3.5rem - 2px)` on mobile to maintain year-column alignment.
+**Work `dt` indent:** `calc(3.1rem - 2px)` at ≥ 768 px; `calc(3.5rem - 2px)` at < 768 px to maintain year-column alignment.
 
 **Touch targets:** Social icon links in the footer expand to `24 × 24 px` on hover/focus via negative margin compensation. Minimum 44 px touch targets should be maintained for any new interactive elements added on mobile.
 
@@ -191,7 +191,7 @@ Do not add `box-shadow` or `drop-shadow` to any element.
 
 ## 9. Agent Prompt Guide
 
-**Colour references (use these names in prompts):**
+**Color references (use these names in prompts):**
 - `primary` = coral/red accent `#ff5249`
 - `link` = electric blue `#0040ff`
 - `background` = off-white `#f8f9fa`
