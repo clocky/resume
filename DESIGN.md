@@ -23,7 +23,7 @@ All colors are declared as CSS custom properties with a Display P3 wide-gamut pr
 
 | Token | Display P3 | sRGB Fallback | Role |
 |---|---|---|---|
-| `--color-primary` | `color(display-p3 1 0.32 0.285)` | `#ff5249` | Headings, section icons, borders, blinking cursor, link hover backgrounds |
+| `--color-primary` | `color(display-p3 1 0.32 0.285)` | `#ff5249` | Headings, section icons, borders, blinking cursor |
 | `--color-link` | `color(display-p3 0 0.25 1 / 1)` | `#0040ff` | Body links (resting), link hover/focus backgrounds |
 | `--color-background` | `color(display-p3 0.98 0.98 0.98)` | `#f8f9fa` | Page background |
 | `--opacity-muted` | — | `0.6` | Dates and separator glyphs (applied via `opacity`) |
@@ -68,7 +68,7 @@ No web fonts are loaded. The stack resolves to the best available system monospa
 ### Links
 - **Resting:** `color: --color-link`, `text-decoration: none`
 - **Hover:** background `--color-link`, text `#fff`, padding `0.125rem 0.33rem`, margin `-0.125rem -0.33rem` (optical compensation), `border-radius: 2px`, `box-decoration-break: clone` (for multi-line wraps)
-- **Focus-visible:** same as hover plus `outline: 2px solid --color-link; outline-offset: 2px`
+- **Focus-visible:** background `--color-link`, text `#fff`, padding `0.125rem 0.33rem`, margin `-0.125rem -0.33rem`, `box-decoration-break: clone`, `outline: 2px solid --color-link; outline-offset: 2px` (no `border-radius` — differs from hover)
 
 ### Section headings (`h2`)
 Icon-only: a 32 × 32 px pixel SVG from the `pixel:` Iconify set. Text content is present in the DOM as `.sr-only` for accessibility. Color inherits `currentColor` from `--color-primary`.
@@ -77,13 +77,15 @@ Available section icons: `pixel:briefcase` (work), `pixel:trophy` (awards), `pix
 
 ### Definition lists (`<dl>`, `<dt>`, `<dd>`)
 - `dt`: `text-transform: uppercase; font-weight: 600; margin-top: 1.5rem`
-- `dd`: `display: flex; flex-direction: row; gap: 1rem; margin: 0`
+- `dd`: default `display: flex; flex-direction: row; gap: 1rem; margin: 0`
 - Work section `dt` is additionally indented by `3.1rem` to align with the year column in `dd`.
-- At ≥768 px, the Projects `dl` switches to a 2-column grid (`grid-template-columns: 1fr 1fr; column-gap: 2rem`) with `dt` spanning both columns.
+- At ≥768 px, the Projects `dl` switches to a 2-column grid (`grid-template-columns: 1fr 1fr; column-gap: 2rem`) with `dt` spanning both columns; in that layout, Projects `dd` overrides the default and uses `display: block`.
 
-### Lists (`<ul>`, `<li>`)
+### Content lists (`<ul>`, `<li>`)
+Applies to work, awards, volunteer, certificates, publications, patents, and projects sections.
 - `list-style-type: none; padding-left: 0; margin-left: 0`
 - `li`: `display: flex; flex-direction: row; gap: 1rem`
+- Footer `li` is styled differently: `display: inline` with `margin-left: 0.5rem`.
 
 ### Sections
 - `margin-top: 4rem` for vertical rhythm between every section.
@@ -174,7 +176,7 @@ Do not add `box-shadow` or `drop-shadow` to any element.
 
 | Name | Range | Notes |
 |---|---|---|
-| Mobile | < 576 px | Full width, 1rem font, `dd > span` forced block |
+| Mobile | < 576 px | Full width, 1rem font, `dd > span` set to `inline-block` |
 | Tablet-sm | 576–767 px | 80vw, footer switches to `flex-direction: row` |
 | Tablet-lg | 768–991 px | 60vw, projects grid activates |
 | Desktop | ≥ 992 px | 44vw, smallest font size (0.85rem) |
